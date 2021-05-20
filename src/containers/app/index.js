@@ -16,33 +16,16 @@ import News from 'containers/news';
 import NotFound from 'containers/404';
 
 import 'static/styles/index.scss';
-import storage from 'helpers/storage';
 
-
-const KEY = storage.KEYS.FilterThemeMode;
 
 class App extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      isDarkMode: !storage.getData(KEY) ? storage.getData(KEY) : true,
-    }
-  }
-
-  onSwitch = (value) => {
-    storage.setData(KEY, value);
-    return this.setState({ isDarkMode: value });
-  }
-
   render() {
-    const { isDarkMode } = this.state;
-    const themeMode = isDarkMode ? 'dark-mode' : 'light-mode';
+    const { ui: { theme } } = this.props;
 
-    return <ThemeProvider>
-      <Grid container className={themeMode}>
+    return <ThemeProvider variant={theme}>
+      <Grid container className={`${theme}-mode`}>
         <Grid item xs={12}>
-          <Header darkmode={isDarkMode} onSwitch={this.onSwitch} />
+          <Header />
         </Grid>
         <Grid item xs={12}>
           <Switch>
@@ -62,6 +45,7 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
+  ui: state.ui,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({

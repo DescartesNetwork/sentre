@@ -6,8 +6,8 @@
 const defaultState = {
   width: 0,
   type: 'xs',
+  theme: 'dark',
 }
-
 
 /**
  * Responsive
@@ -48,6 +48,32 @@ export const setScreen = (width) => {
 
 
 /**
+ * Theme
+ */
+export const SET_THEME = 'SET_THEME';
+export const SET_THEME_OK = 'SET_THEME_OK';
+export const SET_THEME_FAIL = 'SET_THEME_FAIL';
+
+export const setTheme = (theme = 'dark') => {
+  return dispatch => {
+    return new Promise((resolve, reject) => {
+      dispatch({ type: SET_THEME });
+
+      if (!['dark', 'light'].includes(theme)) {
+        const er = 'Invalid theme type';
+        dispatch({ type: SET_THEME_FAIL, reason: er });
+        return reject(er);
+      }
+
+      const data = { theme };
+      dispatch({ type: SET_THEME_OK, data });
+      return resolve(data);
+    });
+  }
+}
+
+
+/**
  * Reducder
  */
 // eslint-disable-next-line
@@ -56,6 +82,10 @@ export default (state = defaultState, action) => {
     case SET_SCREEN_OK:
       return { ...state, ...action.data };
     case SET_SCREEN_FAIL:
+      return { ...state, ...action.data };
+    case SET_THEME_OK:
+      return { ...state, ...action.data };
+    case SET_THEME_FAIL:
       return { ...state, ...action.data };
     default:
       return state;

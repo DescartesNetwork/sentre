@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router-dom';
@@ -15,6 +14,7 @@ import Brand from 'senswap-ui/brand';
 import styles from './styles';
 import { IconDark, IconLight } from 'static/images/index';
 import data from 'static/base/index';
+import { setTheme } from 'modules/ui.reducer';
 
 
 class Header extends Component {
@@ -23,7 +23,6 @@ class Header extends Component {
 
     this.state = {
       isActive: false,
-      isSwitch: this.props.darkmode || false,
     }
 
     this.onClickOutSide = this.onClickOutSide.bind(this);
@@ -33,7 +32,7 @@ class Header extends Component {
     const { history: { listen } } = this.props;
     document.addEventListener('click', this.onClickOutSide);
     this.listRouter = listen(() => {
-      this.setState({ isActive: false });
+      return this.setState({ isActive: false });
     });
   }
 
@@ -51,11 +50,9 @@ class Header extends Component {
   }
 
   onSwitch = (e) => {
-    const { onSwitch } = this.props;
+    const { setTheme } = this.props;
     const checked = e.target.checked;
-    return this.setState({ isSwitch: checked }, () => {
-      return onSwitch(checked);
-    });
+    return setTheme(checked ? 'dark' : 'light');
   }
 
   onToggleMenu = () => {
@@ -64,8 +61,8 @@ class Header extends Component {
   }
 
   render() {
-    const { classes } = this.props;
-    const { isActive, isSwitch } = this.state;
+    const { classes, ui: { theme } } = this.props;
+    const { isActive } = this.state;
 
     return <Grid container className={classes.header}>
       <Grid component="nav" className="navbar-menu" item>
@@ -90,8 +87,8 @@ class Header extends Component {
               </Button>
             </Grid>
             <Grid component="li" className="menu-items">
-              <Grid component="img" src={isSwitch ? IconDark : IconLight} />
-              <Switch variant="contained" onChange={this.onSwitch} checked={isSwitch} />
+              <Grid component="img" src={theme === 'dark' ? IconDark : IconLight} />
+              <Switch variant="contained" onChange={this.onSwitch} checked={theme === 'dark'} />
             </Grid>
           </Grid>
         </Grid>
@@ -105,19 +102,13 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+  ui: state.ui,
+});
 
-const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
-
-Header.defaultProps = {
-  darkmode: true,
-  onSwitch: () => { }
-}
-
-Header.propsType = {
-  darkmode: PropTypes.bool,
-  onSwitch: PropTypes.func
-}
+const mapDispatchToProps = dispatch => bindActionCreators({
+  setTheme,
+}, dispatch);
 
 export default withRouter(connect(
   mapStateToProps,
