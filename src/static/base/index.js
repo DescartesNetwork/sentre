@@ -4,21 +4,6 @@ const data = {
     description: 'We will keep you apprised of further developments and updates',
     bg_news: require('../images/img-blur-spec.png'),
   },
-  navs: [
-    {
-      name: 'About',
-      route: '/about-us'
-    },
-    // {
-    //   name: 'Document',
-    //   route: '/document'
-    // },
-    {
-      name: 'News',
-      route: '/news'
-    }
-
-  ],
   features: [
     {
       title: 'Single Token for Single Pool',
@@ -66,21 +51,13 @@ const data = {
   },
   community: {
     title: 'A global community',
-    description: 'Learn more about Senswap, chat with the team, others in the community, and have your say in shaping the future of the Uniswap protocol.',
+    description: 'Learn more about Senswap, chat with the team, others in the community, and have your say in shaping the future of the SenSwap protocol.',
     btn_telegram: 'Telegram',
     btn_twitter: 'Twitter',
     ico_fb_url: require('../images/logo-facebook.png'),
     ico_tw_url: require('../images/logo-twitter.png'),
     img_bgr: require('../images/img-bg-comm-r.png'),
     img_bgl: require('../images/img-bg-comm-l.png'),
-  },
-  footer: {
-    reserved: '© 2021, All Rights Reserved',
-    form_label: 'Contact Us',
-    menu_news: 'News',
-    menu_document: 'Document',
-    logo: require('../images/logo.png'),
-    form_icon: require('../images/ico-btn-sub.png')
   },
   pageNews: {
     title: 'Our News',

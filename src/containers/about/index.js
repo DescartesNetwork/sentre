@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom'
+  ;
 import Grid from 'senswap-ui/grid';
 
-import { AboutUs, Banner, RelatedArticles } from '../../../components/about';
+import { AboutUs, Banner, RelatedArticles } from 'components/about';
+
 
 class About extends Component {
 
@@ -22,6 +24,7 @@ class About extends Component {
 }
 
 const mapStateToProps = state => ({
+  articles: state.articles,
 });
 const mapDispatchToProps = dispatch => bindActionCreators({
 }, dispatch);

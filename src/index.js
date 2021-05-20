@@ -5,17 +5,14 @@ import { ConnectedRouter } from 'connected-react-router';
 
 import store, { history } from './store';
 
-import App from './views/index';
-
-import 'static/styles/index.scss';
+import App from 'containers/app/index';
 
 
-const rootElement = document.getElementById('root')
 render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <App />
     </ConnectedRouter>
   </Provider>,
-  rootElement
+  document.getElementById('root')
 );

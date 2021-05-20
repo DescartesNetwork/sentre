@@ -2,27 +2,28 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router-dom';
-import Grid from 'senswap-ui/grid';
-import { withStyles } from 'senswap-ui/styles';
 
-import { Articles, Banner } from 'components/news';
+import { withStyles } from 'senswap-ui/styles';
+import Grid from 'senswap-ui/grid';
+
+import Banner from './banner';
+import Articles from './articles';
 
 import styles from './styles';
+import { getArticles } from 'modules/article.reducer';
+
 
 class News extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      articles: [],
-    }
+  componentDidMount() {
+    const { getArticles } = this.props;
+    return getArticles();
   }
 
   render() {
     const { articles } = this.props;
 
     return <Grid container spacing={0}>
-      <Grid item md={12} sm={12} xs={12}>
+      <Grid item xs={12}>
         <Banner />
         <Articles articles={articles} />
       </Grid>
@@ -31,8 +32,11 @@ class News extends Component {
 }
 
 const mapStateToProps = state => ({
+  articles: state.articles,
 });
+
 const mapDispatchToProps = dispatch => bindActionCreators({
+  getArticles,
 }, dispatch);
 
 export default withRouter(connect(

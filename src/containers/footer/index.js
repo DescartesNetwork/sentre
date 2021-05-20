@@ -2,14 +2,17 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router-dom';
+
+import { withStyles } from 'senswap-ui/styles';
 import Grid from 'senswap-ui/grid';
 import Link from 'senswap-ui/link';
 import Typography from 'senswap-ui/typography';
-import data from '../../static/base';
-import { withStyles } from 'senswap-ui/styles';
+import Brand from 'senswap-ui/brand';
+
 import { MailOutline } from 'senswap-ui/icons';
 
 import styles from './styles';
+
 
 class Footer extends Component {
   render() {
@@ -21,37 +24,30 @@ class Footer extends Component {
           <Grid item sm={12} md={6}>
             <Grid component="ul" className="footer-menu">
               <Grid component="li">
-                <Grid component="img" src={data.footer.logo.default} />
+                <Brand />
               </Grid>
               <Grid component="li">
-                <Typography>{data.footer.reserved}</Typography>
+                <Typography>© 2021, All Rights Reserved</Typography>
               </Grid>
               <Grid component="li" className="group-btn">
-                <Link to="/news">{data.footer.menu_news}</Link>
-                {/* <Link className="disable">{data.footer.menu_document}</Link> */}
+                <Link to="/home">Home</Link>
+                <Link to="/news">News</Link>
+                <Link to="/about0us">About us</Link>
               </Grid>
             </Grid>
           </Grid>
           <Grid item sm={12} md={6} xs={12}>
-            {/* <Grid className="sub-form">
-              <Typography variant="body2" className="label">{data.footer.form_label}</Typography>
-              <Grid className="sub-input">
-                <Grid component="input" />
-                <Typography></Typography>
-              </Grid>
-              <Grid component="img" src={data.footer.form_icon.default} />
-            </Grid> */}
             <Grid container spacing={0} className="contact-us">
               <Grid item xs={12} className="label">
-                <Typography>{data.footer.form_label}</Typography>
+                <Typography>Contact Us</Typography>
               </Grid>
               <Grid item xs={12} className="link">
                 <Link
-                  href="mailto:example@senswap.com"
+                  href="mailto:hi@senswap.com"
                   underline="none"
                   children={<Typography>
                     <MailOutline />
-                    mailto@senswap.com
+                    hi@senswap.com
                   </Typography>} />
               </Grid>
             </Grid>
