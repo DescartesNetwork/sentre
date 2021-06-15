@@ -3,44 +3,23 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 
-import { ThemeProvider } from 'senswap-ui/styles';
-import Grid from 'senswap-ui/grid';
-
 // Static
-import Header from 'containers/header';
-import Footer from 'containers/footer';
+import Header from 'containers/app/header';
 //Views
-import Home from 'containers/home';
-import AboutUs from 'containers/about';
-import News from 'containers/news';
-import NotFound from 'containers/404';
+import Home from 'containers/app/home';
 
 import 'static/styles/index.scss';
 
 
 class App extends Component {
   render() {
-    const { ui: { theme } } = this.props;
-
-    return <ThemeProvider variant={theme}>
-      <Grid container className={`${theme}-mode`}>
-        <Grid item xs={12}>
-          <Header />
-        </Grid>
-        <Grid item xs={12}>
-          <Switch>
-            <Redirect exact from='/' to='/home' />
-            <Route exact path='/home' component={Home} />
-            <Route exact path="/about-us" component={AboutUs} />
-            <Route exact path="/news" component={News} />
-            <Route exact path='*' component={NotFound} />
-          </Switch>
-        </Grid>
-        <Grid item xs={12}>
-          <Footer />
-        </Grid>
-      </Grid>
-    </ThemeProvider>
+    return <div className="page">
+      <Header />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='*' render={() => <Redirect to="/" />} />
+      </Switch>
+    </div>
   }
 }
 
