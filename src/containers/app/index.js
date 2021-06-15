@@ -16,8 +16,8 @@ class App extends Component {
     return <div className="page">
       <Header />
       <Switch>
-        {/* <Redirect from='*' to='/' /> */}
         <Route exact path='/' component={Home} />
+        <Route path='*' render={() => <Redirect to="/" />} />
       </Switch>
     </div>
   }
