@@ -3,13 +3,14 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router-dom';
 
-import { Medium, Telegram, Twitter, ImgCircle } from 'static/images';
+import { Medium, Telegram, Twitter, ImgCircle, Paper } from 'static/images';
 import Button from 'components/button';
 
 const SOCIAL_ICON = [
   { icon: Telegram, src: 'https://t.me/SenSwap' },
   { icon: Twitter, src: 'https://twitter.com/SenSwap' },
   { icon: Medium, src: 'https://senswap.medium.com' },
+  { icon: Paper, src: 'https://docsend.com/view/z3bqdccr2a9zhvpz' },
 ];
 
 class Home extends Component {
