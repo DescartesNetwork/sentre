@@ -6,11 +6,13 @@ import { withRouter } from 'react-router-dom';
 import { Medium, Telegram, Twitter, ImgCircle, Paper } from 'static/images';
 import Button from 'components/button';
 
+import WHITEPAPER from 'static/base/senswap_whitepaper.pdf';
+
 const SOCIAL_ICON = [
   { icon: Telegram, src: 'https://t.me/SenSwap' },
   { icon: Twitter, src: 'https://twitter.com/SenSwap' },
   { icon: Medium, src: 'https://blogs.senswap.com' },
-  { icon: Paper, src: 'https://docsend.com/view/z3bqdccr2a9zhvpz' },
+  { icon: Paper, src: WHITEPAPER },
 ];
 
 class Home extends Component {
