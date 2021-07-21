@@ -7,6 +7,7 @@ import { Medium, Telegram, Twitter, ImgCircle, Paper } from 'static/images';
 import Button from 'components/button';
 
 import WHITEPAPER from 'static/base/senswap_whitepaper.pdf';
+import CTA_GUIDELINE from 'static/base/guideline_senswap_devnet.pdf';
 
 const SOCIAL_ICON = [
   { icon: Telegram, src: 'https://t.me/SenSwap' },
@@ -14,6 +15,7 @@ const SOCIAL_ICON = [
   { icon: Medium, src: 'https://blogs.senswap.com' },
   { icon: Paper, src: WHITEPAPER },
 ];
+const CTA_SENSWAP_DEVNET = 'https://app.senswap.com';
 
 class Home extends Component {
   render() {
@@ -24,8 +26,13 @@ class Home extends Component {
             <div className="title">
               <h1>An Open Liquidity Protocol for Token Swap on Solana</h1>
             </div>
-            <div className="btn-coming-soon">
-              <Button />
+            <div className="group-button">
+              <div className="btn-coming-soon">
+                <Button text="Guideline to join" url={CTA_GUIDELINE} />
+              </div>
+              <div className="btn-coming-soon">
+                <Button text="Senswap Devnet" url={CTA_SENSWAP_DEVNET} />
+              </div>
             </div>
             <ul className="btn-social">
               {SOCIAL_ICON.map((e, idx) => {
