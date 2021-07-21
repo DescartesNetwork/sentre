@@ -14,6 +14,8 @@ const SOCIAL_ICON = [
   { icon: Medium, src: 'https://blogs.senswap.com' },
   { icon: Paper, src: WHITEPAPER },
 ];
+const CTA_GUIDELINE = 'https://docs.google.com/document/d/1ijh17jPNWzHaWPQkD4g2iaSReahHIdJ8F-Wia9Nd7e0';
+const CTA_SENSWAP_DEVNET = 'https://app.senswap.com';
 
 class Home extends Component {
   render() {
@@ -24,8 +26,13 @@ class Home extends Component {
             <div className="title">
               <h1>An Open Liquidity Protocol for Token Swap on Solana</h1>
             </div>
-            <div className="btn-coming-soon">
-              <Button />
+            <div className="group-button">
+              <div className="btn-coming-soon">
+                <Button text="Guideline to join" url={CTA_GUIDELINE} />
+              </div>
+              <div className="btn-coming-soon">
+                <Button text="Senswap Devnet" url={CTA_SENSWAP_DEVNET} />
+              </div>
             </div>
             <ul className="btn-social">
               {SOCIAL_ICON.map((e, idx) => {
