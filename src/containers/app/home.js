@@ -36,7 +36,6 @@ class Home extends Component {
   onReleaseDate = () => {
     const today = new Date();
     const releaseDay = new Date(RELEASE_DATE);
-    console.log(releaseDay, 'release date');
     if (today.getTime() >= releaseDay.getTime()) return this.setState({ isRelease: true });
   }
 
