@@ -30,9 +30,9 @@ class Home extends Component {
               <div className="btn-coming-soon">
                 <Button text="Guideline to join" url={CTA_GUIDELINE} />
               </div>
-              <div className="btn-coming-soon">
+              {/* <div className="btn-coming-soon">
                 <Button text="Senswap Devnet" url={CTA_SENSWAP_DEVNET} />
-              </div>
+              </div> */}
             </div>
             <ul className="btn-social">
               {SOCIAL_ICON.map((e, idx) => {
