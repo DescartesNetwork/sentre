@@ -17,7 +17,7 @@ const SOCIAL_ICON = [
   { icon: Paper, src: WHITEPAPER },
 ];
 const CTA_SENSWAP_DEVNET = 'https://app.senswap.com';
-const RELEASE_DATE = '2021,07,25';
+const RELEASE_DATE = '2021,07,25, 19:00:00';
 
 
 class Home extends Component {
