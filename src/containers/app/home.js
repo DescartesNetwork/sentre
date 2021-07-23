@@ -7,7 +7,8 @@ import { Medium, Telegram, Twitter, ImgCircle, Paper } from 'static/images';
 import Button from 'components/button';
 
 import WHITEPAPER from 'static/base/senswap_whitepaper.pdf';
-import CTA_GUIDELINE from 'static/base/guideline_senswap_devnet.pdf';
+import CTA_GUIDELINE_RELEASE from 'static/base/guideline_senswap_devnet.pdf';
+import CTA_GUIDELINE from 'static/base/guideline_senswap.pdf';
 
 const SOCIAL_ICON = [
   { icon: Telegram, src: 'https://t.me/SenSwap' },
@@ -40,6 +41,7 @@ class Home extends Component {
 
   render() {
     const { isRelease } = this.state;
+    const pdf_file = isRelease ? CTA_GUIDELINE_RELEASE : CTA_GUIDELINE;
     return <div className="container">
       <div className="row">
         <div className="col-md-12 coming-soon">
@@ -49,7 +51,7 @@ class Home extends Component {
             </div>
             <div className="group-button">
               <div className="btn-coming-soon">
-                <Button text="Guideline to join" url={CTA_GUIDELINE} />
+                <Button text="Guideline to join" url={pdf_file} />
               </div>
               {isRelease && <div className="btn-coming-soon">
                 <Button text="Senswap Devnet" url={CTA_SENSWAP_DEVNET} />
