@@ -7,8 +7,7 @@ import { Medium, Telegram, Twitter, ImgCircle, Paper } from 'static/images';
 import Button from 'components/button';
 
 import WHITEPAPER from 'static/base/senswap_whitepaper.pdf';
-import CTA_GUIDELINE_RELEASE from 'static/base/guideline_senswap_devnet.pdf';
-import CTA_GUIDELINE from 'static/base/guideline_senswap.pdf';
+import CTA_GUIDELINE from 'static/base/guideline_senswap_devnet.pdf';
 
 const SOCIAL_ICON = [
   { icon: Telegram, src: 'https://t.me/SenSwap' },
@@ -17,31 +16,10 @@ const SOCIAL_ICON = [
   { icon: Paper, src: WHITEPAPER },
 ];
 const CTA_SENSWAP_DEVNET = 'https://app.senswap.com';
-const RELEASE_DATE = '2021,07,25, 19:00:00';
 
 
 class Home extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      isRelease: false
-    }
-  }
-
-  componentDidMount() {
-    this.onReleaseDate();
-  }
-
-  onReleaseDate = () => {
-    const today = new Date();
-    const releaseDay = new Date(RELEASE_DATE);
-    if (today.getTime() >= releaseDay.getTime()) return this.setState({ isRelease: true });
-  }
-
   render() {
-    const { isRelease } = this.state;
-    const pdf_file = isRelease ? CTA_GUIDELINE_RELEASE : CTA_GUIDELINE;
     return <div className="container">
       <div className="row">
         <div className="col-md-12 coming-soon">
@@ -51,11 +29,11 @@ class Home extends Component {
             </div>
             <div className="group-button">
               <div className="btn-coming-soon">
-                <Button text="Guideline to join" url={pdf_file} />
+                <Button text="Guideline to join" url={CTA_GUIDELINE} />
               </div>
-              {isRelease && <div className="btn-coming-soon">
+               <div className="btn-coming-soon">
                 <Button text="Senswap Devnet" url={CTA_SENSWAP_DEVNET} />
-              </div>}
+              </div>
             </div>
             <ul className="btn-social">
               {SOCIAL_ICON.map((e, idx) => {
