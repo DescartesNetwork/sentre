@@ -8,7 +8,7 @@ const configs = {}
  */
 configs.development = {
   base: 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/',
-  auth: '@senswap'
+  auth: '@senswap',
 }
 
 /**
@@ -16,7 +16,7 @@ configs.development = {
  */
 configs.staging = {
   base: 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/',
-  auth: '@senswap'
+  auth: '@senswap',
 }
 
 /**
@@ -24,10 +24,10 @@ configs.staging = {
  */
 configs.production = {
   base: 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/',
-  auth: '@senswap'
+  auth: '@senswap',
 }
 
 /**
  * Module exports
  */
-export default configs;
+export default configs

@@ -1,3 +1,3 @@
 const data = {
-  comming_soon: ""
-};
+  comming_soon: '',
+}

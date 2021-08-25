@@ -1,32 +1,29 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { withRouter } from 'react-router-dom';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { withRouter } from 'react-router-dom'
 
-import SenLogo from 'static/images/sen-logo.svg';
-import Logo from 'components/logo';
-
+import SenLogo from 'static/images/sen-logo.svg'
+import Logo from 'components/logo'
 
 class Header extends Component {
   render() {
-    return <div className="container header">
-      <div className="row">
-        <div className="col-sm-12">
-          <Logo src={SenLogo} />
+    return (
+      <div className="container header">
+        <div className="row">
+          <div className="col-sm-12">
+            <Logo src={SenLogo} />
+          </div>
         </div>
       </div>
-    </div>
+    )
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   ui: state.ui,
-});
+})
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-}, dispatch);
+const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch)
 
-export default withRouter(connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Header));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header))
