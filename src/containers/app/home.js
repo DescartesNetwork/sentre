@@ -25,7 +25,7 @@ class Home extends Component {
           <div className="col-md-12 coming-soon">
             <div className="wrap-content">
               <div className="title">
-                <h1>An Open Liquidity Protocol for Token Swap on Solana</h1>
+                <h1>An Open Liquidity Protocol on Solana</h1>
               </div>
               <div className="group-button">
                 <div className="btn-coming-soon">
