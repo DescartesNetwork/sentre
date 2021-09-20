@@ -15,7 +15,7 @@ const SOCIAL_ICON = [
   { icon: Medium, src: 'https://blogs.senswap.com' },
   { icon: Paper, src: WHITEPAPER },
 ]
-const CTA_SENSWAP_DEVNET = 'https://app.senswap.com'
+const CTA_SENTRE_DEVNET = 'https://app.sentre.io'
 
 class Home extends Component {
   render() {
@@ -29,7 +29,7 @@ class Home extends Component {
               </div>
               <div className="group-button">
                 <div className="btn-coming-soon">
-                  <Button text="Senswap Devnet" url={CTA_SENSWAP_DEVNET} />
+                  <Button text="Sentre Devnet" url={CTA_SENTRE_DEVNET} />
                 </div>
                 <div className="btn-coming-soon">
                   <Button text="Rewards" url={CTA_DEVNET_REWARDS} />

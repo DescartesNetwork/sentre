@@ -1,6 +1,6 @@
 FROM node:12.18.0
 
-WORKDIR /home/senswap-home
+WORKDIR /home/sen-home
 
 COPY package*.json ./
 RUN npm install
