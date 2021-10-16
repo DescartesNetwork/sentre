@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom'
 
-// Static
 import Header from 'containers/app/header'
-//Views
 import Home from 'containers/app/home'
 
 import 'static/styles/index.scss'
@@ -24,10 +20,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  ui: state.ui,
-})
-
-const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch)
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
+export default withRouter(App)

@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { withRouter } from 'react-router-dom'
 
 import SenLogo from 'static/images/sen-logo.svg'
@@ -20,10 +18,4 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  ui: state.ui,
-})
-
-const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch)
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header))
+export default withRouter(Header)

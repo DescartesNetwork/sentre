@@ -20,6 +20,7 @@ Button.defaultProps = {
   text: 'Coming soon...',
   url: '',
 }
+
 Button.PropsType = {
   text: PropType.string,
   url: PropType.string,
