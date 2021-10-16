@@ -8,29 +8,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: Welcome
-        run: echo Start deploying Sen Home
-      - name: Build Dockerfile
+        run: echo Start deploying Sentre
+      - name: Checkout git
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Deploy core to gh-pages branch
         run: |
-          sed -i 's/__ENV__/prod/g' Dockerfile
-          cat Dockerfile
-      - name: Build docker
-        uses: docker/build-push-action@v1
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: descartesnetwork/sen-home
-          tags: mainnet,latest
-      - name: Run docker
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SSH_HOST_PRODUCTION }}
-          username: ubuntu
-          key: ${{ secrets.SSH_PRIVATEKEY_PRODUCTION }}
-          script: |
-            sudo docker stop home
-            sudo docker rm home
-            sudo docker pull descartesnetwork/sen-home:mainnet
-            sudo docker run -d -p 80:80 --name home descartesnetwork/sen-home:mainnet
-            sudo docker image prune -a -f
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

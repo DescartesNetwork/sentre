@@ -1,7 +1,7 @@
 {
   "name": "sen-home",
   "version": "0.1.0",
-  "private": true,
+  "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
@@ -18,19 +18,14 @@
     "react-scripts": "4.0.3",
     "redux": "^4.1.0",
     "redux-thunk": "^2.3.0",
-    "sass": "^1.32.13",
-    "sass-loader": "^11.1.1",
-    "serve": "^11.3.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "REACT_APP_ENV=development PORT=4000 react-scripts start",
     "build": "REACT_APP_ENV=production react-scripts build",
-    "stag": "REACT_APP_ENV=staging react-scripts build",
-    "prod": "REACT_APP_ENV=production react-scripts build",
-    "serve": "serve -s build -l 80",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [
@@ -49,5 +44,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "sass": "^1.43.2",
+    "sass-loader": "^12.2.0"
   }
 }
