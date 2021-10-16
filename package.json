@@ -23,9 +23,9 @@
   "scripts": {
     "start": "REACT_APP_ENV=development PORT=4000 react-scripts start",
     "build": "REACT_APP_ENV=production react-scripts build",
+    "test": "react-scripts test",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "test": "react-scripts test"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
