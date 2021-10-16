@@ -24,7 +24,7 @@
     "start": "REACT_APP_ENV=development PORT=4000 react-scripts start",
     "build": "REACT_APP_ENV=production react-scripts build",
     "test": "react-scripts test",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && echo 'sentre.io' > ./build/CNAME",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
