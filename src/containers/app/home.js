@@ -9,7 +9,7 @@ import CTA_DEVNET_REWARDS from 'static/base/devnet_rewards.pdf'
 
 const SOCIAL_ICON = [
   { icon: Telegram, src: 'https://t.me/Sentre' },
-  { icon: Twitter, src: 'https://twitter.com/SenSwap' },
+  { icon: Twitter, src: 'https://twitter.com/SentreProtocol' },
   { icon: Medium, src: 'https://sentre.medium.com' },
   { icon: Paper, src: WHITEPAPER },
 ]
