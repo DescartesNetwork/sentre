@@ -13,7 +13,7 @@ const SOCIAL_ICON = [
   { icon: Medium, src: 'https://sentre.medium.com' },
   { icon: Paper, src: WHITEPAPER },
 ]
-const CTA_SENTRE_DEVNET = 'https://app.senswap.com'
+const CTA_SENTRE_DEVNET = 'https://dev.sentre.com'
 
 class Home extends Component {
   render() {
