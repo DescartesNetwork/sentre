@@ -10,7 +10,7 @@ import CTA_DEVNET_REWARDS from 'static/base/devnet_rewards.pdf'
 const SOCIAL_ICON = [
   { icon: Telegram, src: 'https://t.me/SenSwap' },
   { icon: Twitter, src: 'https://twitter.com/SenSwap' },
-  { icon: Medium, src: 'https://blogs.senswap.com' },
+  { icon: Medium, src: 'https://sentre.medium.com' },
   { icon: Paper, src: WHITEPAPER },
 ]
 const CTA_SENTRE_DEVNET = 'https://app.senswap.com'
