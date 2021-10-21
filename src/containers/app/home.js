@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 import { Medium, Telegram, Twitter, ImgCircle, Paper } from 'static/images'
 import Button from 'components/button'
 
-import WHITEPAPER from 'static/base/senswap_whitepaper.pdf'
+import WHITEPAPER from 'static/base/sentre_whitepaper.pdf'
 import CTA_DEVNET_REWARDS from 'static/base/devnet_rewards.pdf'
 
 const SOCIAL_ICON = [
