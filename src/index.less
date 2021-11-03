@@ -1,0 +1,211 @@
+// root
+#root {
+  overflow: hidden;
+}
+
+.header,
+.footer {
+  height: @height-lg * 2 + 8;
+}
+.footer {
+  border-top: 1px solid @NEUTRAL_BORDER;
+  margin-top: @margin-lg * 4;
+}
+// Section banner
+.banner {
+  padding-top: 44px;
+  .title {
+    font-size: @font-size-base * 5 + 2;
+    line-height: 86px;
+    margin: 0;
+  }
+  .description {
+    font-size: @font-size-base * 2 - 4;
+    line-height: 32px;
+    font-weight: 400;
+    margin: 0;
+  }
+  @media (max-width: 1199.9px) {
+    .title {
+      font-size: @font-size-base * 4 - 4;
+      line-height: 62px;
+    }
+  }
+  @media (max-width: 767.9px) {
+    .title {
+      font-size: @font-size-base * 3 - 6;
+      line-height: 42px;
+    }
+    .description {
+      font-size: @font-size-base;
+      line-height: 24px;
+    }
+  }
+}
+.gradient-text {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 72px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    background: linear-gradient(90deg, transparent, @BLUE);
+    z-index: -1;
+    @media (max-width: 1199.9px) {
+      height: 62px;
+    }
+    @media (max-width: 767.9px) {
+      height: 43px;
+    }
+  }
+}
+.right-content {
+  .ant-image {
+    position: absolute;
+    width: 49px;
+    bottom: 35px;
+    right: 60px;
+  }
+}
+
+// Section article
+.card-post {
+  & .ant-card-cover {
+    height: 295px;
+    overflow: hidden;
+    .ant-image {
+      height: inherit;
+      &-img {
+        height: inherit;
+        object-fit: cover;
+      }
+    }
+  }
+  .ant-card-body {
+    padding: 21px 24px;
+  }
+  .ant-card-meta {
+    &-title {
+      font-weight: 700;
+    }
+    &-description {
+      color: #212433;
+    }
+  }
+}
+
+// Trending
+.trending-title {
+  .ant-image {
+    position: absolute;
+    width: 185px;
+    left: -180px;
+    top: -120px;
+  }
+}
+
+// Section partner
+.partner-card {
+  background: linear-gradient(
+    45deg,
+    @SEN_PRIMARY,
+    @WHITE 20%,
+    @WHITE 80%,
+    @BLUE 100%
+  ) !important;
+  .ant-card-body {
+    padding: 48px 250px;
+    @media (max-width: 1199.9px) {
+      padding: 48px 80px;
+    }
+    @media (max-width: 767.9px) {
+      padding: 32px 40px;
+    }
+  }
+}
+
+// Section blockchain
+.blockchain-img {
+  .ant-image {
+    position: absolute;
+    width: 250px;
+    right: -250px;
+    bottom: -90px;
+  }
+}
+
+// Section community
+.community {
+  .ant-card-body {
+    padding: 64px;
+    @media (max-width: 767.9px) {
+      padding: 32px 16px;
+      h1 {
+        font-size: @font-size-base * 2 - 4;
+        line-height: 32px;
+      }
+      h3 {
+        font-size: @font-size-base + 2;
+        line-height: 24px;
+      }
+    }
+  }
+  .ant-image {
+    position: absolute;
+    width: 316px;
+    left: -360px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// Article content
+.article-content {
+  .ant-image,
+  figure {
+    width: 100%;
+    overflow: hidden;
+    img {
+      width: inherit;
+      object-fit: cover;
+    }
+  }
+  .ant-typography {
+    font-size: @font-size-base + 6;
+  }
+
+  p {
+    font-size: @font-size-base + 6;
+    &:first-child {
+      font-weight: 600;
+    }
+    @media (max-width: 1199.9px) {
+      font-size: @font-size-base + 4;
+    }
+    @media (max-width: 767.9px) {
+      font-size: @font-size-base + 2;
+    }
+  }
+}
+
+// Blogs
+.blogs {
+  padding-top: 50px;
+  .ant-tabs-nav {
+    &::before {
+      border-bottom-color: @NEUTRAL_DISABLE !important;
+    }
+  }
+}
+
+// social icon
+.ico-social {
+  font-size: @font-size-base * 2 - 4;
+  color: @NEUTRAL_SECONDARY;
+  .anticon {
+    cursor: pointer;
+  }
+}
