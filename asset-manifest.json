@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e50e896d.chunk.css",
+    "main.js": "/static/js/main.74e865e0.chunk.js",
+    "main.js.map": "/static/js/main.74e865e0.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3f8838d4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3f8838d4.js.map",
+    "static/js/2.9ee49d2b.chunk.js": "/static/js/2.9ee49d2b.chunk.js",
+    "static/js/2.9ee49d2b.chunk.js.map": "/static/js/2.9ee49d2b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.e50e896d.chunk.css.map": "/static/css/main.e50e896d.chunk.css.map",
+    "static/js/2.9ee49d2b.chunk.js.LICENSE.txt": "/static/js/2.9ee49d2b.chunk.js.LICENSE.txt",
+    "static/media/bg-banner.1bd8c74d.png": "/static/media/bg-banner.1bd8c74d.png",
+    "static/media/img-circle.1a00e6a2.png": "/static/media/img-circle.1a00e6a2.png",
+    "static/media/img-fsquare.deeed869.png": "/static/media/img-fsquare.deeed869.png",
+    "static/media/img-square-blur.4868f49b.png": "/static/media/img-square-blur.4868f49b.png",
+    "static/media/logo-coin98.7280c65b.png": "/static/media/logo-coin98.7280c65b.png",
+    "static/media/sen-full.658f05ff.png": "/static/media/sen-full.658f05ff.png",
+    "static/media/sen-lite.210754c2.png": "/static/media/sen-lite.210754c2.png",
+    "static/media/sentre_whitepaper.347d3fea.pdf": "/static/media/sentre_whitepaper.347d3fea.pdf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3f8838d4.js",
+    "static/js/2.9ee49d2b.chunk.js",
+    "static/css/main.e50e896d.chunk.css",
+    "static/js/main.74e865e0.chunk.js"
+  ]
+}
