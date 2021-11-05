@@ -3,7 +3,7 @@ import { useMemo } from 'react'
 import { useHistory } from 'react-router'
 
 import { SquareBlur } from 'static/images/index'
-import { Icon } from 'static/theme'
+import Icon from 'components/icon'
 import Articles from '../blogs/components/articles'
 
 const Trending = () => {

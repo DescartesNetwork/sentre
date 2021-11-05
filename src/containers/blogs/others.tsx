@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Row, Col, Button } from 'antd'
 
 import Articles from './components/articles'
-import { Icon } from 'static/theme'
+import Icon from 'components/icon'
 
 const Others = () => {
   const [maxPost, setMaxPost] = useState(9)

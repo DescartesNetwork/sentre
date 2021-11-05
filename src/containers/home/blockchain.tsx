@@ -4,7 +4,7 @@ import { Row, Col, Typography, Image, Button, Grid } from 'antd'
 import { useHistory } from 'react-router'
 
 import { FSquare } from 'static/images/index'
-import { Icon } from 'static/theme'
+import Icon from 'components/icon'
 import Articles from '../blogs/components/articles'
 
 const Blockchain = () => {
