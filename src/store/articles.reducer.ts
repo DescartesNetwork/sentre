@@ -3,6 +3,7 @@ import axios from 'axios'
 
 const BASE_URL =
   'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com'
+const END_POINT = '@sentre/feed'
 
 const api = axios.create({
   baseURL: BASE_URL,
@@ -28,7 +29,7 @@ export const getArticles = createAsyncThunk(`${NAME}/getArticles`, async () => {
   try {
     const {
       data: { items },
-    } = await api.get('@thiennguyen-69028/feed')
+    } = await api.get(END_POINT)
     return { data: items }
   } catch (error) {
     return {}

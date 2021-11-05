@@ -15,7 +15,7 @@ const Blockchain = () => {
   return (
     <Row gutter={[16, 48]} justify="center">
       <Col span={24}>
-        <Articles maxPost={maxPost} />
+        <Articles maxPost={maxPost} category="blockchain" />
       </Col>
       <Button
         type="default"

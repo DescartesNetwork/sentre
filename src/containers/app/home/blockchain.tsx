@@ -20,24 +20,18 @@ const Blockchain = () => {
   }, [xl])
 
   return (
-    <Row gutter={[24, 16]}>
-      <Col span={24} className="blockchain-title">
+    <Row gutter={[24, 16]} className="blockchain">
+      <Col span={24}>
         <Row gutter={[16, 16]} align="middle">
           <Col span={24} flex="auto">
-            <Typography.Title level={3} style={{ margin: 0 }}>
+            <Typography.Title level={2} className="blockchain-title">
               Blockchain
             </Typography.Title>
           </Col>
           <Col>
             <Button
               type="text"
-              style={{
-                color: '#212433',
-                fontWeight: 300,
-                padding: 0,
-                height: 'auto',
-                cursor: 'pointer',
-              }}
+              className="btn-view-all"
               onClick={() => history.push('/blogs')}
             >
               View all

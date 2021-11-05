@@ -44,6 +44,7 @@ const Articles = ({
   return (
     <Row gutter={[24, 24]}>
       {mapArticleData?.map((art: TypeArticleData, index: number) => {
+        const artURI = encodeURIComponent(art.title || '')
         return (
           <Col
             xl={{ span: 8 }}
@@ -58,7 +59,7 @@ const Articles = ({
               src={art.thumbnail}
               date={art.pubDate}
               time={art.time}
-              onClick={() => history.push(`/blogs/${art?.title || ''}`)}
+              onClick={() => history.push(`/blogs/${artURI}`)}
             />
           </Col>
         )

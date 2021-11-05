@@ -16,8 +16,6 @@
     "antd": "^4.16.13",
     "axios": "^0.24.0",
     "craco-less": "^1.20.0",
-    "less": "^4.1.2",
-    "less-loader": "^7.3.0",
     "nodemon": "^2.0.14",
     "rc-animate": "^3.1.1",
     "rc-tween-one": "^2.7.3",

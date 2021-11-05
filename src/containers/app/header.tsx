@@ -1,13 +1,13 @@
-import { useDispatch, useSelector } from 'react-redux'
+// import { useDispatch, useSelector } from 'react-redux'
 
-import { Row, Col, Space, Divider } from 'antd'
+import { Row, Col, Space } from 'antd'
 import { Brand, Icon } from 'static/theme'
 
 import WHITEPAPER from 'static/base/sentre_whitepaper.pdf'
-import { RootState } from 'store'
-import { setTheme } from 'store/theme.reducer'
+// import { RootState } from 'store'
+// import { setTheme } from 'store/theme.reducer'
 
-const SOCIALS = [
+export const SOCIALS = [
   { icon: 'logo-medium', src: 'https://sentre.medium.com' },
   { icon: 'paper-plane', src: 'https://t.me/Sentre' },
   { icon: 'logo-twitter', src: 'https://twitter.com/SentreProtocol' },
@@ -15,18 +15,18 @@ const SOCIALS = [
 ]
 
 const Header = () => {
-  const dispatch = useDispatch()
-  const {
-    theme: { isDarkMode },
-  } = useSelector((state: RootState) => state)
+  // const dispatch = useDispatch()
+  // const {
+  //   theme: { isDarkMode },
+  // } = useSelector((state: RootState) => state)
 
-  const onThemeChange = () => {
-    dispatch(setTheme())
-  }
+  // const onThemeChange = () => {
+  //   dispatch(setTheme())
+  // }
 
-  const iconTheme = !isDarkMode
-    ? 'cloudy-night-outline'
-    : 'partly-sunny-outline'
+  // const iconTheme = !isDarkMode
+  //   ? 'cloudy-night-outline'
+  //   : 'partly-sunny-outline'
   return (
     <Row gutter={[16, 16]} className="header" align="middle">
       <Col span={24} flex="auto">
@@ -45,8 +45,9 @@ const Header = () => {
               )
             })}
           </Space>
-          <Divider type="vertical" />
-          <Icon name={iconTheme} onClick={onThemeChange} />
+          {/* Theme mode */}
+          {/* <Divider type="vertical" />
+          <Icon name={iconTheme} onClick={onThemeChange} /> */}
         </Space>
       </Col>
     </Row>

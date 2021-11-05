@@ -1,24 +1,39 @@
 import { Row, Col, Space, Typography } from 'antd'
 import { Brand, Icon } from 'static/theme'
 
+import { SOCIALS } from './header'
+
 const Footer = () => {
   return (
-    <Row gutter={[16, 16]} className="footer" align="middle">
-      <Col span={24} flex="auto">
-        <Space>
-          <Brand href="/home" />
-          <Typography.Text type="secondary" style={{ fontSize: 12 }}>
-            © 2020, All Rights Reserved
-          </Typography.Text>
-        </Space>
+    <Row
+      gutter={[16, 16]}
+      className="footer"
+      align="middle"
+      justify="space-between"
+    >
+      <Col xl={24} lg={24} md={24} sm={12} xs={12} flex="auto">
+        <Row gutter={[8, 0]} align="middle">
+          <Col>
+            <Brand href="/home" />
+          </Col>
+          <Col span={24} flex="auto">
+            <Typography.Text type="secondary" style={{ fontSize: 12 }}>
+              © 2020, All Rights Reserved
+            </Typography.Text>
+          </Col>
+        </Row>
       </Col>
       <Col>
-        <Space size={24} className="ico-social">
-          {['logo-medium', 'paper-plane', 'logo-twitter', 'document'].map(
-            (e, i) => {
-              return <Icon name={e} key={e + i} />
-            },
-          )}
+        <Space className="ico-social" size={24}>
+          {SOCIALS.map((social, index) => {
+            return (
+              <Icon
+                name={social.icon}
+                key={social.icon}
+                onClick={() => window.open(social.src, '_blank')}
+              />
+            )
+          })}
         </Space>
       </Col>
     </Row>

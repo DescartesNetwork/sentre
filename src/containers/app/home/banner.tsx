@@ -3,7 +3,6 @@ import { Row, Col, Typography, Image, Button, Grid } from 'antd'
 import { BgHero, Square } from 'static/images/index'
 
 const SENTRE_URL = 'https://app.sentre.io'
-const COLLECT_REWARDS_URL = ''
 
 const Banner = () => {
   const { xl } = Grid.useBreakpoint() || {}
@@ -18,7 +17,7 @@ const Banner = () => {
       className="banner"
     >
       <Col
-        xl={{ span: 12, order: 1 }}
+        xl={{ span: 13, order: 1 }}
         lg={{ span: 12, order: 1 }}
         sm={{ span: 12, order: 1 }}
         xs={{ span: 24, order: 2 }}
@@ -43,7 +42,7 @@ const Banner = () => {
           </Col>
           <Col span={24}>
             <Row gutter={[16, 16]}>
-              <Col xs={12} sm={12} md={12} lg={8}>
+              <Col xs={24} sm={24} md={16} lg={10}>
                 <Button
                   type="primary"
                   size="middle"
@@ -53,22 +52,13 @@ const Banner = () => {
                   Launch Sentre
                 </Button>
               </Col>
-              <Col xs={12} sm={12} md={12} lg={8}>
-                <Button
-                  size="middle"
-                  block
-                  onClick={() => window.open(COLLECT_REWARDS_URL, '_blank')}
-                >
-                  Collect Rewards
-                </Button>
-              </Col>
             </Row>
           </Col>
         </Row>
         <Image preview={false} src={Square} style={!xl ? disable : {}} />
       </Col>
       <Col
-        xl={{ span: 12, order: 2 }}
+        xl={{ span: 11, order: 2 }}
         lg={{ span: 12, order: 2 }}
         sm={{ span: 12, order: 2 }}
         xs={{ span: 24, order: 1 }}
