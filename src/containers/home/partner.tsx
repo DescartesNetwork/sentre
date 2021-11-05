@@ -1,4 +1,4 @@
-import { Card, Col, Image, Row } from 'static/theme'
+import { Card, Col, Image, Row } from 'antd'
 
 import { Coin98, Solana, Slope } from 'static/images'
 

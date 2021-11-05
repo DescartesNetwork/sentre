@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { useParams } from 'react-router'
 
 import { Col, Divider, Row, Space, Typography, Grid } from 'antd'
-import { Icon } from 'static/theme'
+import Icon from 'components/icon'
 
 import Articles from './components/articles'
 import { RootState } from 'store'

@@ -3,7 +3,7 @@ import { Col, Row } from 'antd'
 import Banner from './banner'
 import Blockchain from './blockchain'
 import Partner from './partner'
-import Community from './community'
+import Community from './community'
 import Trending from './trending'
 
 const Home = () => {
