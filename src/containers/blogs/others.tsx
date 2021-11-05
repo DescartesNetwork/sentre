@@ -3,9 +3,9 @@ import { useState } from 'react'
 import { Row, Col, Button } from 'antd'
 
 import Articles from './components/articles'
-import { Icon } from 'static/theme'
+import Icon from 'components/icon'
 
-const Trending = () => {
+const Others = () => {
   const [maxPost, setMaxPost] = useState(9)
 
   const onViewMore = () => {
@@ -15,7 +15,7 @@ const Trending = () => {
   return (
     <Row gutter={[16, 48]} justify="center">
       <Col span={24}>
-        <Articles maxPost={maxPost} />
+        <Articles maxPost={maxPost} category="others" />
       </Col>
       <Button
         type="default"
@@ -28,4 +28,4 @@ const Trending = () => {
     </Row>
   )
 }
-export default Trending
+export default Others

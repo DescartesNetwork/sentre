@@ -1,12 +1,13 @@
-import { Row, Col, Typography, Image, Button, Grid } from 'antd'
 import { useMemo } from 'react'
+
+import { Row, Col, Typography, Image, Button, Grid } from 'antd'
 import { useHistory } from 'react-router'
 
-import { SquareBlur } from 'static/images/index'
-import { Icon } from 'static/theme'
+import { FSquare } from 'static/images/index'
+import Icon from 'components/icon'
 import Articles from '../blogs/components/articles'
 
-const Trending = () => {
+const Blockchain = () => {
   const history = useHistory()
   const { xl } = Grid.useBreakpoint() || {}
   const maxPost = useMemo(() => {
@@ -19,12 +20,12 @@ const Trending = () => {
   }, [xl])
 
   return (
-    <Row gutter={[24, 16]} className="trending">
+    <Row gutter={[24, 16]} className="blockchain">
       <Col span={24}>
         <Row gutter={[16, 16]} align="middle">
           <Col span={24} flex="auto">
-            <Typography.Title level={2} className="trending-title">
-              Trending
+            <Typography.Title level={2} className="blockchain-title">
+              Blockchain
             </Typography.Title>
           </Col>
           <Col>
@@ -37,16 +38,16 @@ const Trending = () => {
               <Icon name="chevron-forward-outline" />
             </Button>
           </Col>
-          <Col span={24} className="trending-img">
-            <Image preview={false} src={SquareBlur} />
-          </Col>
         </Row>
       </Col>
       <Col span={24}>
-        <Articles maxPost={maxPost} />
+        <Articles maxPost={maxPost} category="blockchain" />
+      </Col>
+      <Col span={24} className="blockchain-img">
+        <Image preview={false} src={FSquare} />
       </Col>
     </Row>
   )
 }
 
-export default Trending
+export default Blockchain

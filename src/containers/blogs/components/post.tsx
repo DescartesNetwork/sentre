@@ -1,5 +1,5 @@
 import { Card, Image, Space, Typography } from 'antd'
-// import { Icon } from 'static/theme'
+// import { Icon } from 'components/icon'
 
 type TypeCard = {
   src?: string

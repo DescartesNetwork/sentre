@@ -1,7 +1,8 @@
 // import { useDispatch, useSelector } from 'react-redux'
 
-import { Row, Col, Space } from 'antd'
-import { Brand, Icon } from 'static/theme'
+import { Row, Col, Space, Grid } from 'antd'
+import Icon from 'components/icon'
+import Brand from 'components/brand'
 
 import WHITEPAPER from 'static/base/sentre_whitepaper.pdf'
 // import { RootState } from 'store'
@@ -27,10 +28,12 @@ const Header = () => {
   // const iconTheme = !isDarkMode
   //   ? 'cloudy-night-outline'
   //   : 'partly-sunny-outline'
+  const { sm } = Grid.useBreakpoint() || {}
+
   return (
     <Row gutter={[16, 16]} className="header" align="middle">
       <Col span={24} flex="auto">
-        <Brand href="/home" />
+        <Brand style={{ height: 24, cursor: 'pointer' }} lite={!sm} />
       </Col>
       <Col>
         <Space size={8} className="ico-social">
