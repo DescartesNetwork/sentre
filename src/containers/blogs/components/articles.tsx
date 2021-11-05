@@ -30,8 +30,15 @@ const Articles = ({
   const {
     articles: { data: articleData },
   } = useSelector((state: RootState) => state)
+
   const articleWithCategories = useMemo(() => {
     if (!category) return articleData
+
+    if (category === 'others')
+      return articleData?.filter(
+        ({ categories }) => !categories.includes('blockchain'),
+      )
+
     return articleData?.filter(({ categories }) =>
       categories.includes(category),
     )

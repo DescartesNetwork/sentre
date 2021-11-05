@@ -21,7 +21,7 @@ const Trending = () => {
   return (
     <Row gutter={[24, 16]} className="trending">
       <Col span={24}>
-        <Row gutter={[16, 16]} align="middle">
+        <Row gutter={[16, 0]} align="middle">
           <Col span={24} flex="auto">
             <Typography.Title level={2} className="trending-title">
               Trending

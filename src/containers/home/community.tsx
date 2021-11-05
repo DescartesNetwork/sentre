@@ -1,6 +1,5 @@
-import { Card, Row, Col, Typography, Space, Image } from 'antd'
+import { Card, Row, Col, Typography, Space, Image, Button } from 'antd'
 
-import Subcribe from './subcribe'
 import { Circle } from 'static/images/index'
 
 const Community = () => {
@@ -39,7 +38,13 @@ const Community = () => {
           sm={{ span: 24 }}
           xs={{ span: 24 }}
         >
-          <Subcribe />
+          <Button
+            type="primary"
+            onClick={() => window.open('mailto: hi@sentre.io')}
+            block
+          >
+            Contact us
+          </Button>
         </Col>
       </Row>
       <Image preview={false} src={Circle} />

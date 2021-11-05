@@ -2,13 +2,13 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 
 import { Row, Col } from 'antd'
 
-import Header from 'containers/app/header'
-import Home from 'containers/app/home'
-import Footer from './footer'
-import Blogs from './blogs'
-import ArticleDetail from './blogs/articleDetail'
+import Header from 'containers/header'
+import Home from 'containers/home'
+import Footer from '../footer'
+import Blogs from '../blogs'
+import ArticleDetail from '../blogs/articleDetail'
 import NotFound from 'containers/404'
-import ArticleWatcher from './blogs/components/articleWatcher'
+import ArticleWatcher from '../blogs/components/articleWatcher'
 
 const App = () => {
   const pageStyles = {

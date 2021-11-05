@@ -1,7 +1,7 @@
 import { Row, Col, Space, Typography } from 'antd'
 import { Brand, Icon } from 'static/theme'
 
-import { SOCIALS } from './header'
+import { SOCIALS } from '../header'
 
 const Footer = () => {
   return (
