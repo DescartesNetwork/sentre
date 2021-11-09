@@ -1,6 +1,6 @@
 import { render } from 'react-dom'
-import { Provider } from 'react-redux'
 import { HashRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
 
 import App from 'containers/app/index'
 
