@@ -1,14 +1,12 @@
-@import '~antd/dist/antd.dark.less';
+@import '~antd/dist/antd.less';
 @import './typography.less';
-@import './button.less';
-@import './card.less';
-@import './modal.less';
+@import 'static/styles/index.less';
 
 // Customize
-
 @WHITE: #ffffff;
 @BLACK: #000000;
-@SHADOW: 0px 4px 32px rgba(33, 36, 51, 0.08);
+@BLUE: #5d6ccf;
+@SHADOW: 0px 4px 40px rgba(33, 36, 51, 0.12);
 @DARK_SOLID_BG: #181c36;
 @LIGHT_SOLID_BG: #2d3355;
 @GLASS_BG: 'linear-gradient(135deg, rgba(26, 30, 56, 0.45) 0%, rgba(35, 31, 54, 0.75) 100%)';
@@ -23,10 +21,6 @@
 @NEUTRAL_BORDER: #d3d3d6;
 @NEUTRAL_DIVIDER: #e9e9eb;
 @NEUTRAL_05: #f4f4f5;
-@BLUE: #5d6ccf;
-
-// Landing page
-@BACKGOURND_COLOR: #ebebed;
 
 // Available vars: https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
 // Colors
@@ -35,8 +29,8 @@
 @success-color: @SEN_SUCCESS;
 @warning-color: @SEN_WARNING;
 @error-color: @SEN_ERROR;
-@body-background: @BACKGOURND_COLOR;
-@component-background: @LIGHT_SOLID_BG;
+@body-background: @NEUTRAL_05;
+@component-background: @NEUTRAL_05;
 
 // Fonts
 @font-family: 'Nunito', sans-serif;
@@ -45,7 +39,7 @@
 @border-radius-base: 8px;
 @border-color-base: rgba(255, 255, 255, 0.2);
 @border-width-base: 1px;
-@border-color-split: rgba(255, 255, 255, 0.2);
+@border-color-split: @border-color-base;
 
 // Card
 @card-radius: @border-radius-base * 2;
@@ -78,6 +72,7 @@
 @input-border-color: @NEUTRAL_BORDER;
 @input-hover-border-color: @SEN_PRIMARY;
 @input-color: @NEUTRAL_PRIMARY;
+@input-disabled-color: @NEUTRAL_DISABLE;
 
 // Typography
 @text-color: @NEUTRAL_PRIMARY;
@@ -86,6 +81,14 @@
 
 // Divider
 @divider-color: @NEUTRAL_BORDER;
+
+// Modal
+@modal-header-bg: @NEUTRAL_05;
+@modal-content-bg: @NEUTRAL_05;
+@modal-footer-bg: @NEUTRAL_05;
+
+// Drawer
+@drawer-bg: @NEUTRAL_05;
 
 html {
   scroll-behavior: smooth;
@@ -97,4 +100,13 @@ html {
 
 *:focus {
   outline: none !important;
+}
+
+// body
+.theme-light {
+  background: url('./background/light-bg.png');
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  background-origin: border-box;
 }

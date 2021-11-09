@@ -7,7 +7,7 @@
 .footer {
   height: @height-lg * 2 + 8;
 }
-.footer {
+.footer.@{ant-prefix}-row {
   border-top: 1px solid @NEUTRAL_BORDER;
   margin-top: @margin-lg * 4;
 }
@@ -67,7 +67,7 @@
   }
 }
 .right-content {
-  .ant-image {
+  .@{ant-prefix}-image {
     position: absolute;
     width: 49px;
     bottom: 35px;
@@ -77,11 +77,11 @@
 
 // Section article
 .card-post {
-  & .ant-card-cover {
+  & .@{ant-prefix}-card-cover {
     height: 295px;
     overflow: hidden;
     cursor: pointer;
-    .ant-image {
+    .@{ant-prefix}-image {
       height: inherit;
       &-img {
         height: inherit;
@@ -89,7 +89,7 @@
       }
     }
   }
-  .ant-card-body {
+  .@{ant-prefix}-card-body {
     padding: 21px 24px;
     min-height: 220px;
     cursor: pointer;
@@ -121,7 +121,7 @@
 // Trending
 .trending {
   &-img {
-    .ant-image {
+    .@{ant-prefix}-image {
       position: absolute;
       width: 185px;
       left: -180px;
@@ -146,7 +146,7 @@
     @WHITE 80%,
     @BLUE 100%
   ) !important;
-  .ant-card-body {
+  .@{ant-prefix}-card-body {
     padding: 48px 250px;
     @media (max-width: 1199.9px) {
       padding: 48px 80px;
@@ -160,7 +160,7 @@
 // Section blockchain
 .blockchain {
   &-img {
-    .ant-image {
+    .@{ant-prefix}-image {
       position: absolute;
       width: 250px;
       right: -250px;
@@ -177,8 +177,9 @@
 }
 
 // Section community
-.community {
-  .ant-card-body {
+.community.@{ant-prefix}-card {
+  position: relative;
+  .@{ant-prefix}-card-body {
     padding: 64px;
     @media (max-width: 767.9px) {
       padding: 32px 16px;
@@ -192,18 +193,30 @@
       }
     }
   }
-  .ant-image {
+  .@{ant-prefix}-image {
     position: absolute;
     width: 316px;
     left: -360px;
     top: 50%;
     transform: translateY(-50%);
   }
+  &::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 32px);
+    height: 100%;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: color(~`('@{NEUTRAL_05}66') `);
+    border-radius: @border-radius-base * 2;
+    z-index: -1;
+  }
 }
 
 // Article content
-.article-content {
-  .ant-image,
+.article-content.@{ant-prefix}-col {
+  .@{ant-prefix}-image,
   figure {
     width: 100%;
     overflow: hidden;
@@ -218,13 +231,17 @@
   h4,
   h5,
   h6 {
+    color: @NEUTRAL_PRIMARY;
     font-weight: 700;
   }
   *:not(h1, h2, h3, h4, h5, h6, strong) {
     font-size: @font-size-base + 6;
     font-weight: 400;
-    &:first-child {
-      font-weight: 600;
+    color: @NEUTRAL_PRIMARY;
+    & em {
+      font-weight: 300;
+      font-style: italic;
+      color: @NEUTRAL_SECONDARY;
     }
     @media (max-width: 1199.9px) {
       font-size: @font-size-base + 4;
@@ -238,7 +255,7 @@
 // Blogs
 .blogs {
   padding-top: 50px;
-  .ant-tabs-nav {
+  .@{ant-prefix}-tabs-nav {
     &::before {
       border-bottom-color: @NEUTRAL_DISABLE !important;
     }
