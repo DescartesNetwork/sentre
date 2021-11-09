@@ -31,8 +31,10 @@
     "less-loader": "^10.2.0"
   },
   "scripts": {
-    "start": "REACT_APP_ENV=development PORT=1200 craco start",
-    "build": "craco build",
+    "start": "nodemon --watch * --exec \"REACT_APP_ENV=development PORT=8000 craco start\"",
+    "build": "REACT_APP_ENV=production craco build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

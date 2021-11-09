@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Route, Switch, Redirect, BrowserRouter } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 import { Row, Col, ConfigProvider } from 'antd'
@@ -36,26 +36,24 @@ const App = () => {
 
   return (
     <ConfigProvider prefixCls={isDarkMode ? 'dark' : 'default'}>
-      <BrowserRouter>
-        <Row style={{ ...pageStyles }}>
-          <Col span={24}>
-            <Header />
-          </Col>
-          <Col span={24}>
-            <Switch>
-              <Redirect exact from="/" to="/home" />
-              <Route exact path="/home" component={Home} />
-              <Route exact path="/blogs" component={Blogs} />
-              <Route exact path="/blogs/:articleId" component={ArticleDetail} />
-              <Route exact path="*" component={NotFound} />
-            </Switch>
-          </Col>
-          <Col span={24}>
-            <Footer />
-          </Col>
-          <ArticleWatcher />
-        </Row>
-      </BrowserRouter>
+      <Row style={{ ...pageStyles }}>
+        <Col span={24}>
+          <Header />
+        </Col>
+        <Col span={24}>
+          <Switch>
+            <Redirect exact from="/" to="/home" />
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/blogs" component={Blogs} />
+            <Route exact path="/blogs/:articleId" component={ArticleDetail} />
+            <Route exact path="*" component={NotFound} />
+          </Switch>
+        </Col>
+        <Col span={24}>
+          <Footer />
+        </Col>
+        <ArticleWatcher />
+      </Row>
     </ConfigProvider>
   )
 }
