@@ -20,6 +20,7 @@ const Post = ({ src, title, description, date, time, onClick }: TypeCard) => {
       cover={<Image preview={false} src={src} />}
       className="card-post"
       onClick={onClick}
+      bordered={false}
     >
       <Space direction="vertical" size={9}>
         <Space style={{ fontSize: 12 }}>

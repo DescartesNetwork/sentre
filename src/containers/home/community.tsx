@@ -4,7 +4,7 @@ import { Circle } from 'static/images/index'
 
 const Community = () => {
   return (
-    <Card className="community">
+    <Card className="community" bordered={false}>
       <Row gutter={[16, { xs: 32, sm: 48, md: 48, lg: 48 }]} justify="center">
         <Col
           xl={{ span: 18 }}

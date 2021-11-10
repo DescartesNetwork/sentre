@@ -1,4 +1,4 @@
-import { Fragment, useMemo } from 'react'
+import { Fragment, useEffect, useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router'
 
@@ -60,6 +60,11 @@ const ArticleDetail = () => {
       </Row>
     )
   }
+
+  useEffect(() => {
+    // scroll to top
+    window.scrollTo(0, 0)
+  }, [article])
 
   const formatDate = new Date(article?.pubDate).toDateString()
 

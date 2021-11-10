@@ -6,7 +6,7 @@ const Partner = () => {
   return (
     <Card className="partner-card shadowed" bordered={false}>
       <Row gutter={[32, 36]} justify="center" align="middle">
-        {[Slope, Solana, Coin98].map((elm, index) => {
+        {[Coin98, Solana, Slope].map((elm, index) => {
           return (
             <Col
               xs={24}

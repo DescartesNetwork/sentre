@@ -1,12 +1,12 @@
-// import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
-import { Row, Col, Space, Grid } from 'antd'
+import { Row, Col, Space, Grid, Divider } from 'antd'
 import Icon from 'components/icon'
 import Brand from 'components/brand'
 
 import WHITEPAPER from 'static/base/sentre_whitepaper.pdf'
-// import { RootState } from 'store'
-// import { setTheme } from 'store/theme.reducer'
+import { RootState } from 'store'
+import { setTheme } from 'store/theme.reducer'
 
 export const SOCIALS = [
   { icon: 'logo-medium', src: 'https://sentre.medium.com' },
@@ -16,24 +16,26 @@ export const SOCIALS = [
 ]
 
 const Header = () => {
-  // const dispatch = useDispatch()
-  // const {
-  //   theme: { isDarkMode },
-  // } = useSelector((state: RootState) => state)
+  const dispatch = useDispatch()
+  const {
+    theme: { isDarkMode },
+  } = useSelector((state: RootState) => state)
 
-  // const onThemeChange = () => {
-  //   dispatch(setTheme())
-  // }
+  const onThemeChange = () => {
+    dispatch(setTheme())
+  }
 
-  // const iconTheme = !isDarkMode
-  //   ? 'cloudy-night-outline'
-  //   : 'partly-sunny-outline'
+  const iconTheme = !isDarkMode ? 'moon-outline' : 'sunny-outline'
   const { sm } = Grid.useBreakpoint() || {}
 
   return (
     <Row gutter={[16, 16]} className="header" align="middle">
       <Col span={24} flex="auto">
-        <Brand style={{ height: 24, cursor: 'pointer' }} lite={!sm} />
+        <Brand
+          style={{ height: 24, cursor: 'pointer' }}
+          lite={!sm}
+          darkTheme={isDarkMode}
+        />
       </Col>
       <Col>
         <Space size={8} className="ico-social">
@@ -49,8 +51,8 @@ const Header = () => {
             })}
           </Space>
           {/* Theme mode */}
-          {/* <Divider type="vertical" />
-          <Icon name={iconTheme} onClick={onThemeChange} /> */}
+          <Divider type="vertical" />
+          <Icon name={iconTheme} onClick={onThemeChange} />
         </Space>
       </Col>
     </Row>
