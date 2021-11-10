@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c23c480d.css",
-    "main.js": "/static/js/main.fd610d0f.js",
+    "main.js": "/static/js/main.f35e0112.js",
     "static/media/sentre_whitepaper.pdf": "/static/media/sentre_whitepaper.347d3fea21f933629ff5.pdf",
     "static/media/bg-banner.png": "/static/media/bg-banner.1bd8c74db4ce8d103dde.png",
     "static/media/img-fsquare.png": "/static/media/img-fsquare.deeed8692ea7b2e80eeb.png",
@@ -15,10 +15,10 @@
     "static/media/logo-coin98.png": "/static/media/logo-coin98.7280c65b30580cf36793.png",
     "index.html": "/index.html",
     "main.c23c480d.css.map": "/static/css/main.c23c480d.css.map",
-    "main.fd610d0f.js.map": "/static/js/main.fd610d0f.js.map"
+    "main.f35e0112.js.map": "/static/js/main.f35e0112.js.map"
   },
   "entrypoints": [
     "static/css/main.c23c480d.css",
-    "static/js/main.fd610d0f.js"
+    "static/js/main.f35e0112.js"
   ]
 }
