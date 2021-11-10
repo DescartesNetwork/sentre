@@ -1,28 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.e50e896d.chunk.css",
-    "main.js": "/static/js/main.4409018d.chunk.js",
-    "main.js.map": "/static/js/main.4409018d.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.3f8838d4.js",
-    "runtime-main.js.map": "/static/js/runtime-main.3f8838d4.js.map",
-    "static/js/2.77f8c1af.chunk.js": "/static/js/2.77f8c1af.chunk.js",
-    "static/js/2.77f8c1af.chunk.js.map": "/static/js/2.77f8c1af.chunk.js.map",
+    "main.css": "/static/css/main.c23c480d.css",
+    "main.js": "/static/js/main.fd610d0f.js",
+    "static/media/sentre_whitepaper.pdf": "/static/media/sentre_whitepaper.347d3fea21f933629ff5.pdf",
+    "static/media/bg-banner.png": "/static/media/bg-banner.1bd8c74db4ce8d103dde.png",
+    "static/media/img-fsquare.png": "/static/media/img-fsquare.deeed8692ea7b2e80eeb.png",
+    "static/media/img-circle.png": "/static/media/img-circle.1a00e6a23da84a495335.png",
+    "static/media/img-square-blur.png": "/static/media/img-square-blur.4868f49b69a6f0306a68.png",
+    "static/media/dark-bg.png": "/static/media/dark-bg.9ee0825f2b8382c7f504.png",
+    "static/media/light-bg.png": "/static/media/light-bg.d50c31e1df3f18fcc841.png",
+    "static/media/sen-full-dark.png": "/static/media/sen-full-dark.f334428ce186b2472dcb.png",
+    "static/media/sen-full.png": "/static/media/sen-full.658f05fff127284973db.png",
+    "static/media/sen-lite.png": "/static/media/sen-lite.210754c276178acec395.png",
+    "static/media/logo-coin98.png": "/static/media/logo-coin98.7280c65b30580cf36793.png",
     "index.html": "/index.html",
-    "static/css/main.e50e896d.chunk.css.map": "/static/css/main.e50e896d.chunk.css.map",
-    "static/js/2.77f8c1af.chunk.js.LICENSE.txt": "/static/js/2.77f8c1af.chunk.js.LICENSE.txt",
-    "static/media/bg-banner.1bd8c74d.png": "/static/media/bg-banner.1bd8c74d.png",
-    "static/media/img-circle.1a00e6a2.png": "/static/media/img-circle.1a00e6a2.png",
-    "static/media/img-fsquare.deeed869.png": "/static/media/img-fsquare.deeed869.png",
-    "static/media/img-square-blur.4868f49b.png": "/static/media/img-square-blur.4868f49b.png",
-    "static/media/logo-coin98.7280c65b.png": "/static/media/logo-coin98.7280c65b.png",
-    "static/media/sen-full.658f05ff.png": "/static/media/sen-full.658f05ff.png",
-    "static/media/sen-lite.210754c2.png": "/static/media/sen-lite.210754c2.png",
-    "static/media/sentre_whitepaper.347d3fea.pdf": "/static/media/sentre_whitepaper.347d3fea.pdf"
+    "main.c23c480d.css.map": "/static/css/main.c23c480d.css.map",
+    "main.fd610d0f.js.map": "/static/js/main.fd610d0f.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.3f8838d4.js",
-    "static/js/2.77f8c1af.chunk.js",
-    "static/css/main.e50e896d.chunk.css",
-    "static/js/main.4409018d.chunk.js"
+    "static/css/main.c23c480d.css",
+    "static/js/main.fd610d0f.js"
   ]
 }
