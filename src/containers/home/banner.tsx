@@ -34,8 +34,8 @@ const Banner = () => {
               </Col>
               <Col span={24} style={{ position: 'relative' }}>
                 <Typography.Text type="secondary" className="description">
-                  The #1 AMM built on Solana to enrich the proficiency of DeFi
-                  ecosystem.
+                  All-in-One Solana Open Platform with DApps Store and Universal
+                  Protocol for Liquidity.
                 </Typography.Text>
               </Col>
             </Row>
