@@ -6,12 +6,7 @@ const Community = () => {
   return (
     <Card className="community" bordered={false}>
       <Row gutter={[16, { xs: 32, sm: 48, md: 48, lg: 48 }]} justify="center">
-        <Col
-          xl={{ span: 18 }}
-          lg={{ span: 20 }}
-          sm={{ span: 24 }}
-          xs={{ span: 24 }}
-        >
+        <Col xl={{ span: 18 }} lg={{ span: 20 }} xs={{ span: 24 }}>
           <Space
             size={16}
             direction="vertical"
@@ -32,12 +27,7 @@ const Community = () => {
             </Typography.Title>
           </Space>
         </Col>
-        <Col
-          xl={{ span: 10 }}
-          lg={{ span: 16 }}
-          sm={{ span: 24 }}
-          xs={{ span: 24 }}
-        >
+        <Col xl={{ span: 10 }} lg={{ span: 16 }} xs={{ span: 24 }}>
           <Button
             type="primary"
             onClick={() => window.open('mailto: hi@sentre.io')}

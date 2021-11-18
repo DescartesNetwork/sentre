@@ -20,7 +20,7 @@ const Footer = () => {
       align="middle"
       justify="space-between"
     >
-      <Col xl={24} lg={24} md={24} sm={12} xs={12} flex="auto">
+      <Col md={12} xs={24}>
         <Row gutter={[8, 0]} align="bottom">
           <Col>
             <Brand
@@ -29,7 +29,7 @@ const Footer = () => {
               darkTheme={isDarkMode}
             />
           </Col>
-          <Col span={24} flex="auto">
+          <Col md={12} xs={24}>
             <Typography.Text type="secondary" style={{ fontSize: 12 }}>
               © 2021, All Rights Reserved
             </Typography.Text>

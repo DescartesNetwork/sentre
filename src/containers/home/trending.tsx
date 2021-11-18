@@ -4,7 +4,7 @@ import { useHistory } from 'react-router'
 
 import { SquareBlur } from 'static/images/index'
 import Icon from 'components/icon'
-import Articles from '../blogs/components/articles'
+import Articles from '../blogs/articles'
 
 const Trending = () => {
   const history = useHistory()

@@ -9,7 +9,7 @@ type TypeCard = {
   time?: string
   onClick?: () => void
 }
-const SUBSTR_DESCRIPTION = 115
+const SUBSTR_DESCRIPTION = 100
 
 const Post = ({ src, title, description, date, time, onClick }: TypeCard) => {
   const formatDate = date ? new Date(date).toDateString() : ''
@@ -25,10 +25,6 @@ const Post = ({ src, title, description, date, time, onClick }: TypeCard) => {
       <Space direction="vertical" size={9}>
         <Space style={{ fontSize: 12 }}>
           <Typography.Text type="secondary">{formatDate}</Typography.Text>
-          {/* <Typography.Text type="secondary">
-            <Icon name="time-outline" />
-          </Typography.Text>
-          <Typography.Text type="secondary">{time}</Typography.Text> */}
         </Space>
         <Typography.Title className="title" level={3} style={{ margin: 0 }}>
           {title}

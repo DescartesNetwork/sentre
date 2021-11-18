@@ -25,7 +25,7 @@ const Header = () => {
     dispatch(setTheme())
   }
 
-  const iconTheme = !isDarkMode ? 'moon-outline' : 'sunny-outline'
+  const iconTheme = !isDarkMode ? 'moon' : 'sunny'
   const { sm } = Grid.useBreakpoint() || {}
 
   return (
