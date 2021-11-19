@@ -6,7 +6,7 @@ import Brand from 'components/brand'
 
 import WHITEPAPER from 'static/base/sentre_whitepaper.pdf'
 import { RootState } from 'store'
-import { setTheme } from 'store/theme.reducer'
+import { switchTheme } from 'store/theme.reducer'
 
 export const SOCIALS = [
   { icon: 'logo-medium', src: 'https://sentre.medium.com' },
@@ -22,7 +22,7 @@ const Header = () => {
   } = useSelector((state: RootState) => state)
 
   const onThemeChange = () => {
-    dispatch(setTheme())
+    dispatch(switchTheme())
   }
 
   const iconTheme = !isDarkMode ? 'moon-outline' : 'sunny-outline'

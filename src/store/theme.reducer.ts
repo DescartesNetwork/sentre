@@ -15,14 +15,22 @@ const initialState: State = {
  * Actions
  */
 
-export const setTheme = createAsyncThunk<Partial<State>, void, { state: any }>(
-  `${NAME}/setTheme`,
-  async (_, { getState }): Promise<any> => {
-    const {
-      theme: { isDarkMode },
-    } = getState()
+export const switchTheme = createAsyncThunk<
+  Partial<State>,
+  void,
+  { state: any }
+>(`${NAME}/switchTheme`, async (_, { getState }): Promise<State> => {
+  const {
+    theme: { isDarkMode },
+  } = getState()
 
-    return { isDarkMode: !isDarkMode }
+  return { isDarkMode: !isDarkMode }
+})
+
+export const setTheme = createAsyncThunk<Partial<State>, { mode: string }>(
+  `${NAME}/setTheme`,
+  async ({ mode }): Promise<State> => {
+    return { isDarkMode: mode === 'dark' }
   },
 )
 
@@ -31,10 +39,15 @@ const slice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) =>
-    void builder.addCase(
-      setTheme.fulfilled,
-      (state, { payload }) => void Object.assign(state, payload),
-    ),
+    void builder
+      .addCase(
+        switchTheme.fulfilled,
+        (state, { payload }) => void Object.assign(state, payload),
+      )
+      .addCase(
+        setTheme.fulfilled,
+        (state, { payload }) => void Object.assign(state, payload),
+      ),
 })
 
 export default slice.reducer
