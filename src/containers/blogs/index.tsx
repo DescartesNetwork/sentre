@@ -1,6 +1,13 @@
 import { Row, Col, Tabs, Typography } from 'antd'
-import Blockchain from './blockchain'
-import Others from './others'
+import Articles from './articles'
+
+const ARTICLE_CATEGORIES = [
+  'all',
+  'news',
+  'sentizens',
+  'ecosystem',
+  'developers',
+]
 
 const Blogs = () => {
   return (
@@ -9,13 +16,12 @@ const Blogs = () => {
         <Typography.Title style={{ margin: 0 }}>All posts</Typography.Title>
       </Col>
       <Col span={24}>
-        <Tabs defaultActiveKey="trending">
-          <Tabs.TabPane tab="Blockchain" key="blockchain">
-            <Blockchain />
-          </Tabs.TabPane>
-          <Tabs.TabPane tab="Others" key="others">
-            <Others />
-          </Tabs.TabPane>
+        <Tabs defaultActiveKey={ARTICLE_CATEGORIES[0]}>
+          {ARTICLE_CATEGORIES.map((category, idx) => (
+            <Tabs.TabPane tab={category} key={category}>
+              <Articles category={category} />
+            </Tabs.TabPane>
+          ))}
         </Tabs>
       </Col>
     </Row>

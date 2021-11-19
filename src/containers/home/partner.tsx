@@ -8,14 +8,7 @@ const Partner = () => {
       <Row gutter={[32, 36]} justify="center" align="middle">
         {[Solana, Coin98].map((elm, index) => {
           return (
-            <Col
-              xs={24}
-              sm={8}
-              md={8}
-              lg={8}
-              key={index}
-              style={{ textAlign: 'center' }}
-            >
+            <Col xs={24} sm={8} key={index} style={{ textAlign: 'center' }}>
               <Image preview={false} src={elm} className="logo" />
             </Col>
           )

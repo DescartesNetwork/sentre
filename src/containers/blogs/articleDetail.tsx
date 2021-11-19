@@ -2,10 +2,10 @@ import { Fragment, useEffect, useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router'
 
-import { Col, Divider, Row, Space, Typography, Grid } from 'antd'
+import { Col, Divider, Row, Space, Typography, Grid, Empty } from 'antd'
 import Icon from 'components/icon'
 
-import Articles from './components/articles'
+import Articles from './articles'
 import { RootState } from 'store'
 
 const ArticleDetail = () => {
@@ -16,12 +16,7 @@ const ArticleDetail = () => {
   const { xl } = Grid.useBreakpoint() || {}
 
   const maxPost = useMemo(() => {
-    switch (true) {
-      case xl:
-        return 3
-      case !xl:
-        return 2
-    }
+    return xl ? 3 : 2
   }, [xl])
 
   const article = useMemo(() => {
@@ -51,16 +46,6 @@ const ArticleDetail = () => {
     )
   }
 
-  const noDataArticle = () => {
-    return (
-      <Row gutter={[16, 16]}>
-        <Col span={24}>
-          <Typography.Title style={{ margin: 0 }}>No data</Typography.Title>
-        </Col>
-      </Row>
-    )
-  }
-
   useEffect(() => {
     // scroll to top
     window.scrollTo(0, 0)
@@ -72,24 +57,18 @@ const ArticleDetail = () => {
     <Row gutter={[16, 16]} justify="center" className="blogs">
       {article ? (
         <Fragment>
-          <Col xs={24} sm={24} md={24} lg={18}>
+          <Col xs={24} lg={18}>
             <Typography.Title style={{ margin: 0, fontWeight: 700 }}>
               {article?.title || 'Article'}
             </Typography.Title>
           </Col>
-          <Col xs={24} sm={24} md={24} lg={18}>
+          <Col xs={24} lg={18}>
             <Row gutter={[16, 16]}>
               <Col span={24} flex="auto">
                 <Space style={{ fontSize: 12 }}>
                   <Typography.Text type="secondary">
                     {formatDate}
                   </Typography.Text>
-                  {/* <Typography.Text type="secondary">
-                <Icon name="time-outline" />
-              </Typography.Text>
-              <Typography.Text type="secondary">
-                {article?.time}
-              </Typography.Text> */}
                 </Space>
               </Col>
               <Col>
@@ -112,8 +91,8 @@ const ArticleDetail = () => {
           </Col>
         </Fragment>
       ) : (
-        <Col xs={24} sm={24} md={24} lg={18}>
-          {noDataArticle()}
+        <Col xs={24} lg={18}>
+          <Empty />
         </Col>
       )}
       <Col span={24}>

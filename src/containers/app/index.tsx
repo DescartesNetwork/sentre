@@ -3,15 +3,15 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { Row, Col, ConfigProvider } from 'antd'
-
 import Header from 'containers/header'
 import Home from 'containers/home'
 import Footer from '../footer'
 import Blogs from '../blogs'
 import ArticleDetail from '../blogs/articleDetail'
 import NotFound from 'containers/404'
-import ArticleWatcher from '../blogs/components/articleWatcher'
-import { AppDispatch, RootState } from 'store'
+import FetchArticles from '../blogs/components/fetchArticles'
+
+import { RootState } from 'store'
 
 import 'static/theme/dark/index.dark.less'
 import 'static/theme/index.default.less'
@@ -23,7 +23,7 @@ const App = () => {
     margin: 'auto',
     padding: '0 15px',
   }
-  const dispatch = useDispatch<AppDispatch>()
+  const dispatch = useDispatch()
   const {
     theme: { isDarkMode },
   } = useSelector((state: RootState) => state)
@@ -39,9 +39,8 @@ const App = () => {
     const now = new Date()
     const hours = now.getHours()
     ;(() => {
-      if (hours >= 18 || hours < 6)
-        return dispatch(setTheme({ mode: 'dark' })).unwrap()
-      return dispatch(setTheme({ mode: 'light' })).unwrap()
+      if (hours >= 18 || hours < 6) return dispatch(setTheme({ mode: 'dark' }))
+      return dispatch(setTheme({ mode: 'light' }))
     })()
   }, [dispatch])
 
@@ -63,7 +62,7 @@ const App = () => {
         <Col span={24}>
           <Footer />
         </Col>
-        <ArticleWatcher />
+        <FetchArticles />
       </Row>
     </ConfigProvider>
   )

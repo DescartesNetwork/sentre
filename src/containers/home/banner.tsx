@@ -42,7 +42,7 @@ const Banner = () => {
           </Col>
           <Col span={24}>
             <Row gutter={[16, 16]}>
-              <Col xs={24} sm={24} md={16} lg={10}>
+              <Col xs={24} md={16} lg={10}>
                 <Button
                   type="primary"
                   size="middle"

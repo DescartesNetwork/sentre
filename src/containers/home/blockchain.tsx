@@ -5,7 +5,7 @@ import { useHistory } from 'react-router'
 
 import { FSquare } from 'static/images/index'
 import Icon from 'components/icon'
-import Articles from '../blogs/components/articles'
+import Articles from '../blogs/articles'
 
 const Blockchain = () => {
   const history = useHistory()
