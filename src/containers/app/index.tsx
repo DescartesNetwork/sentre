@@ -23,7 +23,7 @@ const App = () => {
     margin: 'auto',
     padding: '0 15px',
   }
-  const dispatch = useDispatch<AppDispatch>()
+  const dispatch = useDispatch()
   const {
     theme: { isDarkMode },
   } = useSelector((state: RootState) => state)
@@ -39,9 +39,8 @@ const App = () => {
     const now = new Date()
     const hours = now.getHours()
     ;(() => {
-      if (hours >= 18 || hours < 6)
-        return dispatch(setTheme({ mode: 'dark' })).unwrap()
-      return dispatch(setTheme({ mode: 'light' })).unwrap()
+      if (hours >= 18 || hours < 6) return dispatch(setTheme({ mode: 'dark' }))
+      return dispatch(setTheme({ mode: 'light' }))
     })()
   }, [dispatch])
 
