@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import { Row, Col, ConfigProvider } from 'antd'
 import Header from 'containers/header'
@@ -15,6 +15,7 @@ import { RootState } from 'store'
 
 import 'static/theme/dark/index.dark.less'
 import 'static/theme/index.default.less'
+import { setTheme } from 'store/theme.reducer'
 
 const App = () => {
   const pageStyles = {
@@ -22,7 +23,7 @@ const App = () => {
     margin: 'auto',
     padding: '0 15px',
   }
-
+  const dispatch = useDispatch<AppDispatch>()
   const {
     theme: { isDarkMode },
   } = useSelector((state: RootState) => state)
@@ -33,6 +34,16 @@ const App = () => {
       return document.body.setAttribute('class', 'theme-light')
     })()
   }, [isDarkMode])
+
+  useEffect(() => {
+    const now = new Date()
+    const hours = now.getHours()
+    ;(() => {
+      if (hours >= 18 || hours < 6)
+        return dispatch(setTheme({ mode: 'dark' })).unwrap()
+      return dispatch(setTheme({ mode: 'light' })).unwrap()
+    })()
+  }, [dispatch])
 
   return (
     <ConfigProvider prefixCls={isDarkMode ? 'dark' : 'default'}>

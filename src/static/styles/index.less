@@ -3,9 +3,15 @@
   overflow: hidden;
 }
 
-.header,
+.header {
+  height: @height-lg * 2 + 8;
+}
 .footer {
   height: @height-lg * 2 + 8;
+  @media (max-width: 991.9px) {
+    height: auto;
+    padding: 24px 0;
+  }
 }
 .footer.@{ant-prefix}-row {
   border-top: 1px solid @NEUTRAL_BORDER;
