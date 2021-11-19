@@ -20,7 +20,7 @@ type TypeArticleData = {
 
 const MEDIUM_CATEGORIES: Record<string, string[]> = {
   developers: ['developer', 'source-code', 'coding', 'code-tips'],
-  sentizens: ['community', 'event', 'tutorial', 'blockchain'],
+  sentizens: ['community', 'event', 'tutorial'],
   ecosystem: ['ecosystem', 'decentralized-apps'],
   news: ['defi', 'updates', 'partnerships'],
 }
@@ -58,7 +58,6 @@ const Articles = ({
   const articleLength = useMemo(() => {
     return filterArticle?.length || 0
   }, [filterArticle])
-  console.log(articleLength, 'length')
   const getLimitArticle = useMemo(() => {
     const limitPost = maxPost || postPerPage
     return filterArticle?.slice(0, limitPost)

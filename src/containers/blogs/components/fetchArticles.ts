@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 
 import { getArticles } from 'store/articles.reducer'
 
-const ArticleWatcher = () => {
+const FetchArticles = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -13,4 +13,4 @@ const ArticleWatcher = () => {
   return null
 }
 
-export default ArticleWatcher
+export default FetchArticles

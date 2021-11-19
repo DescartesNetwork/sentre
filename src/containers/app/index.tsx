@@ -3,14 +3,14 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 import { Row, Col, ConfigProvider } from 'antd'
-
 import Header from 'containers/header'
 import Home from 'containers/home'
 import Footer from '../footer'
 import Blogs from '../blogs'
 import ArticleDetail from '../blogs/articleDetail'
 import NotFound from 'containers/404'
-import ArticleWatcher from '../blogs/components/articleWatcher'
+import FetchArticles from '../blogs/components/fetchArticles'
+
 import { RootState } from 'store'
 
 import 'static/theme/dark/index.dark.less'
@@ -52,7 +52,7 @@ const App = () => {
         <Col span={24}>
           <Footer />
         </Col>
-        <ArticleWatcher />
+        <FetchArticles />
       </Row>
     </ConfigProvider>
   )
