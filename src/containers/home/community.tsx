@@ -22,7 +22,7 @@ const Community = () => {
               style={{ margin: 0, fontWeight: 400 }}
             >
               Learn more about Sentre, chat with the team, others in the
-              community, and have your say in shaping the future of the Uniswap
+              community, and have your say in shaping the future of the Sentre
               protocol.
             </Typography.Title>
           </Space>
