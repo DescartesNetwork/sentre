@@ -1,12 +1,13 @@
+import { useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { Row, Col, Space, Grid, Divider } from 'antd'
 import Icon from 'components/icon'
 import Brand from 'components/brand'
 
-import WHITEPAPER from 'static/base/sentre_whitepaper.pdf'
 import { RootState } from 'store'
-import { switchTheme } from 'store/theme.reducer'
+import { setTheme, Theme } from 'store/theme.reducer'
+import WHITEPAPER from 'static/base/sentre_whitepaper.pdf'
 
 export const SOCIALS = [
   { icon: 'logo-medium', src: 'https://sentre.medium.com' },
@@ -17,16 +18,21 @@ export const SOCIALS = [
 
 const Header = () => {
   const dispatch = useDispatch()
-  const {
-    theme: { isDarkMode },
-  } = useSelector((state: RootState) => state)
+  const { theme } = useSelector((state: RootState) => state.theme)
+
+  const isDarkMode = useMemo(() => {
+    return theme === 'dark'
+  }, [theme])
+  const iconTheme = useMemo(() => {
+    return isDarkMode ? 'moon' : 'sunny'
+  }, [isDarkMode])
+  const { sm } = Grid.useBreakpoint() || {}
 
   const onThemeChange = () => {
-    dispatch(switchTheme())
+    let switchTheme: Theme = 'light'
+    if (!isDarkMode) switchTheme = 'dark'
+    dispatch(setTheme(switchTheme))
   }
-
-  const iconTheme = !isDarkMode ? 'moon' : 'sunny'
-  const { sm } = Grid.useBreakpoint() || {}
 
   return (
     <Row gutter={[16, 16]} className="header" align="middle">

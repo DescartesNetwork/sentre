@@ -8,7 +8,7 @@
 const path = require('path')
 const { deepClone, styleRuleByName } = require('./utils')
 
-const lessRegex = /\.default\.less$/
+const lessRegex = /\.less$/
 const lessModuleRegex = /\.module\.less$/
 
 const overrideWebpackConfig = ({ context, webpackConfig, pluginOptions }) => {
