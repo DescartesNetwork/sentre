@@ -9,9 +9,7 @@ import { RootState } from 'store'
 
 const Footer = () => {
   const { sm } = Grid.useBreakpoint() || {}
-  const {
-    theme: { isDarkMode },
-  } = useSelector((state: RootState) => state)
+  const { theme } = useSelector((state: RootState) => state.theme)
 
   return (
     <Row
@@ -26,7 +24,7 @@ const Footer = () => {
             <Brand
               style={{ height: 24, cursor: 'pointer' }}
               lite={!sm}
-              darkTheme={isDarkMode}
+              darkTheme={theme === 'dark'}
             />
           </Col>
           <Col md={12} xs={24}>

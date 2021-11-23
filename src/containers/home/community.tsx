@@ -16,15 +16,11 @@ const Community = () => {
             <Typography.Title style={{ margin: 0 }}>
               A global community
             </Typography.Title>
-            <Typography.Title
-              type="secondary"
-              level={3}
-              style={{ margin: 0, fontWeight: 400 }}
-            >
+            <Typography.Text type="secondary" className="description">
               Learn more about Sentre, chat with the team, others in the
               community, and have your say in shaping the future of the Sentre
               protocol.
-            </Typography.Title>
+            </Typography.Text>
           </Space>
         </Col>
         <Col xl={{ span: 10 }} lg={{ span: 16 }} xs={{ span: 24 }}>

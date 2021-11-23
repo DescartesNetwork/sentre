@@ -1,36 +1,34 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
+export type Theme = 'light' | 'dark'
+
 type State = {
   isDarkMode?: boolean
+  theme: Theme
 }
+
+const getTheme = (): Theme => {
+  const hour = new Date().getHours()
+  if (hour >= 6 && hour < 18) return 'light'
+  return 'dark'
+}
+
 /**
  * Store constructor
  */
 const NAME = 'articles'
 const initialState: State = {
   isDarkMode: false,
+  theme: getTheme(),
 }
 
 /**
  * Actions
  */
-
-export const switchTheme = createAsyncThunk<
-  Partial<State>,
-  void,
-  { state: any }
->(`${NAME}/switchTheme`, async (_, { getState }): Promise<State> => {
-  const {
-    theme: { isDarkMode },
-  } = getState()
-
-  return { isDarkMode: !isDarkMode }
-})
-
-export const setTheme = createAsyncThunk<Partial<State>, { mode: string }>(
+export const setTheme = createAsyncThunk(
   `${NAME}/setTheme`,
-  async ({ mode }): Promise<State> => {
-    return { isDarkMode: mode === 'dark' }
+  async (theme: Theme) => {
+    return { theme }
   },
 )
 
@@ -39,15 +37,10 @@ const slice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) =>
-    void builder
-      .addCase(
-        switchTheme.fulfilled,
-        (state, { payload }) => void Object.assign(state, payload),
-      )
-      .addCase(
-        setTheme.fulfilled,
-        (state, { payload }) => void Object.assign(state, payload),
-      ),
+    void builder.addCase(
+      setTheme.fulfilled,
+      (state, { payload }) => void Object.assign(state, payload),
+    ),
 })
 
 export default slice.reducer
