@@ -16,14 +16,14 @@ const overrideWebpackConfig = ({ context, webpackConfig, pluginOptions }) => {
     loaderByName('postcss-loader'),
   )
   if (!hasFoundAny) return webpackConfig
-  const osPrefixWrap = theme.map((selector) =>
+  const prefixWrap = theme.map((selector) =>
     PrefixWrap(`#${selector}`, {
       ignoredSelectors: ['html'],
       whitelist: [new RegExp(`${selector}\.less$`, 'i')],
     }),
   )
   matches.forEach((match) => {
-    match.loader.options.postcssOptions.plugins.push(...osPrefixWrap)
+    match.loader.options.postcssOptions.plugins.push(...prefixWrap)
   })
   return webpackConfig
 }

@@ -11,7 +11,6 @@ module.exports = {
         lessLoaderOptions: {
           lessOptions: {
             javascriptEnabled: true,
-            // modifyVars: require('./src/static/theme'),
           },
         },
       },
@@ -20,7 +19,6 @@ module.exports = {
       plugin: CracoTheme,
       options: {
         theme: ['light', 'dark'],
-        appId: process.env.REACT_APP_ID,
       },
     },
   ],
