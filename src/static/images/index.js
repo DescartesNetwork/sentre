@@ -10,6 +10,12 @@ import SquareBlur from './img-square-blur.png'
 import FSquare from './img-fsquare.png'
 import Square from './img-square.png'
 import Circle from './img-circle.png'
+import EcoLight from "./eco-light.png"
+import EcoDark from "./eco-dark.png"
+import EcoDarkMobile from "./eco-dark-mobile.png"
+import EcoLightMobile from "./eco-light-mobile.png"
+import BallBlue from "./ball-blue.png"
+import BallRed from "./ball-red.png"
 
 export {
   Medium,
@@ -24,4 +30,10 @@ export {
   SquareBlur,
   FSquare,
   Circle,
+  EcoLight,
+  EcoDark,
+  EcoDarkMobile,
+  EcoLightMobile,
+  BallBlue,
+  BallRed
 }

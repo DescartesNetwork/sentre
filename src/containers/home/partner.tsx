@@ -1,12 +1,26 @@
-import { Card, Col, Image, Row } from 'antd'
+import { Card, Col, Image, Row, Typography } from 'antd'
 
-import { Coin98, Solana } from 'static/images'
+import { Coin98, Slope, Solana } from 'static/images'
 
 const Partner = () => {
   return (
-    <Card className="partner-card shadowed" bordered={false}>
+    <Card className="partner-card shadowed" bordered={false} id="partners">
       <Row gutter={[32, 36]} justify="center" align="middle">
-        {[Solana, Coin98].map((elm, index) => {
+        <Col span={24}>
+          <Row gutter={16}>
+            <Col span={24}>
+              <Typography.Title level={2} className="partner-card_title">
+                Our partners
+              </Typography.Title>
+            </Col>
+            <Col span={24}>
+              <Typography.Text type="secondary" className="description">
+                Trusted by the best. Top investors make our brand.
+              </Typography.Text>
+            </Col>
+          </Row>
+        </Col>
+        {[Slope, Solana, Coin98].map((elm, index) => {
           return (
             <Col xs={24} sm={8} key={index} style={{ textAlign: 'center' }}>
               <Image preview={false} src={elm} className="logo" />

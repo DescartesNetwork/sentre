@@ -10,12 +10,12 @@ import Blogs from '../blogs'
 import ArticleDetail from '../blogs/articleDetail'
 import NotFound from 'containers/404'
 import FetchArticles from '../blogs/components/fetchArticles'
-
 import { RootState } from 'store'
 
 import 'static/styles/dark.less'
 import 'static/styles/light.less'
-import 'static/styles/index.less'
+import './index.less'
+import Ecosystem from 'containers/home/ecosystem'
 
 const App = () => {
   const pageStyles = {
@@ -30,22 +30,25 @@ const App = () => {
   }, [theme])
 
   return (
-    <Row style={{ ...pageStyles }}>
+    <Row>
       <Col span={24}>
         <Header />
       </Col>
-      <Col span={24}>
-        <Switch>
-          <Redirect exact from="/" to="/home" />
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/blogs" component={Blogs} />
-          <Route exact path="/blogs/:articleId" component={ArticleDetail} />
-          <Route exact path="*" component={NotFound} />
-        </Switch>
-      </Col>
-      <Col span={24}>
-        <Footer />
-      </Col>
+      <Row style={{ ...pageStyles }}>
+        <Col span={24}>
+          <Switch>
+            <Redirect exact from="/" to="/home" />
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/blogs" component={Blogs} />
+            <Route exact path="/blogs/:articleId" component={ArticleDetail} />
+            <Route exact path="/ecosystem" component={Ecosystem} />
+            <Route exact path="*" component={NotFound} />
+          </Switch>
+        </Col>
+        <Col span={24}>
+          <Footer />
+        </Col>
+      </Row>
       <FetchArticles />
     </Row>
   )

@@ -1,10 +1,11 @@
 import { Col, Row } from 'antd'
 
 import Banner from './banner'
-import Blockchain from './blockchain'
+import HomeBlog from './homeBlog'
 import Partner from './partner'
 import Community from './community'
-import Trending from './trending'
+import MustRead from './mustRead'
+import Ecosystem from './ecosystem'
 
 const Home = () => {
   return (
@@ -13,13 +14,16 @@ const Home = () => {
         <Banner />
       </Col>
       <Col span={24}>
-        <Trending />
+        <Ecosystem />
+      </Col>
+      <Col span={24}>
+        <MustRead />
       </Col>
       <Col span={24}>
         <Partner />
       </Col>
       <Col span={24}>
-        <Blockchain />
+        <HomeBlog />
       </Col>
       <Col span={24}>
         <Community />

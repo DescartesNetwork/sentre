@@ -18,16 +18,16 @@ const Footer = () => {
       align="middle"
       justify="space-between"
     >
-      <Col md={12} xs={24}>
+      <Col md={12} xs={12}>
         <Row gutter={[8, 0]} align="bottom">
-          <Col>
+          <Col sm={8} md={6} lg={5} xl={4}>
             <Brand
               style={{ height: 24, cursor: 'pointer' }}
               lite={!sm}
               darkTheme={theme === 'dark'}
             />
           </Col>
-          <Col md={12} xs={24}>
+          <Col md={12} xs={24} sm={16}>
             <Typography.Text type="secondary" style={{ fontSize: 12 }}>
               © 2021, All Rights Reserved
             </Typography.Text>

@@ -1,6 +1,8 @@
+import { useState, useEffect } from 'react'
 import { Row, Col, Typography, Image, Button, Grid } from 'antd'
+import { getRemainingTimeUntilMsTimestamp } from './untils/CountDownTimerUtils'
 
-import { BgHero, Square } from 'static/images/index'
+import { BgHero, Square, SquareBlur } from 'static/images/index'
 
 const SENTRE_URL = 'https://app.sentre.io'
 
@@ -10,11 +12,42 @@ const Banner = () => {
     display: 'none',
   }
 
+  let DATE_RELEASE = '11/30/2021 17:20:00' // input date time release
+  let date = new Date(DATE_RELEASE)
+  let countdownTimestampMs = date.getTime()
+
+  const defaultRemainingTime = {
+    minutes: '00',
+    hours: '00',
+    days: '00',
+  }
+
+  const [remainingTime, setRemainingTime] = useState(defaultRemainingTime)
+  const [isDisable, setIsDisable] = useState(true)
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      updateRemainingTime(countdownTimestampMs)
+    }, 1000)
+    return () => clearInterval(intervalId)
+  }, [countdownTimestampMs])
+
+  useEffect(() => {
+    if (remainingTime.minutes === '00') {
+      setIsDisable(false)
+    } else setIsDisable(true)
+  }, [remainingTime])
+
+  const updateRemainingTime = (countdown: number) => {
+    setRemainingTime(getRemainingTimeUntilMsTimestamp(countdown))
+  }
+
   return (
     <Row
       gutter={[12, { xs: 48, sm: 24, md: 24, lg: 24 }]}
       align="middle"
       className="banner"
+      id="home"
     >
       <Col
         xl={{ span: 13, order: 1 }}
@@ -28,33 +61,84 @@ const Banner = () => {
             <Row gutter={[16, { xs: 16, sm: 20, md: 27, lg: 27 }]}>
               <Col span={24}>
                 <Typography.Title level={1} className="title">
-                  An Open Liquidity Protocol on{' '}
+                  An Open <br /> Liquidity Protocol <br /> on{' '}
                   <strong className="gradient-text">Solana</strong>
                 </Typography.Title>
               </Col>
               <Col span={24} style={{ position: 'relative' }}>
                 <Typography.Text type="secondary" className="description">
-                  All-in-One Solana Open Platform with DApps Store and Universal
-                  Protocol for Liquidity.
+                  The #1 AMM built on Solana to enrich the proficiency of DeFi
+                  ecosystem.
                 </Typography.Text>
               </Col>
             </Row>
           </Col>
           <Col span={24}>
             <Row gutter={[16, 16]}>
-              <Col xs={24} md={16} lg={10}>
+              <Col xs={24} md={9} lg={8} xl={6}>
                 <Button
                   type="primary"
-                  size="middle"
+                  size="large"
                   block
                   onClick={() => window.open(SENTRE_URL, '_blank')}
+                  disabled={isDisable}
                 >
-                  Launch Sentre
+                  <span style={{ fontSize: '14px' }}>Launch Sentre</span>
                 </Button>
               </Col>
             </Row>
           </Col>
+          <Col span={24}>
+            <Typography.Paragraph className="btn-launch">
+              Official Sentre launch in
+            </Typography.Paragraph>
+          </Col>
+          <Col span={24}>
+            <Row gutter={{ xs: 44, sm: 28, md: 28, lg: 28, xl: 54 }}>
+              <Col xs={8} sm={8} md={8} lg={6}>
+                <div className="count-down">
+                  <p>{remainingTime.days}</p>
+                  <Typography.Text
+                    style={{ textTransform: 'uppercase', fontSize: '14px' }}
+                    type="secondary"
+                    className="description"
+                  >
+                    days
+                  </Typography.Text>
+                  <p className="separation">:</p>
+                </div>
+              </Col>
+              <Col xs={8} sm={8} md={8} lg={6}>
+                <div className="count-down">
+                  <p>{remainingTime.hours}</p>
+                  <Typography.Text
+                    style={{ textTransform: 'uppercase', fontSize: '14px' }}
+                    type="secondary"
+                    className="description"
+                  >
+                    hours
+                  </Typography.Text>
+                  <p className="separation">:</p>
+                </div>
+              </Col>
+              <Col xs={8} sm={8} md={8} lg={6}>
+                <div className="count-down">
+                  <p>{remainingTime.minutes}</p>
+                  <Typography.Text
+                    style={{ textTransform: 'uppercase', fontSize: '14px' }}
+                    type="secondary"
+                    className="description"
+                  >
+                    minutes
+                  </Typography.Text>
+                </div>
+              </Col>
+            </Row>
+          </Col>
         </Row>
+        <Col span={24} className="banner-img">
+          <Image preview={false} src={SquareBlur} />
+        </Col>
         <Image preview={false} src={Square} style={!xl ? disable : {}} />
       </Col>
       <Col
