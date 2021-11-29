@@ -18,7 +18,6 @@ import Brand from 'components/brand'
 
 import { RootState } from 'store'
 import { setTheme, Theme } from 'store/theme.reducer'
-import WHITEPAPER from 'static/base/sentre_whitepaper.pdf'
 
 export const SOCIALS = [
   { icon: 'logo-medium', src: 'https://sentre.medium.com' },
