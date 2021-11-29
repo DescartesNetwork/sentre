@@ -24,7 +24,7 @@ export const SOCIALS = [
   { icon: 'logo-medium', src: 'https://sentre.medium.com' },
   { icon: 'paper-plane', src: 'https://t.me/Sentre' },
   { icon: 'logo-twitter', src: 'https://twitter.com/SentreProtocol' },
-  { icon: 'document', src: WHITEPAPER },
+  { icon: 'document', src: 'https://docs.sentre.io/litepaper' },
 ]
 
 const SECTIONS_LIST = [
@@ -153,7 +153,7 @@ const Header = () => {
           <Col xl={6} lg={5}>
             <Space size={8} className="ico-social">
               <Space size={24}>
-                {SOCIALS.map((social, index) => {
+                {SOCIALS.map((social) => {
                   return (
                     <Icon
                       name={social.icon}
