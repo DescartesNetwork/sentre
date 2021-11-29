@@ -66,15 +66,15 @@ const Banner = () => {
               </Col>
               <Col span={24} style={{ position: 'relative' }}>
                 <Typography.Text type="secondary" className="description">
-                  The #1 AMM built on Solana to enrich the proficiency of DeFi
-                  ecosystem.
+                  All-in-One Solana Open Platform with DApps Store and Universal
+                  Protocol for Liquidity.
                 </Typography.Text>
               </Col>
             </Row>
           </Col>
           <Col span={24}>
             <Row gutter={[16, 16]}>
-              <Col xs={24} md={9} lg={8} xl={6}>
+              <Col xs={12} md={9} lg={8} xl={6}>
                 <Button
                   type="primary"
                   size="large"
@@ -82,7 +82,17 @@ const Banner = () => {
                   onClick={() => window.open(SENTRE_URL, '_blank')}
                   disabled={isDisable}
                 >
-                  <span style={{ fontSize: '14px' }}>Launch Sentre</span>
+                  Join IDO
+                </Button>
+              </Col>
+              <Col xs={12} md={9} lg={8} xl={6}>
+                <Button
+                  type="primary"
+                  size="large"
+                  block
+                  onClick={() => window.open(SENTRE_URL, '_blank')}
+                >
+                  Sentre Devnet
                 </Button>
               </Col>
             </Row>
