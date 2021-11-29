@@ -90,9 +90,11 @@ const Banner = () => {
                   type="primary"
                   size="large"
                   block
-                  onClick={() => window.open(SENTRE_URL, '_blank')}
+                  onClick={() =>
+                    window.open('https://sentre.synaps.me', '_blank')
+                  }
                 >
-                  Sentre Devnet
+                  Register KYC
                 </Button>
               </Col>
             </Row>
