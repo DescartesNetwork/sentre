@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import { Row, Col, Tabs, Typography } from 'antd'
 import Articles from './articles'
 
@@ -10,6 +12,10 @@ const ARTICLE_CATEGORIES = [
 ]
 
 const Blogs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <Row gutter={[16, 19]} className="blogs">
       <Col span={24}>

@@ -3,7 +3,6 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 export type Theme = 'light' | 'dark'
 
 type State = {
-  isDarkMode?: boolean
   theme: Theme
 }
 
@@ -18,7 +17,6 @@ const getTheme = (): Theme => {
  */
 const NAME = 'articles'
 const initialState: State = {
-  isDarkMode: false,
   theme: getTheme(),
 }
 

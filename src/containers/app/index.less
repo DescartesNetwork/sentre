@@ -4,8 +4,61 @@
 }
 
 .header {
-  height: 88px;
+  height: 64px;
+  width: 100%;
+  position: relative;
+  &-content {
+    width: 1200px;
+    padding: 0 15px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .menu-icon {
+      font-size: 24px;
+      margin-left: 23px;
+      cursor: pointer;
+    }
+  }
+  .sections {
+    margin: 0 !important;
+    &-item {
+      float: left;
+      margin-right: 48px;
+      list-style: none;
+      cursor: pointer;
+    }
+  }
+  &.sticky {
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+    background-color: #f4f4f5;
+  }
+  @media (max-width: 1199.9px) {
+    .header-content {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 917px) {
+    padding: 0;
+    .sections {
+      &-item {
+        margin-right: 32px;
+      }
+    }
+  }
+  @media (max-width: 835px) {
+    .sections {
+      &-item {
+        margin-right: 18px;
+      }
+    }
+  }
 }
+
 .footer {
   height: 88px;
   @media (max-width: 991.9px) {
@@ -20,6 +73,14 @@
 // Section banner
 .banner {
   padding-top: 44px;
+  .banner-img {
+    .ant-image {
+      position: absolute !important;
+      width: 185px;
+      left: -195px;
+      top: -55px;
+    }
+  }
   .title {
     font-size: 72px !important;
     font-weight: 800;
@@ -35,10 +96,51 @@
     font-weight: 400;
     margin: 0;
   }
+  .count-down {
+    position: relative;
+    background-color: hsl(240, 5%, 96%);
+    border-radius: 16px;
+    height: 116px;
+    width: 100%;
+    text-align: center;
+    padding-top: 24px;
+    box-shadow: 0px 4px 40px rgba(249, 87, 94, 0.12);
+    text-transform: uppercase;
+    p {
+      font-size: 38px;
+      line-height: 46px;
+      font-weight: 800;
+      margin-bottom: 0 !important;
+      color: #212433;
+    }
+    .separation {
+      position: absolute;
+      top: 30%;
+      right: -32px;
+    }
+    .count-down_text {
+      line-height: 32px;
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+  .btn-launch {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    margin: 0 !important;
+    color: #f9575e !important;
+  }
+
   @media (max-width: 1199.9px) {
     .title {
       font-size: 52px !important;
       line-height: 62px !important;
+    }
+    .count-down {
+      .separation {
+        right: -19px !important;
+      }
     }
   }
   @media (max-width: 767.9px) {
@@ -49,6 +151,22 @@
     .description {
       font-size: 14px;
       line-height: 24px;
+    }
+    .count-down {
+      .separation {
+        right: -19px !important;
+      }
+    }
+  }
+  @media (max-width: 575px) {
+    .count-down {
+      .separation {
+        right: -27px !important;
+      }
+    }
+    .btn-launch {
+      width: 100%;
+      text-align: center;
     }
   }
 }
@@ -76,8 +194,30 @@
   .ant-image {
     position: absolute !important;
     width: 49px;
-    bottom: 35px;
+    bottom: 260px;
     right: 60px;
+  }
+}
+
+// Section Ecosytem
+.ecosystem {
+  text-align: center;
+  position: relative;
+  .title {
+    width: 100%;
+  }
+
+  &_ball-red {
+    position: absolute !important;
+    z-index: -2;
+    top: -100px;
+    right: -340px;
+  }
+  &_ball-blue {
+    position: absolute !important;
+    z-index: -2;
+    bottom: -160px;
+    left: -370px;
   }
 }
 
@@ -90,7 +230,7 @@
     .ant-image {
       height: inherit;
       &-img {
-        height: inherit;
+        height: 100% !important;
         object-fit: cover;
       }
     }
@@ -120,23 +260,17 @@
 }
 .btn-view-all {
   font-weight: 400 !important;
-  padding: 0 !important;
+  padding: 9px 16px !important;
   height: auto !important;
+  border: solid 1px #d3d3d6 !important;
 }
 
-// Trending
-.trending {
-  &-img {
-    .ant-image {
-      position: absolute !important;
-      width: 185px;
-      left: -180px;
-      top: -120px;
-    }
-  }
-  &-title {
+// Must Read
+.must-read {
+  &_title {
     font-weight: 800 !important;
     margin-bottom: 0 !important;
+    text-align: center;
     @media (max-width: 767.9px) {
       font-size: 24px !important;
     }
@@ -152,20 +286,24 @@
     #fff 80%,
     #5d6ccf 100%
   ) !important;
+  text-align: center;
+  &_title {
+    color: #212433;
+  }
   .ant-card-body {
-    padding: 48px 250px;
+    padding: 64px 250px !important;
     @media (max-width: 1199.9px) {
-      padding: 48px 80px;
+      padding: 64px 80px !important;
     }
     @media (max-width: 767.9px) {
-      padding: 32px 40px;
+      padding: 32px 40px !important;
     }
   }
 }
 
-// Section blockchain
-.blockchain {
-  &-img {
+// Section Home Blog
+.home-blog {
+  &_img {
     .ant-image {
       position: absolute !important;
       width: 250px;
@@ -173,9 +311,10 @@
       bottom: -90px;
     }
   }
-  &-title {
+  &_title {
     font-weight: 800 !important;
     margin-bottom: 0 !important;
+    text-align: center;
     @media (max-width: 767.9px) {
       font-size: 24px !important;
     }
@@ -191,6 +330,7 @@
       font-size: 24px;
       line-height: 32px;
       font-weight: 400;
+      color: #7a7b85 !important;
     }
     @media (max-width: 767.9px) {
       padding: 32px 16px;
@@ -283,6 +423,9 @@
   .footer {
     border-top: 1px solid #d3d3d6;
   }
+  .ant-drawer-close {
+    left: 0;
+  }
   .community.ant-card {
     &::before {
       background: #f4f4f566;
@@ -309,10 +452,38 @@
   .footer {
     border-top: 1px solid #4e4f5c;
   }
+  .ant-drawer-close {
+    left: 0;
+  }
+
+  .header.sticky {
+    background-color: #212433;
+  }
+  .banner {
+    .count-down {
+      background-color: #212433;
+      p {
+        color: #e9e9eb;
+      }
+    }
+    .btn-launch {
+      color: #fb9a9e !important;
+    }
+  }
   .community.ant-card {
     &::before {
       background: #21243366;
     }
+  }
+
+  .partner-card {
+    background: linear-gradient(
+      45deg,
+      #f9575e,
+      #212433 20%,
+      #212433 80%,
+      #5d6ccf 100%
+    ) !important;
   }
   .article-content {
     * {
