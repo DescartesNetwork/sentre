@@ -50,11 +50,12 @@ const SECTIONS_LIST = [
   },
 ]
 
+const DISABLE = {
+  display: 'none',
+}
+
 const Header = () => {
   const { sm, md } = Grid.useBreakpoint() || {}
-  const disable = {
-    display: 'none',
-  }
 
   const [visible, setVisible] = useState(false)
   const showDrawer = () => {
@@ -113,7 +114,7 @@ const Header = () => {
               darkTheme={isDarkMode}
             />
             <Icon
-              style={md || location.pathname !== '/home' ? disable : {}}
+              style={md || location.pathname !== '/home' ? DISABLE : {}}
               className="menu-icon"
               name="menu-outline"
               onClick={showDrawer}
@@ -135,7 +136,7 @@ const Header = () => {
             </Drawer>
 
             <ul
-              style={!md || location.pathname !== '/home' ? disable : {}}
+              style={!md || location.pathname !== '/home' ? DISABLE : {}}
               className="sections"
             >
               {SECTIONS_LIST.map((item) => (

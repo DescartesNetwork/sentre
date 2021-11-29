@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { useSelector } from 'react-redux'
 
 import { Row, Col, Typography, Image, Grid } from 'antd'
@@ -13,19 +13,29 @@ import {
   EcoLightMobile,
 } from 'static/images'
 
+const DISABLE = {
+  display: 'none',
+}
+
 const Ecosystem = () => {
   const { theme } = useSelector((state: RootState) => state.theme)
   const [isDarkMode, setIsDarkMode] = useState(false)
 
   const { sm } = Grid.useBreakpoint() || {}
-  const disable = {
-    display: 'none',
-  }
+  console.log(sm)
+
+  const getEcosystemSrc = useMemo(() => {
+    if (!sm) {
+      if (isDarkMode) return EcoDarkMobile
+      else return EcoLightMobile
+    } else {
+      if (isDarkMode) return EcoDark
+      else return EcoLight
+    }
+  }, [sm, isDarkMode])
 
   useEffect(() => {
-    if (theme === 'dark') {
-      setIsDarkMode(true)
-    } else setIsDarkMode(false)
+    setIsDarkMode(theme === 'dark')
   }, [theme])
 
   return (
@@ -41,22 +51,13 @@ const Ecosystem = () => {
         </Typography.Text>
       </Col>
       <Col span={24}>
-        <Image
-          style={!sm ? disable : {}}
-          preview={false}
-          src={isDarkMode ? EcoDark : EcoLight}
-        />
-        <Image
-          style={sm ? disable : {}}
-          preview={false}
-          src={isDarkMode ? EcoDarkMobile : EcoLightMobile}
-        />
+        <Image preview={false} src={getEcosystemSrc} />
       </Col>
       <Col span={24} className="ecosystem_ball-blue">
-        <Image style={!sm ? disable : {}} preview={false} src={BallBlue} />
+        <Image style={!sm ? DISABLE : {}} preview={false} src={BallBlue} />
       </Col>
       <Col span={24} className="ecosystem_ball-red">
-        <Image style={!sm ? disable : {}} preview={false} src={BallRed} />
+        <Image style={!sm ? DISABLE : {}} preview={false} src={BallRed} />
       </Col>
     </Row>
   )

@@ -1,18 +1,19 @@
 import { useState, useEffect } from 'react'
+
 import { Row, Col, Typography, Image, Button, Grid } from 'antd'
 import { getRemainingTimeUntilMsTimestamp } from './untils/CountDownTimerUtils'
-
 import { BgHero, Square, SquareBlur } from 'static/images/index'
 
 const SENTRE_URL = 'https://app.sentre.io'
 
+const DISABLE = {
+  display: 'none',
+}
+
 const Banner = () => {
   const { xl } = Grid.useBreakpoint() || {}
-  const disable = {
-    display: 'none',
-  }
 
-  let DATE_RELEASE = '11/30/2021 17:20:00' // input date time release
+  const DATE_RELEASE = '11/30/2021 17:20:00' // input date time release
   let date = new Date(DATE_RELEASE)
   let countdownTimestampMs = date.getTime()
 
@@ -61,7 +62,7 @@ const Banner = () => {
             <Row gutter={[16, { xs: 16, sm: 20, md: 27, lg: 27 }]}>
               <Col span={24}>
                 <Typography.Title level={1} className="title">
-                  An Open <br /> Liquidity Protocol <br /> on{' '}
+                  An Open Liquidity Protocol on{' '}
                   <strong className="gradient-text">Solana</strong>
                 </Typography.Title>
               </Col>
@@ -98,11 +99,7 @@ const Banner = () => {
               <Col xs={8} sm={8} md={8} lg={6}>
                 <div className="count-down">
                   <p>{remainingTime.days}</p>
-                  <Typography.Text
-                    style={{ textTransform: 'uppercase', fontSize: '14px' }}
-                    type="secondary"
-                    className="description"
-                  >
+                  <Typography.Text type="secondary" className="count-down_text">
                     days
                   </Typography.Text>
                   <p className="separation">:</p>
@@ -111,11 +108,7 @@ const Banner = () => {
               <Col xs={8} sm={8} md={8} lg={6}>
                 <div className="count-down">
                   <p>{remainingTime.hours}</p>
-                  <Typography.Text
-                    style={{ textTransform: 'uppercase', fontSize: '14px' }}
-                    type="secondary"
-                    className="description"
-                  >
+                  <Typography.Text type="secondary" className="count-down_text">
                     hours
                   </Typography.Text>
                   <p className="separation">:</p>
@@ -124,11 +117,7 @@ const Banner = () => {
               <Col xs={8} sm={8} md={8} lg={6}>
                 <div className="count-down">
                   <p>{remainingTime.minutes}</p>
-                  <Typography.Text
-                    style={{ textTransform: 'uppercase', fontSize: '14px' }}
-                    type="secondary"
-                    className="description"
-                  >
+                  <Typography.Text type="secondary" className="count-down_text">
                     minutes
                   </Typography.Text>
                 </div>
@@ -139,7 +128,7 @@ const Banner = () => {
         <Col span={24} className="banner-img">
           <Image preview={false} src={SquareBlur} />
         </Col>
-        <Image preview={false} src={Square} style={!xl ? disable : {}} />
+        <Image preview={false} src={Square} style={!xl ? DISABLE : {}} />
       </Col>
       <Col
         xl={{ span: 11, order: 2 }}
