@@ -55,13 +55,12 @@ const DISABLE = {
 }
 
 const Header = () => {
-  const { sm, md } = Grid.useBreakpoint() || {}
-
   const [visible, setVisible] = useState(false)
   const [isChange, setIsChange] = useState(false)
-
   const dispatch = useDispatch()
   const location = useLocation()
+
+  const { sm, md } = Grid.useBreakpoint() || {}
 
   const showDrawer = () => {
     setVisible(true)

@@ -6,7 +6,9 @@ import Articles from '../blogs/articles'
 
 const MustRead = () => {
   const history = useHistory()
+
   const { xl } = Grid.useBreakpoint() || {}
+
   const maxPost = useMemo(() => {
     if (xl) return 3
     return 2
