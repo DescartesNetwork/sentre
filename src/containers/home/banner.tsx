@@ -10,10 +10,11 @@ const DISABLE = {
   display: 'none',
 }
 
+const DATE_RELEASE = '11/30/2021 17:20:00' // input date time release
+
 const Banner = () => {
   const { xl } = Grid.useBreakpoint() || {}
 
-  const DATE_RELEASE = '11/30/2021 17:20:00' // input date time release
   let date = new Date(DATE_RELEASE)
   let countdownTimestampMs = date.getTime()
 
@@ -34,9 +35,7 @@ const Banner = () => {
   }, [countdownTimestampMs])
 
   useEffect(() => {
-    if (remainingTime.minutes === '00') {
-      setIsDisable(false)
-    } else setIsDisable(true)
+    setIsDisable(remainingTime.minutes === '00')
   }, [remainingTime])
 
   const updateRemainingTime = (countdown: number) => {

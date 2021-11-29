@@ -8,7 +8,6 @@ import Home from 'containers/home'
 import Footer from '../footer'
 import Blogs from '../blogs'
 import ArticleDetail from '../blogs/articleDetail'
-import Ecosystem from 'containers/home/ecosystem'
 import NotFound from 'containers/404'
 import FetchArticles from '../blogs/components/fetchArticles'
 import { RootState } from 'store'
@@ -42,7 +41,6 @@ const App = () => {
               <Route exact path="/home" component={Home} />
               <Route exact path="/blogs" component={Blogs} />
               <Route exact path="/blogs/:articleId" component={ArticleDetail} />
-              <Route exact path="/ecosystem" component={Ecosystem} />
               <Route exact path="*" component={NotFound} />
             </Switch>
           </Col>

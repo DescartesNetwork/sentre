@@ -58,6 +58,11 @@ const Header = () => {
   const { sm, md } = Grid.useBreakpoint() || {}
 
   const [visible, setVisible] = useState(false)
+  const [isChange, setIsChange] = useState(false)
+
+  const dispatch = useDispatch()
+  const location = useLocation()
+
   const showDrawer = () => {
     setVisible(true)
   }
@@ -77,12 +82,7 @@ const Header = () => {
     window.scrollTo({ top: y, behavior: 'smooth' })
   }
 
-  const [isChange, setIsChange] = useState(false)
-
-  const dispatch = useDispatch()
   const { theme } = useSelector((state: RootState) => state.theme)
-
-  const location = useLocation()
 
   const isDarkMode = useMemo(() => {
     return theme === 'dark'

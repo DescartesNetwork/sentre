@@ -9,7 +9,7 @@ const MustRead = () => {
   const { xl } = Grid.useBreakpoint() || {}
   const maxPost = useMemo(() => {
     if (xl) return 3
-    else return 2
+    return 2
   }, [xl])
 
   return (
