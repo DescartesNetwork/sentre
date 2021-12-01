@@ -8,7 +8,7 @@ import { SOCIALS } from '../header'
 import { RootState } from 'store'
 
 const Footer = () => {
-  const { sm } = Grid.useBreakpoint() || {}
+  const { sm, xs } = Grid.useBreakpoint() || {}
   const { theme } = useSelector((state: RootState) => state.theme)
 
   return (
@@ -30,12 +30,13 @@ const Footer = () => {
         </Row>
       </Col>
       <Col>
-        <Space className="ico-social" size={24}>
+        <Space className="ico-social" size={xs ? 20 : 24}>
           {SOCIALS.map((social, index) => {
             return (
               <Icon
                 name={social.icon}
                 key={social.icon}
+                style={{ fontSize: xs ? 18 : 24 }}
                 onClick={() => window.open(social.src, '_blank')}
               />
             )
