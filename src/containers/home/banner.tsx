@@ -4,13 +4,13 @@ import { Row, Col, Typography, Image, Button, Grid } from 'antd'
 import { getRemainingTimeUntilMsTimestamp } from './untils/CountDownTimerUtils'
 import { BgHero, Square, SquareBlur } from 'static/images/index'
 
-const SENTRE_URL = 'https://app.sentre.io'
+const SENTRE_URL = 'https://app.sentre.io/ido'
 
 const DISABLE = {
   display: 'none',
 }
 
-const DATE_RELEASE = '12/17/2021 18:00:00' // input date time release
+const DATE_RELEASE = '12/17/2021 14:00:00' // input date time release
 const defaultRemainingTime = {
   minutes: '00',
   hours: '00',
