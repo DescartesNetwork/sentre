@@ -10,7 +10,7 @@ const DISABLE = {
   display: 'none',
 }
 
-const DATE_RELEASE = '12/17/2021 14:00:00' // input date time release
+const DATE_RELEASE = '2021-12-17T14:00:00.000Z' // input date time release
 const defaultRemainingTime = {
   minutes: '00',
   hours: '00',
