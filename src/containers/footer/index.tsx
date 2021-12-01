@@ -8,18 +8,13 @@ import { SOCIALS } from '../header'
 import { RootState } from 'store'
 
 const Footer = () => {
-  const { sm } = Grid.useBreakpoint() || {}
+  const { sm, xs } = Grid.useBreakpoint() || {}
   const { theme } = useSelector((state: RootState) => state.theme)
 
   return (
-    <Row
-      gutter={[16, 16]}
-      className="footer"
-      align="middle"
-      justify="space-between"
-    >
-      <Col md={12} xs={12}>
-        <Row gutter={[8, 0]} align="bottom">
+    <Row className="footer" align="middle" justify="space-between">
+      <Col span={12}>
+        <Row gutter={[8, 4]} align="bottom">
           <Col sm={8} md={6} lg={5} xl={4}>
             <Brand
               style={{ height: 24, cursor: 'pointer' }}
@@ -35,12 +30,13 @@ const Footer = () => {
         </Row>
       </Col>
       <Col>
-        <Space className="ico-social" size={24}>
+        <Space className="ico-social" size={xs ? 20 : 24}>
           {SOCIALS.map((social, index) => {
             return (
               <Icon
                 name={social.icon}
                 key={social.icon}
+                style={{ fontSize: xs ? 18 : 24 }}
                 onClick={() => window.open(social.src, '_blank')}
               />
             )
