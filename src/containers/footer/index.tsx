@@ -12,14 +12,9 @@ const Footer = () => {
   const { theme } = useSelector((state: RootState) => state.theme)
 
   return (
-    <Row
-      gutter={[16, 16]}
-      className="footer"
-      align="middle"
-      justify="space-between"
-    >
-      <Col md={12} xs={12}>
-        <Row gutter={[8, 0]} align="bottom">
+    <Row className="footer" align="middle" justify="space-between">
+      <Col span={12}>
+        <Row gutter={[8, 4]} align="bottom">
           <Col sm={8} md={6} lg={5} xl={4}>
             <Brand
               style={{ height: 24, cursor: 'pointer' }}
