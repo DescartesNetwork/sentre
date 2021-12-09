@@ -23,14 +23,14 @@ const Ecosystem = () => {
 
   const { sm } = Grid.useBreakpoint() || {}
 
-  const imageMoblie = isDarkMode ? EcoDarkMobile : EcoLightMobile
+  const imageMobile = isDarkMode ? EcoDarkMobile : EcoLightMobile
   const imageDesktop = isDarkMode ? EcoDark : EcoLight
 
   const getEcosystemSrc = useMemo(() => {
-    if (!sm) return imageMoblie
+    if (!sm) return imageMobile
 
     return imageDesktop
-  }, [sm, imageMoblie, imageDesktop])
+  }, [sm, imageMobile, imageDesktop])
 
   useEffect(() => {
     setIsDarkMode(theme === 'dark')
