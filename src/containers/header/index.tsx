@@ -32,7 +32,7 @@ const SECTIONS_LIST = [
     route: 'home',
   },
   {
-    title: 'Ecosytem',
+    title: 'Ecosystem',
     route: 'eco',
   },
   {
