@@ -28,7 +28,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "nodemon --watch * --exec \"REACT_APP_ENV=development PORT=8000 craco start --legacy-peer-deps\"",
+    "start": "nodemon --watch * --exec \"REACT_APP_ENV=development PORT=8000 craco start\"",
     "build": "REACT_APP_ENV=production craco build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
