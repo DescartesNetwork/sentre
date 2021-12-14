@@ -10,7 +10,7 @@ const DISABLE = {
   display: 'none',
 }
 
-const DATE_RELEASE = '2021-12-17T14:00:00' // input date time release
+const DATE_RELEASE = '2021-12-17T14:00:00.000Z' // input date time release
 const defaultRemainingTime = {
   minutes: '00',
   hours: '00',
@@ -23,10 +23,8 @@ const Banner = () => {
 
   const { xl } = Grid.useBreakpoint() || {}
 
-  const date = new Date(DATE_RELEASE).toISOString() // get release time at timezone GMT+0
-  const countdownTimestampMs = new Date(date).getTime()
-  const nowGMT0 = new Date().toISOString() // now at timezone GMT+0
-  const now = new Date(nowGMT0).getTime() // convert now to millisecond
+  const countdownTimestampMs = Number(new Date(DATE_RELEASE))
+  const now = Number(new Date()) // convert now to millisecond
 
   useEffect(() => {
     // +60000 millisecond to enable to join IDO early 1 minute
