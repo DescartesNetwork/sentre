@@ -3,7 +3,7 @@ import { Col, Row } from 'antd'
 import Banner from './banner'
 import HomeBlog from './homeBlog'
 import Partner from './partner'
-import Community from './community'
+import Community from './community'
 import MustRead from './mustRead'
 import Ecosystem from './ecosystem'
 
