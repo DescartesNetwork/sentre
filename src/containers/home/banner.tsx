@@ -44,7 +44,7 @@ const Banner = () => {
   return (
     <Row
       gutter={[12, { xs: 48, sm: 24, md: 24, lg: 24 }]}
-      align="middle"
+      align="top"
       className="banner"
       id="home"
     >
