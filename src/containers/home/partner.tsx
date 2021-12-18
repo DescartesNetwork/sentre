@@ -10,7 +10,7 @@ const Partner = () => {
           <Row gutter={16}>
             <Col span={24}>
               <Typography.Title level={2} className="partner-card_title">
-                Our partners
+                Blockchain and Our partners
               </Typography.Title>
             </Col>
             <Col span={24}>
