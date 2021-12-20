@@ -4,7 +4,8 @@ import Twitter from './twitter.png'
 import Paper from './paper.png'
 import BgHero from './bg-banner.png'
 import Coin98 from './logo-coin98.png'
-import Solana from './logo-sol.svg'
+import LightSolana from './light-logo-sol.svg'
+import DarkSolana from './dark-logo-sol.svg'
 import SquareBlur from './img-square-blur.png'
 import FSquare from './img-fsquare.png'
 import Square from './img-square.png'
@@ -24,7 +25,8 @@ export {
   Paper,
   BgHero,
   Coin98,
-  Solana,
+  LightSolana,
+  DarkSolana,
   Square,
   SquareBlur,
   FSquare,
