@@ -1,29 +1,31 @@
 {
   "files": {
     "main.css": "/static/css/main.987a8728.css",
-    "main.js": "/static/js/main.8a993814.js",
-    "static/media/eco-dark.png": "/static/media/eco-dark.7fc0699cde853f510c23.png",
-    "static/media/eco-light.png": "/static/media/eco-light.44695f5e5aa4baadc5db.png",
+    "main.js": "/static/js/main.80ede28e.js",
     "static/media/bg-banner.png": "/static/media/bg-banner.1bd8c74db4ce8d103dde.png",
-    "static/media/eco-dark-mobile.png": "/static/media/eco-dark-mobile.dfecb807c8ee7e0de66b.png",
-    "static/media/eco-light-mobile.png": "/static/media/eco-light-mobile.e0ad512099d15f839135.png",
-    "static/media/ball-red.png": "/static/media/ball-red.05c249bb67b48388c3ea.png",
-    "static/media/ball-blue.png": "/static/media/ball-blue.6d27fcdd7827bbb670cf.png",
+    "static/media/eco-dark.png": "/static/media/eco-dark.2e3bfb60819e5546881d.png",
+    "static/media/eco-light.png": "/static/media/eco-light.b2f627e000ec47fa926d.png",
     "static/media/img-fsquare.png": "/static/media/img-fsquare.deeed8692ea7b2e80eeb.png",
     "static/media/img-circle.png": "/static/media/img-circle.1a00e6a23da84a495335.png",
     "static/media/img-square-blur.png": "/static/media/img-square-blur.4868f49b69a6f0306a68.png",
     "static/media/dark-bg.png": "/static/media/dark-bg.9ee0825f2b8382c7f504.png",
     "static/media/light-bg.png": "/static/media/light-bg.d50c31e1df3f18fcc841.png",
+    "static/media/ball-blue.png": "/static/media/ball-blue.d30440a0dac4ad896d6f.png",
+    "static/media/eco-dark-mobile.png": "/static/media/eco-dark-mobile.de37d5104e1dd3f29c5c.png",
     "static/media/sen-full-dark.png": "/static/media/sen-full-dark.f334428ce186b2472dcb.png",
+    "static/media/eco-light-mobile.png": "/static/media/eco-light-mobile.bc54ec5e61544625b9cd.png",
     "static/media/sen-full.png": "/static/media/sen-full.658f05fff127284973db.png",
+    "static/media/ball-red.png": "/static/media/ball-red.b0fc428af05b2ae06082.png",
+    "static/media/logo-gate.svg": "/static/media/logo-gate.5b7ac18e61704238bc00045fee8548ed.svg",
     "static/media/sen-lite.png": "/static/media/sen-lite.210754c276178acec395.png",
-    "static/media/logo-coin98.png": "/static/media/logo-coin98.7280c65b30580cf36793.png",
+    "static/media/dark-logo-sol.svg": "/static/media/dark-logo-sol.763162497e37ab12f4ad07fb309a2ad3.svg",
+    "static/media/light-logo-sol.svg": "/static/media/light-logo-sol.a7d9c45a4ae219389e59764f40f18ace.svg",
     "index.html": "/index.html",
     "main.987a8728.css.map": "/static/css/main.987a8728.css.map",
-    "main.8a993814.js.map": "/static/js/main.8a993814.js.map"
+    "main.80ede28e.js.map": "/static/js/main.80ede28e.js.map"
   },
   "entrypoints": [
     "static/css/main.987a8728.css",
-    "static/js/main.8a993814.js"
+    "static/js/main.80ede28e.js"
   ]
 }
