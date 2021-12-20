@@ -1,6 +1,6 @@
 import { Card, Col, Image, Row, Typography } from 'antd'
 
-import { Coin98, Solana } from 'static/images'
+import { Coin98, Solana, GateIO } from 'static/images'
 
 const Partner = () => {
   return (
@@ -20,7 +20,7 @@ const Partner = () => {
             </Col>
           </Row>
         </Col>
-        {[Solana, Coin98].map((elm, index) => {
+        {[Solana, Coin98, GateIO].map((elm, index) => {
           return (
             <Col xs={24} sm={8} key={index} style={{ textAlign: 'center' }}>
               <Image preview={false} src={elm} className="logo" />
