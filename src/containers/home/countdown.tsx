@@ -1,5 +1,6 @@
-import { Col, Row, Typography } from 'antd'
 import { useEffect, useState } from 'react'
+
+import { Col, Row, Typography } from 'antd'
 import { getRemainingTimeUntilMsTimestamp } from './untils/CountDownTimerUtils'
 
 const DATE_RELEASE = '2021-12-17T14:00:00' // input date time release
