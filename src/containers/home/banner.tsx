@@ -41,14 +41,14 @@ const Banner = () => {
               </Col>
             </Row>
           </Col>
-          <Col xs={24} lg={12}>
+          <Col xs={24} md={10} lg={8}>
             <Button
               type="primary"
               size="large"
               block
               onClick={() => window.open(SENTRE_URL, '_blank')}
             >
-              Launch SenOs
+              Launch App
             </Button>
           </Col>
         </Row>
