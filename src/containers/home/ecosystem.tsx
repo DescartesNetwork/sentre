@@ -39,7 +39,7 @@ const Ecosystem = () => {
   return (
     <Row align="middle" className="ecosystem" id="eco">
       <Col span={24}>
-        <Typography.Title level={2} className="title">
+        <Typography.Title level={1} className="title">
           Ecosystem
         </Typography.Title>
       </Col>

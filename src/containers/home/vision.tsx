@@ -1,0 +1,80 @@
+import { Row, Col, Typography, Image, List, Grid } from 'antd'
+import { CheckCircleFilled } from '@ant-design/icons'
+
+import { EmptyImage } from 'static/images'
+
+const data = [
+  {
+    description:
+      'A decentralized hub where developers can inherit available liquidity to develop their dApps while users gain access to well-developed innovative apps that generate a high yield of profits.',
+  },
+  {
+    description:
+      'Furthermore, Sentre has been cherished with the hope of opening up a new market for investors/users with multiple sources of Liquidity.',
+  },
+  {
+    description:
+      'As a Safe Haven, DeFi users can leverage Sentre for 100 applications usage at one time rather than going to 100 individual apps. This network also solves liquidity bootstrapping concern.',
+  },
+]
+
+const Vision = () => {
+  const { sm } = Grid.useBreakpoint() || {}
+
+  return (
+    <Row align="middle" className="version" id="eco">
+      <Col span={24}>
+        <Typography.Title level={1} className="version_title">
+          Vision
+        </Typography.Title>
+      </Col>
+      <Col className={!sm ? 'subtitle-mobile' : 'subtitle'}>
+        <Typography.Text type="secondary">
+          Sentre’s vision is to create an{' '}
+          <strong>All-in-One Solana Open Platform</strong> with dApps Store and
+          Universal Protocol for Liquidity; altogether become a{' '}
+          <strong>Safe Haven</strong> for DeFi developers and users.
+        </Typography.Text>
+      </Col>
+      <Col span={24}>
+        <Row style={{ justifyContent: 'center' }}>
+          <Col
+            span={!sm ? 24 : 12}
+            style={{ paddingRight: !sm ? 0 : '56px', order: !sm ? 2 : 1 }}
+          >
+            <List
+              itemLayout="horizontal"
+              dataSource={data}
+              className="list"
+              renderItem={(item) => (
+                <List.Item className="list-item">
+                  <List.Item.Meta
+                    avatar={
+                      <CheckCircleFilled
+                        style={{
+                          color: '#F9575E',
+                          width: '16px',
+                          height: '16px',
+                        }}
+                      />
+                    }
+                    description={item.description}
+                    className="list-item-meta"
+                  />
+                </List.Item>
+              )}
+            />
+          </Col>
+          <Col
+            span={!sm ? 24 : 12}
+            style={{ order: !sm ? 1 : 2, marginBottom: !sm ? '24px' : 0 }}
+          >
+            <Image src={EmptyImage} />
+          </Col>
+        </Row>
+      </Col>
+    </Row>
+  )
+}
+
+export default Vision

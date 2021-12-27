@@ -19,7 +19,7 @@ const MustRead = () => {
       <Col span={24}>
         <Row gutter={[16, 0]} align="middle">
           <Col span={24} flex="auto">
-            <Typography.Title level={2} className="must-read_title">
+            <Typography.Title level={1} className="must-read_title">
               Must Read
             </Typography.Title>
           </Col>

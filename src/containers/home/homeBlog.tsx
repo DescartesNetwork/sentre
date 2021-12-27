@@ -23,7 +23,7 @@ const HomeBlog = () => {
       <Col span={24}>
         <Row gutter={[16, 16]} align="middle">
           <Col span={24} flex="auto">
-            <Typography.Title level={2} className="home-blog_title">
+            <Typography.Title level={1} className="home-blog_title">
               Blog
             </Typography.Title>
           </Col>
