@@ -1,5 +1,5 @@
 import { Row, Col, Typography, Image, List, Grid } from 'antd'
-import { CheckCircleFilled } from '@ant-design/icons'
+import IonIcon from 'components/icon'
 
 import { EmptyImage } from 'static/images'
 
@@ -22,19 +22,24 @@ const Vision = () => {
   const { sm } = Grid.useBreakpoint() || {}
 
   return (
-    <Row align="middle" className="version" id="eco">
-      <Col span={24}>
-        <Typography.Title level={1} className="version_title">
-          Vision
-        </Typography.Title>
+    <Row align="middle" className="vision" justify="center">
+      <Col>
+        <Typography.Title level={1}>Vision</Typography.Title>
       </Col>
-      <Col className={!sm ? 'subtitle-mobile' : 'subtitle'}>
-        <Typography.Text type="secondary">
-          Sentre’s vision is to create an{' '}
-          <strong>All-in-One Solana Open Platform</strong> with dApps Store and
-          Universal Protocol for Liquidity; altogether become a{' '}
-          <strong>Safe Haven</strong> for DeFi developers and users.
-        </Typography.Text>
+      <Col span={24}>
+        <Row justify="center">
+          <Col
+            className={!sm ? 'subtitle-mobile' : 'subtitle'}
+            style={{ textAlign: 'center' }}
+          >
+            <Typography.Text type="secondary">
+              Sentre’s vision is to create an{' '}
+              <strong>All-in-One Solana Open Platform</strong> with dApps Store
+              and Universal Protocol for Liquidity; altogether become a{' '}
+              <strong>Safe Haven</strong> for DeFi developers and users.
+            </Typography.Text>
+          </Col>
+        </Row>
       </Col>
       <Col span={24}>
         <Row style={{ justifyContent: 'center' }}>
@@ -50,7 +55,8 @@ const Vision = () => {
                 <List.Item className="list-item">
                   <List.Item.Meta
                     avatar={
-                      <CheckCircleFilled
+                      <IonIcon
+                        name="checkmark-circle"
                         style={{
                           color: '#F9575E',
                           width: '16px',

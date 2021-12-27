@@ -1,8 +1,9 @@
 import { useEffect, useState, useMemo } from 'react'
 import { useSelector } from 'react-redux'
-import { Row, Col, Typography, Image, Grid } from 'antd'
 
+import { Row, Col, Typography, Image, Grid } from 'antd'
 import { RootState } from 'store'
+
 import {
   RoadmapLight,
   RoadmapDark,
@@ -30,15 +31,9 @@ const RoadMap = () => {
   }, [theme])
 
   return (
-    <Row gutter={[24, 48]} className="must-read">
-      <Col span={24}>
-        <Row gutter={[16, 0]} align="middle">
-          <Col span={24} flex="auto">
-            <Typography.Title level={1} className="road-map_title">
-              Roadmap
-            </Typography.Title>
-          </Col>
-        </Row>
+    <Row gutter={[24, 48]} className="road-map" justify="center">
+      <Col>
+        <Typography.Title level={1}>Roadmap</Typography.Title>
       </Col>
       <Col span={24} style={{ textAlign: 'center' }}>
         <Image src={getRoadmapImgSrc} preview={false} />

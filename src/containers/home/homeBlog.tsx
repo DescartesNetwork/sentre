@@ -19,15 +19,11 @@ const HomeBlog = () => {
   }, [xl])
 
   return (
-    <Row gutter={[24, 32]} className="home-blog" id="blog">
-      <Col span={24}>
-        <Row gutter={[16, 16]} align="middle">
-          <Col span={24} flex="auto">
-            <Typography.Title level={1} className="home-blog_title">
-              Blog
-            </Typography.Title>
-          </Col>
-        </Row>
+    <Row gutter={[24, 32]} className="home-blog" justify="center" id="blog">
+      <Col>
+        <Typography.Title level={1} className="home-blog_title">
+          Blog
+        </Typography.Title>
       </Col>
       <Col span={24}>
         <Articles maxPost={maxPost} />

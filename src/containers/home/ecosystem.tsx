@@ -37,16 +37,24 @@ const Ecosystem = () => {
   }, [theme])
 
   return (
-    <Row align="middle" className="ecosystem" id="eco">
-      <Col span={24}>
-        <Typography.Title level={1} className="title">
-          Ecosystem
-        </Typography.Title>
-      </Col>
-      <Col span={24}>
-        <Typography.Text type="secondary" className="description">
-          Empowering DeFi Users & Developers
-        </Typography.Text>
+    <Row
+      gutter={[0, 35]}
+      align="middle"
+      className="ecosystem"
+      justify="center"
+      id="eco"
+    >
+      <Col>
+        <Row gutter={[0, 16]}>
+          <Typography.Title level={1} className="title">
+            Ecosystem
+          </Typography.Title>
+          <Col span={24}>
+            <Typography.Text type="secondary" className="description">
+              Empowering DeFi Users & Developers
+            </Typography.Text>
+          </Col>
+        </Row>
       </Col>
       <Col span={24}>
         <Image preview={false} src={getEcosystemSrc} />
