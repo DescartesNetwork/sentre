@@ -6,6 +6,8 @@ import Partner from './partner'
 import Community from './community'
 import MustRead from './mustRead'
 import Ecosystem from './ecosystem'
+import RoadMap from './roadMap'
+import Vision from './vision'
 
 const Home = () => {
   return (
@@ -18,6 +20,12 @@ const Home = () => {
       </Col>
       <Col span={24}>
         <MustRead />
+      </Col>
+      <Col span={24}>
+        <RoadMap />
+      </Col>
+      <Col span={24}>
+        <Vision />
       </Col>
       <Col span={24}>
         <Partner />

@@ -17,6 +17,11 @@ import EcoLightMobile from './eco-light-mobile.png'
 import BallBlue from './ball-blue.png'
 import BallRed from './ball-red.png'
 import GateIO from './logo-gate.svg'
+import EmptyImage from './empty.png'
+import RoadmapLight from './roadmap_light.png'
+import RoadmapDark from './roadmap_dark.png'
+import RoadmapLightMobile from './roadmap_light_mobile.png'
+import RoadmapDarkMobile from './roadmap_dark_mobile.png'
 
 export {
   Medium,
@@ -38,4 +43,9 @@ export {
   BallBlue,
   BallRed,
   GateIO,
+  RoadmapLight,
+  EmptyImage,
+  RoadmapDark,
+  RoadmapLightMobile,
+  RoadmapDarkMobile,
 }

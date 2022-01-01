@@ -267,12 +267,60 @@
 
 // Must Read
 .must-read {
-  &_title {
+  &-title {
     font-weight: 800 !important;
     margin-bottom: 0 !important;
     text-align: center;
     @media (max-width: 767.9px) {
       font-size: 24px !important;
+    }
+  }
+}
+
+// Road Map
+.road-map {
+  &-title {
+    font-weight: 800 !important;
+    margin-bottom: 0 !important;
+    text-align: center;
+    @media (max-width: 767.9px) {
+      font-size: 24px !important;
+    }
+  }
+}
+
+// Vision
+.vision {
+  &_title {
+    font-weight: 800 !important;
+    margin-bottom: 16px !important;
+    text-align: center;
+    @media (max-width: 767.9px) {
+      font-size: 24px !important;
+    }
+  }
+
+  .subtitle {
+    max-width: 930px !important;
+    margin-bottom: 56px;
+    margin-top: 16px;
+  }
+
+  .subtitle-mobile {
+    margin-bottom: 24px;
+    margin-top: 8px;
+  }
+
+  .list {
+    .list-item {
+      padding: 0px !important;
+      margin-bottom: 24px;
+      max-width: 592px !important;
+      border-bottom: none !important;
+
+      .list-item-meta {
+        text-align: left;
+      }
     }
   }
 }

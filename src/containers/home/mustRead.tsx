@@ -15,15 +15,11 @@ const MustRead = () => {
   }, [xl])
 
   return (
-    <Row gutter={[24, 48]} className="must-read">
-      <Col span={24}>
-        <Row gutter={[16, 0]} align="middle">
-          <Col span={24} flex="auto">
-            <Typography.Title level={2} className="must-read_title">
-              Must Read
-            </Typography.Title>
-          </Col>
-        </Row>
+    <Row gutter={[24, 48]} className="must-read" justify="center">
+      <Col>
+        <Typography.Title level={1} className="must-read-title">
+          Must Read
+        </Typography.Title>
       </Col>
       <Col span={24}>
         <Articles maxPost={maxPost} />
