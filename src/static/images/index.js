@@ -22,8 +22,6 @@ import RoadmapLight from './roadmap_light.png'
 import RoadmapDark from './roadmap_dark.png'
 import RoadmapLightMobile from './roadmap_light_mobile.png'
 import RoadmapDarkMobile from './roadmap_dark_mobile.png'
-import VisionDark from './vision-dark.png'
-import VisionLight from './vision-light.png'
 
 export {
   Medium,
@@ -50,6 +48,4 @@ export {
   RoadmapDark,
   RoadmapLightMobile,
   RoadmapDarkMobile,
-  VisionDark,
-  VisionLight,
 }

@@ -1,10 +1,7 @@
 import { Row, Col, Typography, Image, List, Grid } from 'antd'
 import IonIcon from 'components/icon'
-import { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
 
-import { VisionDark, VisionLight } from 'static/images'
-import { RootState } from 'store'
+import { EmptyImage } from 'static/images'
 
 const data = [
   {
@@ -23,12 +20,6 @@ const data = [
 
 const Vision = () => {
   const { sm } = Grid.useBreakpoint() || {}
-  const { theme } = useSelector((state: RootState) => state.theme)
-  const [isDarkMode, setIsDarkMode] = useState(false)
-
-  useEffect(() => {
-    setIsDarkMode(theme === 'dark')
-  }, [theme])
 
   return (
     <Row align="middle" className="vision" justify="center">
@@ -84,10 +75,7 @@ const Vision = () => {
             span={!sm ? 24 : 12}
             style={{ order: !sm ? 1 : 2, marginBottom: !sm ? '24px' : 0 }}
           >
-            <Image
-              preview={false}
-              src={isDarkMode ? VisionDark : VisionLight}
-            />
+            <Image src={EmptyImage} />
           </Col>
         </Row>
       </Col>
