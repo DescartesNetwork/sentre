@@ -1,4 +1,5 @@
 import { forwardRef } from 'react'
+import { CUSTOM_ICONS } from './customs'
 
 const IonIcon = forwardRef<
   HTMLElement,
@@ -7,7 +8,11 @@ const IonIcon = forwardRef<
   const cln = className ? 'anticon ' + className : 'anticon'
   return (
     <span className={cln} {...props}>
-      <ion-icon ref={ref} name={name} />
+      {CUSTOM_ICONS[name] ? (
+        <ion-icon ref={ref} src={CUSTOM_ICONS[name]} />
+      ) : (
+        <ion-icon ref={ref} name={name} />
+      )}
     </span>
   )
 })

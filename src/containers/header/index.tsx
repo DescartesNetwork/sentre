@@ -12,9 +12,11 @@ import {
   Drawer,
   List,
   Typography,
+  Button,
 } from 'antd'
 import Icon from 'components/icon'
 import Brand from 'components/brand'
+import SelectSocials from './selectSocial'
 
 import { RootState } from 'store'
 import { setTheme, Theme } from 'store/theme.reducer'
@@ -23,31 +25,18 @@ export const SOCIALS = [
   { icon: 'logo-medium', src: 'https://sentre.medium.com' },
   { icon: 'paper-plane', src: 'https://t.me/Sentre' },
   { icon: 'logo-twitter', src: 'https://twitter.com/SentreProtocol' },
+  { icon: 'logo-discord', src: 'https://discord.com/invite/VD7UBAp2HN' },
+  { icon: 'logo-cgk', src: 'https://www.coingecko.com/en/coins/sentre' },
   { icon: 'document', src: 'https://docs.sentre.io/litepaper' },
 ]
-
 const SECTIONS_LIST = [
-  {
-    title: 'Home',
-    route: 'home',
-  },
-  {
-    title: 'Ecosystem',
-    route: 'eco',
-  },
-  {
-    title: 'Blog',
-    route: 'blog',
-  },
-  {
-    title: 'Partners',
-    route: 'partners',
-  },
-  {
-    title: 'Contact us',
-    route: 'contact',
-  },
+  { title: 'Home', route: 'home' },
+  { title: 'Ecosystem', route: 'eco' },
+  { title: 'Blog', route: 'blog' },
+  { title: 'Partners', route: 'partners' },
+  { title: 'Contact us', route: 'contact' },
 ]
+const SENTRE_URL = 'https://hub.sentre.io'
 
 const DISABLE = {
   display: 'none',
@@ -59,7 +48,7 @@ const Header = () => {
   const dispatch = useDispatch()
   const location = useLocation()
 
-  const { sm, md } = Grid.useBreakpoint() || {}
+  const { sm, md, xl } = Grid.useBreakpoint() || {}
 
   const showDrawer = () => {
     setVisible(true)
@@ -148,23 +137,35 @@ const Header = () => {
               ))}
             </ul>
           </Col>
-
-          <Col xl={6} lg={5}>
-            <Space size={8} className="ico-social">
-              <Space size={24}>
-                {SOCIALS.map((social) => {
-                  return (
-                    <Icon
-                      name={social.icon}
-                      key={social.icon}
-                      onClick={() => window.open(social.src, '_blank')}
-                    />
-                  )
-                })}
+          <Col>
+            <Space size={10} className="ico-social">
+              <Space size={20}>
+                {xl ? (
+                  SOCIALS.map((social) => {
+                    return (
+                      <Icon
+                        name={social.icon}
+                        key={social.icon}
+                        onClick={() => window.open(social.src, '_blank')}
+                        style={{ color: '#7A7B85' }}
+                      />
+                    )
+                  })
+                ) : (
+                  <SelectSocials />
+                )}
               </Space>
+
               {/* Theme mode */}
               <Divider type="vertical" />
               <Icon name={iconTheme} onClick={onThemeChange} />
+              <Button
+                type="primary"
+                style={{ marginBottom: 6, marginLeft: 10 }}
+                onClick={() => window.open(SENTRE_URL, '_blank')}
+              >
+                Launch App
+              </Button>
             </Space>
           </Col>
         </Row>

@@ -1,14 +1,29 @@
-import { Row, Col, Typography, Image, Button, Grid } from 'antd'
-import { BgHero, Square, SquareBlur } from 'static/images/index'
+import { useState } from 'react'
 
-const SENTRE_URL = 'https://app.sentre.io'
+import { Row, Col, Typography, Image, Button, Grid, Modal, Space } from 'antd'
+import { BgHero, Square, SquareBlur } from 'static/images/index'
+import Icon from 'components/icon'
+
+import FlagIndo from '../../static/images/flag-indo.svg'
+import FlagEng from '../../static/images/flag-eng.svg'
+import FlagVn from '../../static/images/flag-vn.svg'
+import pdfFile from '../../static/base/sentre_whitepaper.pdf'
+
+const SENTRE_URL = 'https://hub.sentre.io'
 
 const DISABLE = {
   display: 'none',
 }
 
+const contries = [
+  { flag: FlagVn, name: 'Vietnam', src: pdfFile },
+  { flag: FlagEng, name: 'English', src: pdfFile },
+  { flag: FlagIndo, name: 'Indonesia', src: pdfFile },
+]
+
 const Banner = () => {
   const { xl } = Grid.useBreakpoint()
+  const [visible, setvisible] = useState(false)
 
   return (
     <Row
@@ -51,6 +66,11 @@ const Banner = () => {
               Launch App
             </Button>
           </Col>
+          {/* <Col xs={12} md={10} lg={8}>
+            <Button size="large" block onClick={() => setvisible(true)}>
+              Instruction
+            </Button>
+          </Col> */}
         </Row>
         <Col span={24} className="banner-img">
           <Image preview={false} src={SquareBlur} />
@@ -66,6 +86,39 @@ const Banner = () => {
       >
         <Image preview={false} src={BgHero} />
       </Col>
+      <Modal
+        closeIcon={<Icon name="close" />}
+        title={null}
+        footer={null}
+        visible={visible}
+        onCancel={() => setvisible(false)}
+      >
+        <Row gutter={[0, 48]} justify="center">
+          <Col span={24} style={{ textAlign: 'center' }}>
+            <Typography.Title level={5}>Choose the language</Typography.Title>
+          </Col>
+          <Col span={24} style={{ textAlign: 'center' }}>
+            <Row justify="center" gutter={48}>
+              {contries.map(({ name, flag, src }) => (
+                <Col key={name}>
+                  <Space
+                    direction="vertical"
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => window.open(src)}
+                  >
+                    <Image
+                      src={flag}
+                      preview={false}
+                      style={{ borderRadius: 8 }}
+                    />
+                    <Typography.Text>{name}</Typography.Text>
+                  </Space>
+                </Col>
+              ))}
+            </Row>
+          </Col>
+        </Row>
+      </Modal>
     </Row>
   )
 }
