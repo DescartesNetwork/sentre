@@ -36,7 +36,7 @@ const SelectIcon = () => {
               key={social.content}
               onClick={() => window.open(social.src, '_blank')}
             >
-              <Icon name={social.icon} />
+              <Icon name={social.icon} style={{ color: '#7A7B85' }} />
               <Typography.Text>{social.content}</Typography.Text>
             </Space>
           ))}
