@@ -26,6 +26,7 @@ const Community = () => {
         <Col xl={{ span: 10 }} lg={{ span: 16 }} xs={{ span: 24 }}>
           <Button
             type="primary"
+            size="large"
             onClick={() => window.open('mailto: hi@sentre.io')}
             block
           >

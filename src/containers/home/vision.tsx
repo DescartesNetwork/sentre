@@ -41,7 +41,7 @@ const Vision = () => {
             className={!sm ? 'subtitle-mobile' : 'subtitle'}
             style={{ textAlign: 'center' }}
           >
-            <Typography.Text type="secondary">
+            <Typography.Text type="secondary" className="sub-title">
               Sentre’s vision is to create an{' '}
               <strong>All-in-One Solana Open Platform</strong> with dApps Store
               and Universal Protocol for Liquidity; altogether become a{' '}

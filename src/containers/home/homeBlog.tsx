@@ -19,7 +19,7 @@ const HomeBlog = () => {
   }, [xl])
 
   return (
-    <Row gutter={[24, 32]} className="home-blog" justify="center" id="blog">
+    <Row gutter={[24, 48]} className="home-blog" justify="center" id="blog">
       <Col>
         <Typography.Title level={1} className="home-blog_title">
           Blog
@@ -30,8 +30,6 @@ const HomeBlog = () => {
       </Col>
       <Col span={24} className="home-blog_img">
         <Image preview={false} src={FSquare} />
-      </Col>
-      <Col span={24} style={{ textAlign: 'center' }}>
         <Button
           type="text"
           className="btn-view-all"

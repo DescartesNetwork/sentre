@@ -50,7 +50,7 @@ const Ecosystem = () => {
             Ecosystem
           </Typography.Title>
           <Col span={24}>
-            <Typography.Text type="secondary" className="description">
+            <Typography.Text type="secondary" className="sub-title">
               Empowering DeFi Users & Developers
             </Typography.Text>
           </Col>
