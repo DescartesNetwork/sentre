@@ -21,11 +21,11 @@ const Partner = () => {
           <Row gutter={16}>
             <Col span={24}>
               <Typography.Title level={2} className="partner-card_title">
-                Blockchain and Our partners
+                Our partners
               </Typography.Title>
             </Col>
             <Col span={24}>
-              <Typography.Text type="secondary" className="description">
+              <Typography.Text type="secondary" className="sub-title">
                 Trusted by the best. Top investors make our brand.
               </Typography.Text>
             </Col>
