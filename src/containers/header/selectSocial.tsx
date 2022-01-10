@@ -43,6 +43,7 @@ const SelectIcon = () => {
         </Space>
       }
       trigger="click"
+      placement="bottomLeft"
     >
       <Icon name="share-social" />
     </Popover>
