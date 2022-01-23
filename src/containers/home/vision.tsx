@@ -31,7 +31,7 @@ const Vision = () => {
   }, [theme])
 
   return (
-    <Row align="middle" className="vision" justify="center">
+    <Row align="middle" className="vision" justify="center" id="vision">
       <Col>
         <Typography.Title level={1}>Vision</Typography.Title>
       </Col>

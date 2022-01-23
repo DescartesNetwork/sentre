@@ -4,8 +4,14 @@ import { Row, Col, Space, Typography, Grid } from 'antd'
 
 import Icon from 'components/icon'
 import Brand from 'components/brand'
-import { SOCIALS } from '../header'
 import { RootState } from 'store'
+
+export const SOCIALS = [
+  { icon: 'logo-medium', src: 'https://sentre.medium.com' },
+  { icon: 'paper-plane', src: 'https://t.me/Sentre' },
+  { icon: 'logo-twitter', src: 'https://twitter.com/SentreProtocol' },
+  { icon: 'logo-discord', src: 'https://discord.com/invite/VD7UBAp2HN' },
+]
 
 const Footer = () => {
   const { sm, xs } = Grid.useBreakpoint() || {}
@@ -36,7 +42,7 @@ const Footer = () => {
               <Icon
                 name={social.icon}
                 key={social.icon}
-                style={{ fontSize: xs ? 18 : 24 }}
+                style={{ fontSize: xs ? 18 : 24, color: '#7A7B85' }}
                 onClick={() => window.open(social.src, '_blank')}
               />
             )
