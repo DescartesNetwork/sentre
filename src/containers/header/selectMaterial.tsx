@@ -43,7 +43,10 @@ const SelectMaterial = ({
             </Space>
           ))}
           <Space size={14}>
-            <Icon name={isDarkMode ? 'moon' : 'sunny'} />
+            <Icon
+              style={{ color: '#7A7B85' }}
+              name={isDarkMode ? 'moon' : 'sunny'}
+            />
             <Typography.Text>
               {isDarkMode ? 'Dark theme' : 'Light theme'}
             </Typography.Text>
