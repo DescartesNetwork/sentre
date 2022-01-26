@@ -31,7 +31,7 @@ const RoadMap = () => {
   }, [theme])
 
   return (
-    <Row gutter={[24, 48]} className="road-map" justify="center">
+    <Row gutter={[24, 48]} className="road-map" id="road-map" justify="center">
       <Col>
         <Typography.Title level={1}>Roadmap</Typography.Title>
       </Col>

@@ -7,7 +7,6 @@ import {
   Col,
   Space,
   Grid,
-  Divider,
   Affix,
   Drawer,
   List,
@@ -16,22 +15,16 @@ import {
 } from 'antd'
 import Icon from 'components/icon'
 import Brand from 'components/brand'
-import SelectSocials from './selectSocial'
+import SelectMaterial from './selectMaterial'
 
 import { RootState } from 'store'
 import { setTheme, Theme } from 'store/theme.reducer'
 
-export const SOCIALS = [
-  { icon: 'logo-medium', src: 'https://sentre.medium.com' },
-  { icon: 'paper-plane', src: 'https://t.me/Sentre' },
-  { icon: 'logo-twitter', src: 'https://twitter.com/SentreProtocol' },
-  { icon: 'logo-discord', src: 'https://discord.com/invite/VD7UBAp2HN' },
-  { icon: 'logo-cgk', src: 'https://www.coingecko.com/en/coins/sentre' },
-  { icon: 'document', src: 'https://docs.sentre.io/litepaper' },
-]
 const SECTIONS_LIST = [
   { title: 'Home', route: 'home' },
   { title: 'Ecosystem', route: 'eco' },
+  { title: 'Roadmap', route: 'road-map' },
+  { title: 'Vision', route: 'vision' },
   { title: 'Blog', route: 'blog' },
   { title: 'Partners', route: 'partners' },
   { title: 'Contact us', route: 'contact' },
@@ -48,7 +41,7 @@ const Header = () => {
   const dispatch = useDispatch()
   const location = useLocation()
 
-  const { sm, md, xl } = Grid.useBreakpoint() || {}
+  const { sm, lg } = Grid.useBreakpoint() || {}
 
   const showDrawer = () => {
     setVisible(true)
@@ -74,9 +67,6 @@ const Header = () => {
   const isDarkMode = useMemo(() => {
     return theme === 'dark'
   }, [theme])
-  const iconTheme = useMemo(() => {
-    return isDarkMode ? 'moon' : 'sunny'
-  }, [isDarkMode])
 
   const onThemeChange = () => {
     let switchTheme: Theme = 'light'
@@ -101,7 +91,7 @@ const Header = () => {
               darkTheme={isDarkMode}
             />
             <Icon
-              style={md || location.pathname !== '/home' ? DISABLE : {}}
+              style={lg || location.pathname !== '/home' ? DISABLE : {}}
               className="menu-icon"
               name="menu-outline"
               onClick={showDrawer}
@@ -119,11 +109,11 @@ const Header = () => {
                     <Typography.Text>{item.title}</Typography.Text>
                   </List.Item>
                 )}
-              ></List>
+              />
             </Drawer>
 
             <ul
-              style={!md || location.pathname !== '/home' ? DISABLE : {}}
+              style={!lg || location.pathname !== '/home' ? DISABLE : {}}
               className="sections"
             >
               {SECTIONS_LIST.map((item) => (
@@ -139,26 +129,10 @@ const Header = () => {
           </Col>
           <Col>
             <Space size={10} className="ico-social">
-              <Space size={20}>
-                {xl ? (
-                  SOCIALS.map((social) => {
-                    return (
-                      <Icon
-                        name={social.icon}
-                        key={social.icon}
-                        onClick={() => window.open(social.src, '_blank')}
-                        style={{ color: '#7A7B85' }}
-                      />
-                    )
-                  })
-                ) : (
-                  <SelectSocials />
-                )}
-              </Space>
-
-              {/* Theme mode */}
-              <Divider type="vertical" />
-              <Icon name={iconTheme} onClick={onThemeChange} />
+              <SelectMaterial
+                isDarkMode={isDarkMode}
+                onThemeChange={onThemeChange}
+              />
               <Button
                 type="primary"
                 style={{ marginBottom: 6, marginLeft: 10 }}

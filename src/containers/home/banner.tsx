@@ -8,6 +8,7 @@ import FlagIndo from '../../static/images/flag-indo.svg'
 import FlagEng from '../../static/images/flag-eng.svg'
 import FlagVn from '../../static/images/flag-vn.svg'
 import pdfFile from '../../static/base/sentre_whitepaper.pdf'
+import { SOCIALS } from 'containers/footer'
 
 const SENTRE_URL = 'https://hub.sentre.io'
 
@@ -57,14 +58,29 @@ const Banner = () => {
             </Row>
           </Col>
           <Col xs={24} md={10} lg={8}>
-            <Button
-              type="primary"
-              size="large"
-              block
-              onClick={() => window.open(SENTRE_URL, '_blank')}
-            >
-              Launch App
-            </Button>
+            <Space direction="vertical" size={24}>
+              <Button
+                type="primary"
+                size="large"
+                block
+                onClick={() => window.open(SENTRE_URL, '_blank')}
+              >
+                Launch App
+              </Button>
+              <Space size={20}>
+                {SOCIALS.map((social) => (
+                  <Icon
+                    style={{
+                      color: '#7A7B85',
+                      fontSize: 20,
+                      cursor: 'pointer',
+                    }}
+                    name={social.icon}
+                    onClick={() => window.open(social.src, '_blank')}
+                  />
+                ))}
+              </Space>
+            </Space>
           </Col>
           {/* <Col xs={12} md={10} lg={8}>
             <Button size="large" block onClick={() => setvisible(true)}>
