@@ -1,6 +1,16 @@
 import { useState } from 'react'
 
-import { Row, Col, Typography, Image, Button, Grid, Modal, Space } from 'antd'
+import {
+  Row,
+  Col,
+  Typography,
+  Image,
+  Button,
+  Grid,
+  Modal,
+  Space,
+  Tooltip,
+} from 'antd'
 import { BgHero, Square, SquareBlur } from 'static/images/index'
 import Icon from 'components/icon'
 
@@ -9,8 +19,7 @@ import FlagEng from '../../static/images/flag-eng.svg'
 import FlagVn from '../../static/images/flag-vn.svg'
 import pdfFile from '../../static/base/sentre_whitepaper.pdf'
 import { SOCIALS } from 'containers/footer'
-
-const SENTRE_URL = 'https://hub.sentre.io'
+import { SENLITE_URL, SENTRE_URL } from 'containers/header'
 
 const DISABLE = {
   display: 'none',
@@ -21,6 +30,11 @@ const contries = [
   { flag: FlagEng, name: 'English', src: pdfFile },
   { flag: FlagIndo, name: 'Indonesia', src: pdfFile },
 ]
+
+const EXPLAIN_LITE_BTN =
+  'This version with a simple interface and essential functions for daily users.'
+const EXPLAIN_PRO_BTN =
+  'This version with full functions for professionals and developers.'
 
 const Banner = () => {
   const { xl } = Grid.useBreakpoint()
@@ -58,30 +72,50 @@ const Banner = () => {
             </Row>
           </Col>
           <Col xs={24} md={10} lg={8}>
-            <Space direction="vertical" size={24}>
-              <Button
-                type="primary"
-                size="large"
-                block
-                onClick={() => window.open(SENTRE_URL, '_blank')}
-              >
-                Launch App
-              </Button>
-              <Space size={20}>
-                {SOCIALS.map((social) => (
-                  <Icon
-                    style={{
-                      color: '#7A7B85',
-                      fontSize: 20,
-                      cursor: 'pointer',
-                    }}
-                    name={social.icon}
-                    onClick={() => window.open(social.src, '_blank')}
-                  />
-                ))}
-              </Space>
-            </Space>
+            <Row gutter={[24, 24]}>
+              <Col span={24}>
+                <Space size={20}>
+                  <Tooltip placement="topLeft" title={EXPLAIN_PRO_BTN}>
+                    <Button
+                      type="primary"
+                      size="large"
+                      style={{ width: 111 }}
+                      onClick={() => window.open(SENTRE_URL, '_blank')}
+                    >
+                      Pro App
+                    </Button>
+                  </Tooltip>
+
+                  <Tooltip placement="topLeft" title={EXPLAIN_LITE_BTN}>
+                    <Button
+                      type="ghost"
+                      size="large"
+                      style={{ width: 111 }}
+                      onClick={() => window.open(SENLITE_URL, '_blank')}
+                    >
+                      Lite App
+                    </Button>
+                  </Tooltip>
+                </Space>
+              </Col>
+              <Col>
+                <Space size={20}>
+                  {SOCIALS.map((social) => (
+                    <Icon
+                      style={{
+                        color: '#7A7B85',
+                        fontSize: 20,
+                        cursor: 'pointer',
+                      }}
+                      name={social.icon}
+                      onClick={() => window.open(social.src, '_blank')}
+                    />
+                  ))}
+                </Space>
+              </Col>
+            </Row>
           </Col>
+
           {/* <Col xs={12} md={10} lg={8}>
             <Button size="large" block onClick={() => setvisible(true)}>
               Instruction
