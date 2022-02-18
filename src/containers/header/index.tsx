@@ -29,7 +29,8 @@ const SECTIONS_LIST = [
   { title: 'Partners', route: 'partners' },
   { title: 'Contact us', route: 'contact' },
 ]
-const SENTRE_URL = 'https://hub.sentre.io'
+export const SENTRE_URL = 'https://hub.sentre.io'
+export const SENLITE_URL = 'https://senswap.com'
 
 const DISABLE = {
   display: 'none',
@@ -134,11 +135,16 @@ const Header = () => {
                 onThemeChange={onThemeChange}
               />
               <Button
+                type="ghost"
+                onClick={() => window.open(SENLITE_URL, '_blank')}
+              >
+                Lite app
+              </Button>
+              <Button
                 type="primary"
-                style={{ marginBottom: 6, marginLeft: 10 }}
                 onClick={() => window.open(SENTRE_URL, '_blank')}
               >
-                Launch App
+                Pro app
               </Button>
             </Space>
           </Col>
