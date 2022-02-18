@@ -32,9 +32,9 @@ const contries = [
 ]
 
 const EXPLAIN_LITE_BTN =
-  'Version with a simple interface and essential functions for daily users.'
+  'This version with a simple interface and essential functions for daily users.'
 const EXPLAIN_PRO_BTN =
-  'Version with full admin functions for professional users and developers.'
+  'This version with full functions for professionals and developers.'
 
 const Banner = () => {
   const { xl } = Grid.useBreakpoint()
@@ -82,7 +82,7 @@ const Banner = () => {
                       style={{ width: 111 }}
                       onClick={() => window.open(SENTRE_URL, '_blank')}
                     >
-                      Pro app
+                      Pro App
                     </Button>
                   </Tooltip>
 
@@ -93,7 +93,7 @@ const Banner = () => {
                       style={{ width: 111 }}
                       onClick={() => window.open(SENLITE_URL, '_blank')}
                     >
-                      Lite app
+                      Lite App
                     </Button>
                   </Tooltip>
                 </Space>
