@@ -30,7 +30,7 @@ const SECTIONS_LIST = [
   { title: 'Contact us', route: 'contact' },
 ]
 export const SENTRE_URL = 'https://hub.sentre.io'
-export const SENLITE_URL = 'https://senswap.com'
+export const SENLITE_URL = 'https://lite.sentre.com'
 
 const DISABLE = {
   display: 'none',
@@ -138,13 +138,13 @@ const Header = () => {
                 type="ghost"
                 onClick={() => window.open(SENLITE_URL, '_blank')}
               >
-                Lite app
+                Lite App
               </Button>
               <Button
                 type="primary"
                 onClick={() => window.open(SENTRE_URL, '_blank')}
               >
-                Pro app
+                Pro App
               </Button>
             </Space>
           </Col>
