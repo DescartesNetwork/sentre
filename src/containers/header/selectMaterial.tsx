@@ -13,6 +13,11 @@ export const MATERIALS = [
     content: 'Docs',
   },
   {
+    icon: 'logo-medium',
+    src: 'https://sentre.medium.com',
+    content: 'Medium',
+  },
+  {
     icon: 'logo-cgk',
     src: 'https://www.coingecko.com/en/coins/sentre',
     content: 'Coingecko',
@@ -57,7 +62,7 @@ const SelectMaterial = ({
       trigger="click"
       placement="bottomLeft"
     >
-      <Button icon={<Icon name="ellipsis-horizontal" />} />
+      <Button type="ghost" icon={<Icon name="ellipsis-horizontal" />} />
     </Popover>
   )
 }

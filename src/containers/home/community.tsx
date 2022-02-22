@@ -1,6 +1,14 @@
-import { Card, Row, Col, Typography, Space, Image, Button } from 'antd'
+import { Card, Row, Col, Typography, Space, Image } from 'antd'
+import IonIcon from 'components/icon'
 
 import { Circle } from 'static/images/index'
+
+const SOCIALS = [
+  { icon: 'logo-telegram-color', src: 'https://t.me/Sentre' },
+  { icon: 'logo-twitter-color', src: 'https://twitter.com/SentreProtocol' },
+  { icon: 'logo-discord-color', src: 'https://discord.com/invite/VD7UBAp2HN' },
+  { icon: 'logo-mail-color', src: 'mailto: hi@sentre.io' },
+]
 
 const Community = () => {
   return (
@@ -23,15 +31,22 @@ const Community = () => {
             </Typography.Text>
           </Space>
         </Col>
-        <Col xl={{ span: 10 }} lg={{ span: 16 }} xs={{ span: 24 }}>
-          <Button
-            type="primary"
-            size="large"
-            onClick={() => window.open('mailto: hi@sentre.io')}
-            block
-          >
-            Contact us
-          </Button>
+        <Col
+          xl={{ span: 10 }}
+          lg={{ span: 16 }}
+          xs={{ span: 24 }}
+          style={{ textAlign: 'center' }}
+        >
+          <Space size={29}>
+            {SOCIALS.map((social) => (
+              <IonIcon
+                name={social.icon}
+                key={social.icon}
+                style={{ fontSize: 35, cursor: 'pointer' }}
+                onClick={() => window.open(social.src, '_blank')}
+              />
+            ))}
+          </Space>
         </Col>
       </Row>
       <Image preview={false} src={Circle} />

@@ -25,8 +25,8 @@ const SECTIONS_LIST = [
   { title: 'Ecosystem', route: 'eco' },
   { title: 'Roadmap', route: 'road-map' },
   { title: 'Vision', route: 'vision' },
-  { title: 'Blog', route: 'blog' },
   { title: 'Partners', route: 'partners' },
+  { title: 'Blog', route: 'blog' },
   { title: 'Contact us', route: 'contact' },
 ]
 export const SENTRE_URL = 'https://hub.sentre.io'
