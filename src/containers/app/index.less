@@ -238,13 +238,12 @@
 // Section article
 .card-post {
   & .ant-card-cover {
-    height: 295px;
+    height: auto;
     overflow: hidden;
     cursor: pointer;
     .ant-image {
       height: inherit;
       &-img {
-        height: 100% !important;
         object-fit: cover;
       }
     }
@@ -387,10 +386,12 @@
 // Section community
 .community.ant-card {
   position: relative;
+  background: url('../../static/images/community-light.svg') !important;
+  background-size: cover !important;
   .ant-card-body {
     padding: 64px;
     .description {
-      font-size: 24px;
+      font-size: 20px;
       line-height: 32px;
       font-weight: 400;
       color: #7a7b85 !important;
@@ -534,6 +535,7 @@
     }
   }
   .community.ant-card {
+    background: url('../../static/images/community-dark.svg') !important;
     &::before {
       background: #21243366;
     }

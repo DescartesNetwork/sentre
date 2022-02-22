@@ -7,10 +7,10 @@ import Brand from 'components/brand'
 import { RootState } from 'store'
 
 export const SOCIALS = [
-  { icon: 'logo-medium', src: 'https://sentre.medium.com' },
   { icon: 'paper-plane', src: 'https://t.me/Sentre' },
   { icon: 'logo-twitter', src: 'https://twitter.com/SentreProtocol' },
   { icon: 'logo-discord', src: 'https://discord.com/invite/VD7UBAp2HN' },
+  { icon: 'mail', src: 'mailto: hi@sentre.io' },
 ]
 
 const Footer = () => {
@@ -30,7 +30,7 @@ const Footer = () => {
           </Col>
           <Col md={12} xs={24} sm={16}>
             <Typography.Text type="secondary" style={{ fontSize: 12 }}>
-              © 2021, All Rights Reserved
+              © 2022, All Rights Reserved
             </Typography.Text>
           </Col>
         </Row>
