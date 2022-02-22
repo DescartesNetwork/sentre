@@ -30,7 +30,7 @@ const SECTIONS_LIST = [
   { title: 'Contact us', route: 'contact' },
 ]
 export const SENTRE_URL = 'https://hub.sentre.io'
-export const SENLITE_URL = 'https://lite.sentre.com'
+export const SENLITE_URL = 'https://lite.sentre.io'
 
 const DISABLE = {
   display: 'none',
