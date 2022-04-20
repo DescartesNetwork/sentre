@@ -6,12 +6,12 @@ import { Col, Divider, Row, Space, Typography, Grid, Empty } from 'antd'
 import Icon from 'components/icon'
 
 import Articles from './articles'
-import { RootState } from 'store'
+import { AppState } from 'store'
 
 const ArticleDetail = () => {
   const {
     articles: { data: articleData },
-  } = useSelector((state: RootState) => state)
+  } = useSelector((state: AppState) => state)
   const { articleId } = useParams<{ articleId: string }>()
   const { xl } = Grid.useBreakpoint() || {}
 
@@ -33,7 +33,6 @@ const ArticleDetail = () => {
   }
   const onShareArticle = (url?: string) => {
     const params: any = {
-      // url: window.location.href,
       url: article?.guid,
       text: article?.title,
     }

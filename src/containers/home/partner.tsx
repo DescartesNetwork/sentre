@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { Card, Col, Image, Row, Typography } from 'antd'
 
 import { Coin98, LightSolana, DarkSolana, GateIO } from 'static/images'
-import { RootState } from 'store'
+import { AppState } from 'store'
 
 const LOGO_BY_THEME = {
   dark: DarkSolana,
@@ -11,7 +11,7 @@ const LOGO_BY_THEME = {
 }
 
 const Partner = () => {
-  const { theme } = useSelector((state: RootState) => state.theme)
+  const { theme } = useSelector((state: AppState) => state.ui)
   const Solana = LOGO_BY_THEME?.[theme]
 
   return (

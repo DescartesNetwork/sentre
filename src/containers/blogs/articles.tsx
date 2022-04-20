@@ -6,7 +6,7 @@ import { Row, Col, Empty, Button } from 'antd'
 import Icon from 'components/icon'
 import Post from './components/post'
 
-import { RootState } from 'store'
+import { AppState } from 'store'
 
 type TypeArticleData = {
   description?: string
@@ -35,7 +35,7 @@ const Articles = ({
   const history = useHistory()
   const {
     articles: { data: articleData },
-  } = useSelector((state: RootState) => state)
+  } = useSelector((state: AppState) => state)
   const [postPerPage, setPostPerPage] = useState(9)
 
   const articleCategories = useMemo(() => {
@@ -58,6 +58,7 @@ const Articles = ({
   const articleLength = useMemo(() => {
     return filterArticle?.length || 0
   }, [filterArticle])
+
   const getLimitArticle = useMemo(() => {
     const limitPost = maxPost || postPerPage
     return filterArticle?.slice(0, limitPost)
@@ -72,7 +73,7 @@ const Articles = ({
         return (
           <Col
             xl={{ span: 8 }}
-            sm={{ span: 12 }}
+            md={{ span: 12 }}
             xs={{ span: 24 }}
             key={art.title}
           >

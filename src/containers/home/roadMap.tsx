@@ -2,7 +2,7 @@ import { useEffect, useState, useMemo } from 'react'
 import { useSelector } from 'react-redux'
 
 import { Row, Col, Typography, Image, Grid } from 'antd'
-import { RootState } from 'store'
+import { AppState } from 'store'
 
 import {
   RoadmapLight,
@@ -12,7 +12,7 @@ import {
 } from 'static/images'
 
 const RoadMap = () => {
-  const { theme } = useSelector((state: RootState) => state.theme)
+  const { theme } = useSelector((state: AppState) => state.ui)
   const [isDarkMode, setIsDarkMode] = useState(false)
 
   const { sm } = Grid.useBreakpoint() || {}

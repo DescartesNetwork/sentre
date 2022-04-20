@@ -10,11 +10,12 @@ import Blogs from '../blogs'
 import ArticleDetail from '../blogs/articleDetail'
 import NotFound from 'containers/404'
 import FetchArticles from '../blogs/components/fetchArticles'
-import { RootState } from 'store'
+import { AppState } from 'store'
 
 import 'static/styles/dark.less'
 import 'static/styles/light.less'
 import './index.less'
+import Watcher from 'containers/watcher'
 
 const App = () => {
   const pageStyles = {
@@ -22,7 +23,7 @@ const App = () => {
     margin: 'auto',
     padding: '0 15px',
   }
-  const { theme } = useSelector((state: RootState) => state.theme)
+  const { theme } = useSelector((state: AppState) => state.ui)
 
   useEffect(() => {
     document.body.setAttribute('id', theme)
@@ -50,6 +51,7 @@ const App = () => {
         </Row>
       </Col>
       <FetchArticles />
+      <Watcher />
     </Row>
   )
 }
