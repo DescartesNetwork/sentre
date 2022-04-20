@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ee146b6f.css",
-    "main.js": "/static/js/main.8e9ce610.js",
+    "main.js": "/static/js/main.e4892b28.js",
     "static/media/sentre_whitepaper.pdf": "/static/media/sentre_whitepaper.347d3fea21f933629ff5.pdf",
     "static/media/bg-banner.png": "/static/media/bg-banner.1bd8c74db4ce8d103dde.png",
     "static/media/vision-light.png": "/static/media/vision-light.1d2ee60d8f99b6e25437.png",
@@ -40,10 +40,10 @@
     "static/media/telegram.svg": "/static/media/telegram.d0a5a98799110debb907d13056814d5a.svg",
     "static/media/flag-indo.svg": "/static/media/flag-indo.e30335fbb10a656f52d7e4c97c232153.svg",
     "main.ee146b6f.css.map": "/static/css/main.ee146b6f.css.map",
-    "main.8e9ce610.js.map": "/static/js/main.8e9ce610.js.map"
+    "main.e4892b28.js.map": "/static/js/main.e4892b28.js.map"
   },
   "entrypoints": [
     "static/css/main.ee146b6f.css",
-    "static/js/main.8e9ce610.js"
+    "static/js/main.e4892b28.js"
   ]
 }
