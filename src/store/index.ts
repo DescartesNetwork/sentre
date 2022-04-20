@@ -2,13 +2,13 @@ import { configureStore } from '@reduxjs/toolkit'
 import middleware from './middleware'
 
 import articles from './articles.reducer'
-import theme from './theme.reducer'
+import ui from './ui.reducer'
 
 const store = configureStore({
   middleware,
-  reducer: { articles, theme },
+  reducer: { articles, ui },
 })
-export type RootState = ReturnType<typeof store.getState>
+export type AppState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
 
 export default store

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 
 import { VisionDark, VisionLight } from 'static/images'
-import { RootState } from 'store'
+import { AppState } from 'store'
 
 const data = [
   {
@@ -23,7 +23,7 @@ const data = [
 
 const Vision = () => {
   const { sm } = Grid.useBreakpoint() || {}
-  const { theme } = useSelector((state: RootState) => state.theme)
+  const { theme } = useSelector((state: AppState) => state.ui)
   const [isDarkMode, setIsDarkMode] = useState(false)
 
   useEffect(() => {

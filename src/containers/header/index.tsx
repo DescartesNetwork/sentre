@@ -17,8 +17,8 @@ import Icon from 'components/icon'
 import Brand from 'components/brand'
 import SelectMaterial from './selectMaterial'
 
-import { RootState } from 'store'
-import { setTheme, Theme } from 'store/theme.reducer'
+import { AppState } from 'store'
+import { setTheme, Theme } from 'store/ui.reducer'
 
 const SECTIONS_LIST = [
   { title: 'Home', route: 'home' },
@@ -63,7 +63,7 @@ const Header = () => {
     window.scrollTo({ top: y, behavior: 'smooth' })
   }
 
-  const { theme } = useSelector((state: RootState) => state.theme)
+  const { theme } = useSelector((state: AppState) => state.ui)
 
   const isDarkMode = useMemo(() => {
     return theme === 'dark'

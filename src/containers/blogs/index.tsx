@@ -22,7 +22,10 @@ const Blogs = () => {
         <Typography.Title style={{ margin: 0 }}>All posts</Typography.Title>
       </Col>
       <Col span={24}>
-        <Tabs defaultActiveKey={ARTICLE_CATEGORIES[0]}>
+        <Tabs
+          defaultActiveKey={ARTICLE_CATEGORIES[0]}
+          style={{ overflow: 'unset' }}
+        >
           {ARTICLE_CATEGORIES.map((category, idx) => (
             <Tabs.TabPane tab={category} key={category}>
               <Articles category={category} />

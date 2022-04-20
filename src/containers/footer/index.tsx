@@ -4,7 +4,7 @@ import { Row, Col, Space, Typography, Grid } from 'antd'
 
 import Icon from 'components/icon'
 import Brand from 'components/brand'
-import { RootState } from 'store'
+import { AppState } from 'store'
 
 export const SOCIALS = [
   { icon: 'paper-plane', src: 'https://t.me/Sentre' },
@@ -15,7 +15,7 @@ export const SOCIALS = [
 
 const Footer = () => {
   const { sm, xs } = Grid.useBreakpoint() || {}
-  const { theme } = useSelector((state: RootState) => state.theme)
+  const { theme } = useSelector((state: AppState) => state.ui)
 
   return (
     <Row className="footer" align="middle" justify="space-between">

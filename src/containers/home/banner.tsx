@@ -100,7 +100,7 @@ const Banner = () => {
               </Col>
               <Col>
                 <Space size={20}>
-                  {SOCIALS.map((social) => (
+                  {SOCIALS.map((social, idx) => (
                     <Icon
                       style={{
                         color: '#7A7B85',
@@ -109,6 +109,7 @@ const Banner = () => {
                       }}
                       name={social.icon}
                       onClick={() => window.open(social.src, '_blank')}
+                      key={idx}
                     />
                   ))}
                 </Space>

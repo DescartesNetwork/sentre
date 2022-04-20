@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import { useSelector } from 'react-redux'
 
 import { Row, Col, Typography, Image, Grid } from 'antd'
-import { RootState } from 'store'
+import { AppState } from 'store'
 
 import {
   BallBlue,
@@ -18,7 +18,7 @@ const DISABLE = {
 }
 
 const Ecosystem = () => {
-  const { theme } = useSelector((state: RootState) => state.theme)
+  const { theme } = useSelector((state: AppState) => state.ui)
   const [isDarkMode, setIsDarkMode] = useState(false)
 
   const { sm } = Grid.useBreakpoint() || {}
