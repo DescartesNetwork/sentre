@@ -66,6 +66,14 @@
   }
 }
 
+.body-content{
+  max-width: 1200px;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .footer {
   height: 88px;
   @media (max-width: 991.9px) {
@@ -86,6 +94,7 @@
 }
 // Section banner
 .banner {
+  margin: 'auto';
   padding-top: 44px;
   .banner-img {
     .ant-image {
@@ -220,27 +229,6 @@
   }
 }
 
-// Section Ecosytem
-.ecosystem {
-  text-align: center;
-  position: relative;
-  .title {
-    width: 100%;
-  }
-
-  &_ball-red {
-    position: absolute !important;
-    z-index: -2;
-    top: -100px;
-    right: -340px;
-  }
-  &_ball-blue {
-    position: absolute !important;
-    z-index: -2;
-    bottom: -160px;
-    left: -370px;
-  }
-}
 
 // Section article
 .card-post {
@@ -297,17 +285,25 @@
   }
 }
 
-// Road Map
-.road-map {
-  &-title {
-    font-weight: 800 !important;
-    margin-bottom: 0 !important;
-    text-align: center;
-    @media (max-width: 767.9px) {
-      font-size: 24px !important;
-    }
-  }
+
+//Sen Suite
+
+.sen-suite{
+   padding: 100px;
+   background: url('../../static/images/systems/bg-sen-suite.png') !important;
+   background-repeat: none ;
+   background-size: cover !important;
+.title{
+  .ant-image{
+    position: absolute !important;
+    top: -125px;
+    right: 0;
+    width: 93px;
+ }
 }
+    
+}
+
 
 // Vision
 .vision {

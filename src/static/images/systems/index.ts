@@ -18,5 +18,6 @@
   import senLitePng from './sen-lite.png'
   import visionDarkPng from './vision-dark.png'
   import visionLightPng from './vision-light.png'
-  export {ballBluePng,ballRedPng,bgBannerPng,darkBgPng,emptyPng,imgCirclePng,imgFsquarePng,imgSquareBlurPng,imgSquarePng,lightBgPng,roadmapDarkSvg,roadmapDarkMobileSvg,roadmapLightSvg,roadmapLightMobileSvg,senFullDarkPng,senFullPng,senLitePng,visionDarkPng,visionLightPng}
+  import senSuite from "./sen-suite.png"
+  export {senSuite,ballBluePng,ballRedPng,bgBannerPng,darkBgPng,emptyPng,imgCirclePng,imgFsquarePng,imgSquareBlurPng,imgSquarePng,lightBgPng,roadmapDarkSvg,roadmapDarkMobileSvg,roadmapLightSvg,roadmapLightMobileSvg,senFullDarkPng,senFullPng,senLitePng,visionDarkPng,visionLightPng,}
 

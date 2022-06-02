@@ -19,7 +19,6 @@ import Watcher from 'containers/watcher'
 
 const App = () => {
   const pageStyles = {
-    maxWidth: 1200,
     margin: 'auto',
     padding: '0 15px',
   }
