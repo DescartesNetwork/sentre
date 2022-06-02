@@ -1,44 +1,16 @@
-import { useState } from 'react'
-
-import {
-  Row,
-  Col,
-  Typography,
-  Image,
-  Button,
-  Grid,
-  Modal,
-  Space,
-  Tooltip,
-} from 'antd'
+import { Row, Col, Typography, Image, Button, Grid, Space } from 'antd'
 import { BgHero, Square, SquareBlur } from 'static/images/index'
 import Icon from 'components/icon'
 
-import FlagIndo from '../../static/images/flag-indo.svg'
-import FlagEng from '../../static/images/flag-eng.svg'
-import FlagVn from '../../static/images/flag-vn.svg'
-import pdfFile from '../../static/base/sentre_whitepaper.pdf'
 import { SOCIALS } from 'containers/footer'
-import { SENLITE_URL, SENTRE_URL } from 'containers/header'
+import { SENTRE_URL } from 'containers/header'
 
 const DISABLE = {
   display: 'none',
 }
 
-const contries = [
-  { flag: FlagVn, name: 'Vietnam', src: pdfFile },
-  { flag: FlagEng, name: 'English', src: pdfFile },
-  { flag: FlagIndo, name: 'Indonesia', src: pdfFile },
-]
-
-const EXPLAIN_LITE_BTN =
-  'This version with a simple interface and essential functions for daily users.'
-const EXPLAIN_PRO_BTN =
-  'This version with full functions for professionals and developers.'
-
 const Banner = () => {
   const { xl } = Grid.useBreakpoint()
-  const [visible, setvisible] = useState(false)
 
   return (
     <Row
@@ -59,14 +31,20 @@ const Banner = () => {
             <Row gutter={[16, { xs: 16, sm: 20, md: 27, lg: 27 }]}>
               <Col span={24}>
                 <Typography.Title level={1} className="title">
-                  An Open Liquidity Protocol on{' '}
-                  <strong className="gradient-text">Solana</strong>
+                  <span className="title-spec">The DApp Store</span> For all
+                  Things <span className="gradient-text">Solana</span>
                 </Typography.Title>
+                <Image
+                  preview={false}
+                  src={Square}
+                  style={!xl ? DISABLE : {}}
+                  className="banner-icon"
+                />
               </Col>
               <Col span={24} style={{ position: 'relative' }}>
                 <Typography.Text type="secondary" className="description">
-                  All-in-One Solana Open Platform with DApps Store and Universal
-                  Protocol for Liquidity.
+                  Trade on Sen Hub, build on Sentre, and send your project to
+                  the moon with Sen Suite.
                 </Typography.Text>
               </Col>
             </Row>
@@ -74,29 +52,13 @@ const Banner = () => {
           <Col xs={24} md={10} lg={8}>
             <Row gutter={[24, 24]}>
               <Col span={24}>
-                <Space size={20}>
-                  <Tooltip placement="topLeft" title={EXPLAIN_PRO_BTN}>
-                    <Button
-                      type="primary"
-                      size="large"
-                      style={{ width: 111 }}
-                      onClick={() => window.open(SENTRE_URL, '_blank')}
-                    >
-                      Pro App
-                    </Button>
-                  </Tooltip>
-
-                  <Tooltip placement="topLeft" title={EXPLAIN_LITE_BTN}>
-                    <Button
-                      type="ghost"
-                      size="large"
-                      style={{ width: 111 }}
-                      onClick={() => window.open(SENLITE_URL, '_blank')}
-                    >
-                      Lite App
-                    </Button>
-                  </Tooltip>
-                </Space>
+                <Button
+                  type="primary"
+                  size="large"
+                  onClick={() => window.open(SENTRE_URL, '_blank')}
+                >
+                  Start building
+                </Button>
               </Col>
               <Col>
                 <Space size={20}>
@@ -116,17 +78,10 @@ const Banner = () => {
               </Col>
             </Row>
           </Col>
-
-          {/* <Col xs={12} md={10} lg={8}>
-            <Button size="large" block onClick={() => setvisible(true)}>
-              Instruction
-            </Button>
-          </Col> */}
         </Row>
         <Col span={24} className="banner-img">
           <Image preview={false} src={SquareBlur} />
         </Col>
-        <Image preview={false} src={Square} style={!xl ? DISABLE : {}} />
       </Col>
       <Col
         xl={{ span: 11, order: 2 }}
@@ -137,39 +92,6 @@ const Banner = () => {
       >
         <Image preview={false} src={BgHero} />
       </Col>
-      <Modal
-        closeIcon={<Icon name="close" />}
-        title={null}
-        footer={null}
-        visible={visible}
-        onCancel={() => setvisible(false)}
-      >
-        <Row gutter={[0, 48]} justify="center">
-          <Col span={24} style={{ textAlign: 'center' }}>
-            <Typography.Title level={5}>Choose the language</Typography.Title>
-          </Col>
-          <Col span={24} style={{ textAlign: 'center' }}>
-            <Row justify="center" gutter={48}>
-              {contries.map(({ name, flag, src }) => (
-                <Col key={name}>
-                  <Space
-                    direction="vertical"
-                    style={{ cursor: 'pointer' }}
-                    onClick={() => window.open(src)}
-                  >
-                    <Image
-                      src={flag}
-                      preview={false}
-                      style={{ borderRadius: 8 }}
-                    />
-                    <Typography.Text>{name}</Typography.Text>
-                  </Space>
-                </Col>
-              ))}
-            </Row>
-          </Col>
-        </Row>
-      </Modal>
     </Row>
   )
 }

@@ -30,7 +30,7 @@ const SECTIONS_LIST = [
   { title: 'Contact us', route: 'contact' },
 ]
 export const SENTRE_URL = 'https://hub.sentre.io'
-export const SENLITE_URL = 'https://lite.sentre.io'
+const LITE_PAPER = 'https://docs.sentre.io/litepaper'
 
 const DISABLE = {
   display: 'none',
@@ -136,15 +136,15 @@ const Header = () => {
               />
               <Button
                 type="ghost"
-                onClick={() => window.open(SENLITE_URL, '_blank')}
-              >
-                Lite App
-              </Button>
+                onClick={() => window.open(LITE_PAPER, '_blank')}
+                icon={<Icon name="book" />}
+              />
+
               <Button
                 type="primary"
                 onClick={() => window.open(SENTRE_URL, '_blank')}
               >
-                Pro App
+                Start building
               </Button>
             </Space>
           </Col>

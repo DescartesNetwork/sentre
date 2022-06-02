@@ -1,4 +1,4 @@
-import { Button, Popover, Space, Switch, Typography } from 'antd'
+import { Button, Popover, Space, Typography } from 'antd'
 import Icon from 'components/icon'
 
 export const MATERIALS = [
@@ -6,11 +6,6 @@ export const MATERIALS = [
     icon: 'logo-github',
     src: 'https://github.com/DescartesNetwork',
     content: 'Github',
-  },
-  {
-    icon: 'book',
-    src: 'https://docs.sentre.io/litepaper',
-    content: 'Docs',
   },
   {
     icon: 'logo-medium',
@@ -26,7 +21,7 @@ export const MATERIALS = [
 
 export type SelectMaterialsProps = {
   isDarkMode: boolean
-  onThemeChange?: () => void
+  onThemeChange: () => void
 }
 
 const SelectMaterial = ({
@@ -36,10 +31,14 @@ const SelectMaterial = ({
   return (
     <Popover
       content={
-        <Space direction="vertical" style={{ cursor: 'pointer' }}>
+        <Space
+          direction="vertical"
+          size={10}
+          style={{ cursor: 'pointer', width: 186 }}
+        >
           {MATERIALS.map((material) => (
             <Space
-              size={14}
+              size={15}
               key={material.content}
               onClick={() => window.open(material.src, '_blank')}
             >
@@ -47,15 +46,14 @@ const SelectMaterial = ({
               <Typography.Text>{material.content}</Typography.Text>
             </Space>
           ))}
-          <Space size={14}>
+          <Space size={15} onClick={onThemeChange}>
             <Icon
               style={{ color: '#7A7B85' }}
               name={isDarkMode ? 'moon' : 'sunny'}
             />
             <Typography.Text>
-              {isDarkMode ? 'Dark theme' : 'Light theme'}
+              {isDarkMode ? 'Light theme' : 'Dark theme'}
             </Typography.Text>
-            <Switch size="small" onChange={onThemeChange} />
           </Space>
         </Space>
       }
