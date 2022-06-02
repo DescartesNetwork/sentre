@@ -1,9 +1,7 @@
 import { CSSProperties } from 'react'
 import { useHistory } from 'react-router-dom'
 
-import fullLogo from 'static/images/sen-full.png'
-import fullLogoDark from 'static/images/sen-full-dark.png'
-import liteLogo from 'static/images/sen-lite.png'
+import { senFullDarkPng, senFullPng, senLitePng } from 'static/images/systems'
 
 const Brand = ({
   style,
@@ -18,7 +16,7 @@ const Brand = ({
 
   return (
     <img
-      src={lite ? liteLogo : darkTheme ? fullLogoDark : fullLogo}
+      src={lite ? senLitePng : darkTheme ? senFullDarkPng : senFullPng}
       style={style}
       alt="logo"
       onClick={() => history.push('/')}

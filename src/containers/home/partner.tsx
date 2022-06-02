@@ -2,12 +2,17 @@ import { useSelector } from 'react-redux'
 
 import { Card, Col, Image, Row, Typography } from 'antd'
 
-import { Coin98, LightSolana, DarkSolana, GateIO } from 'static/images'
 import { AppState } from 'store'
+import {
+  darkLogoSolSvg,
+  lightLogoSolSvg,
+  logoCoin98Png,
+  logoGateSvg,
+} from 'static/images/logos'
 
 const LOGO_BY_THEME = {
-  dark: DarkSolana,
-  light: LightSolana,
+  dark: darkLogoSolSvg,
+  light: lightLogoSolSvg,
 }
 
 const Partner = () => {
@@ -31,7 +36,7 @@ const Partner = () => {
             </Col>
           </Row>
         </Col>
-        {[Solana, Coin98, GateIO].map((elm, index) => {
+        {[Solana, logoCoin98Png, logoGateSvg].map((elm, index) => {
           return (
             <Col xs={24} sm={8} key={index} style={{ textAlign: 'center' }}>
               <Image preview={false} src={elm} className="logo" />

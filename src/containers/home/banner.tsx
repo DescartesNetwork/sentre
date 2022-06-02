@@ -11,24 +11,26 @@ import {
   Space,
   Tooltip,
 } from 'antd'
-import { BgHero, Square, SquareBlur } from 'static/images/index'
 import Icon from 'components/icon'
 
-import FlagIndo from '../../static/images/flag-indo.svg'
-import FlagEng from '../../static/images/flag-eng.svg'
-import FlagVn from '../../static/images/flag-vn.svg'
 import pdfFile from '../../static/base/sentre_whitepaper.pdf'
 import { SOCIALS } from 'containers/footer'
 import { SENLITE_URL, SENTRE_URL } from 'containers/header'
+import {
+  bgBannerPng,
+  imgSquareBlurPng,
+  imgSquarePng,
+} from 'static/images/systems'
+import { flagEngSvg, flagIndoSvg, flagVnSvg } from 'static/images/languages'
 
 const DISABLE = {
   display: 'none',
 }
 
 const contries = [
-  { flag: FlagVn, name: 'Vietnam', src: pdfFile },
-  { flag: FlagEng, name: 'English', src: pdfFile },
-  { flag: FlagIndo, name: 'Indonesia', src: pdfFile },
+  { flag: flagVnSvg, name: 'Vietnam', src: pdfFile },
+  { flag: flagEngSvg, name: 'English', src: pdfFile },
+  { flag: flagIndoSvg, name: 'Indonesia', src: pdfFile },
 ]
 
 const EXPLAIN_LITE_BTN =
@@ -124,9 +126,9 @@ const Banner = () => {
           </Col> */}
         </Row>
         <Col span={24} className="banner-img">
-          <Image preview={false} src={SquareBlur} />
+          <Image preview={false} src={imgSquareBlurPng} />
         </Col>
-        <Image preview={false} src={Square} style={!xl ? DISABLE : {}} />
+        <Image preview={false} src={imgSquarePng} style={!xl ? DISABLE : {}} />
       </Col>
       <Col
         xl={{ span: 11, order: 2 }}
@@ -135,7 +137,7 @@ const Banner = () => {
         xs={{ span: 24, order: 1 }}
         style={{ textAlign: 'right' }}
       >
-        <Image preview={false} src={BgHero} />
+        <Image preview={false} src={bgBannerPng} />
       </Col>
       <Modal
         closeIcon={<Icon name="close" />}
