@@ -1,7 +1,6 @@
 import { Card, Row, Col, Typography, Space, Image } from 'antd'
 import IonIcon from 'components/icon'
-
-import { Circle } from 'static/images/index'
+import { imgCirclePng } from 'static/images/systems'
 
 const SOCIALS = [
   { icon: 'logo-telegram-color', src: 'https://t.me/Sentre' },
@@ -49,7 +48,7 @@ const Community = () => {
           </Space>
         </Col>
       </Row>
-      <Image preview={false} src={Circle} />
+      <Image preview={false} src={imgCirclePng} />
     </Card>
   )
 }

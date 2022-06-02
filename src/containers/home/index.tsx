@@ -1,11 +1,8 @@
 import { Col, Row } from 'antd'
 
 import Banner from './banner'
-import HomeBlog from './homeBlog'
 import Partner from './partner'
 import Community from './community'
-import Ecosystem from './ecosystem'
-import RoadMap from './roadMap'
 import Vision from './vision'
 
 const Home = () => {
@@ -15,19 +12,10 @@ const Home = () => {
         <Banner />
       </Col>
       <Col span={24}>
-        <Ecosystem />
-      </Col>
-      <Col span={24}>
-        <RoadMap />
-      </Col>
-      <Col span={24}>
         <Vision />
       </Col>
       <Col span={24}>
         <Partner />
-      </Col>
-      <Col span={24}>
-        <HomeBlog />
       </Col>
       <Col span={24}>
         <Community />

@@ -1,9 +1,9 @@
 import { Row, Col, Typography, Image, Button, Grid, Space } from 'antd'
-import { BgHero, Square, SquareBlur } from 'static/images/index'
 import Icon from 'components/icon'
 
 import { SOCIALS } from 'containers/footer'
 import { SENTRE_URL } from 'containers/header'
+import { bgBannerPng, imgSquareBlurPng, imgSquarePng } from 'static/images/systems'
 
 const DISABLE = {
   display: 'none',
@@ -36,7 +36,7 @@ const Banner = () => {
                 </Typography.Title>
                 <Image
                   preview={false}
-                  src={Square}
+                  src={imgSquarePng}
                   style={!xl ? DISABLE : {}}
                   className="banner-icon"
                 />
@@ -80,7 +80,7 @@ const Banner = () => {
           </Col>
         </Row>
         <Col span={24} className="banner-img">
-          <Image preview={false} src={SquareBlur} />
+          <Image preview={false} src={imgSquareBlurPng} />
         </Col>
       </Col>
       <Col
@@ -90,7 +90,7 @@ const Banner = () => {
         xs={{ span: 24, order: 1 }}
         style={{ textAlign: 'right' }}
       >
-        <Image preview={false} src={BgHero} />
+        <Image preview={false} src={bgBannerPng} />
       </Col>
     </Row>
   )

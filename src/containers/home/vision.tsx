@@ -2,8 +2,8 @@ import { Row, Col, Typography, Image, List, Grid } from 'antd'
 import IonIcon from 'components/icon'
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
+import { visionDarkPng, visionLightPng } from 'static/images/systems'
 
-import { VisionDark, VisionLight } from 'static/images'
 import { AppState } from 'store'
 
 const data = [
@@ -86,7 +86,7 @@ const Vision = () => {
           >
             <Image
               preview={false}
-              src={isDarkMode ? VisionDark : VisionLight}
+              src={isDarkMode ? visionDarkPng : visionLightPng}
             />
           </Col>
         </Row>
