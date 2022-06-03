@@ -1,9 +1,12 @@
 import { Row, Col, Typography, Image, Button, Grid, Space } from 'antd'
 import Icon from 'components/icon'
+import { SOCIALS, SENTRE_URL } from 'constant'
 
-import { SOCIALS } from 'containers/footer'
-import { SENTRE_URL } from 'containers/header'
-import { bgBannerPng, imgSquareBlurPng, imgSquarePng } from 'static/images/systems'
+import {
+  bgBannerPng,
+  imgSquareBlurPng,
+  imgSquarePng,
+} from 'static/images/systems'
 
 const DISABLE = {
   display: 'none',
@@ -26,12 +29,12 @@ const Banner = () => {
         xs={{ span: 24, order: 2 }}
         className="right-content"
       >
-        <Row gutter={[16, { xs: 24, sm: 29, md: 40, lg: 40 }]}>
+        <Row gutter={[8, { xs: 16, sm: 21, md: 32, lg: 32 }]}>
           <Col span={24}>
-            <Row gutter={[16, { xs: 16, sm: 20, md: 27, lg: 27 }]}>
+            <Row gutter={[8, { xs: 8, sm: 12, md: 21, lg: 21 }]}>
               <Col span={24}>
                 <Typography.Title level={1} className="title">
-                  <span className="title-spec">The DApp Store</span> For all
+                  <span className="title-spec">The DApp Store</span> For All
                   Things <span className="gradient-text">Solana</span>
                 </Typography.Title>
                 <Image
@@ -49,10 +52,11 @@ const Banner = () => {
               </Col>
             </Row>
           </Col>
-          <Col xs={24} md={10} lg={8}>
+          <Col sm={12} xs={24} md={10} lg={8}>
             <Row gutter={[24, 24]}>
               <Col span={24}>
                 <Button
+                  block
                   type="primary"
                   size="large"
                   onClick={() => window.open(SENTRE_URL, '_blank')}

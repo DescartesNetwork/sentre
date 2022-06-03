@@ -66,7 +66,7 @@
   }
 }
 
-.body-content{
+.body-content {
   max-width: 1200px;
   position: relative;
   top: 0;
@@ -75,16 +75,31 @@
 }
 
 .footer {
-  height: 88px;
+  height: auto;
+  background: #181c36;
+  &-content {
+    padding: 100px 16px;
+  }
+
+  &-item {
+    color: #f4f4f5 !important;
+  }
   @media (max-width: 991.9px) {
     height: auto;
-    padding: 24px 0;
+    // padding: 24px 0;
+  }
+  @media (max-width: 991.9px) {
+    height: auto;
+    // padding: 24px 0;
+  }
+  @media (max-width: 767px) {
+    padding: 32px 16px !important;
+    .brand {
+      text-align: center;
+    }
   }
 }
-.footer {
-  border-top: 1px solid #d3d3d6;
-  margin-top: 96px;
-}
+
 // subtitle
 .sub-title {
   font-size: 20px;
@@ -94,7 +109,6 @@
 }
 // Section banner
 .banner {
-  margin: 'auto';
   padding-top: 44px;
   .banner-img {
     .ant-image {
@@ -162,6 +176,8 @@
   }
 
   @media (max-width: 1199.9px) {
+    padding: 32px 16px !important;
+
     .title {
       font-size: 52px !important;
       line-height: 62px !important;
@@ -229,7 +245,6 @@
   }
 }
 
-
 // Section article
 .card-post {
   & .ant-card-cover {
@@ -273,96 +288,107 @@
   border: solid 1px #d3d3d6 !important;
 }
 
-// Must Read
-.must-read {
-  &-title {
-    font-weight: 800 !important;
-    margin-bottom: 0 !important;
-    text-align: center;
-    @media (max-width: 767.9px) {
-      font-size: 24px !important;
-    }
-  }
-}
-
-
 //Sen Suite
-
-.sen-suite{
-   padding: 100px;
-   background: url('../../static/images/systems/bg-sen-suite.png') !important;
-   background-repeat: none ;
-   background-size: cover !important;
-.title{
-  .ant-image{
-    position: absolute !important;
-    top: -125px;
-    right: 0;
-    width: 93px;
- }
-}
-    
-}
-
-
-// Vision
-.vision {
-  &_title {
-    font-weight: 800 !important;
-    margin-bottom: 16px !important;
-    text-align: center;
-    @media (max-width: 767.9px) {
-      font-size: 24px !important;
+.sen-suite {
+  padding: 100px;
+  background: url('../../static/images/systems/bg-sen-suite.png') !important;
+  background-repeat: none;
+  background-size: cover !important;
+  .title {
+    .ant-image {
+      position: absolute !important;
+      top: -125px;
+      right: 0;
+      width: 93px;
     }
   }
 
-  .subtitle {
-    max-width: 930px !important;
-    margin-bottom: 56px;
-    margin-top: 16px;
+  @media (max-width: 767px) {
+    padding: 32px 16px !important;
+    .title {
+      .ant-image {
+        position: absolute !important;
+        top: -75px;
+        right: 30px;
+      }
+    }
   }
-
-  .subtitle-mobile {
-    margin-bottom: 24px;
-    margin-top: 8px;
+  @media (max-width: 575px) {
+    padding: 32px 16px !important;
+    .title {
+      .ant-image {
+        display: none !important;
+      }
+    }
   }
+}
 
-  .list {
-    .list-item {
-      padding: 0px !important;
-      margin-bottom: 24px;
-      max-width: 592px !important;
-      border-bottom: none !important;
-
-      .list-item-meta {
-        text-align: left;
+//Utilities
+.utilities {
+  margin: 0 !important;
+  background: #e4e5ed;
+  padding: 100px;
+  .title {
+    .ant-image {
+      position: absolute !important;
+      top: -155px;
+      left: -155px;
+      width: 110px;
+    }
+  }
+  @media (max-width: 575px) {
+    padding: 32px 16px !important;
+    .title {
+      .ant-image {
+        display: none !important;
       }
     }
   }
 }
 
 // Section partner
-.partner-card {
-  background: linear-gradient(
-    45deg,
-    #f9575e,
-    #fff 20%,
-    #fff 80%,
-    #5d6ccf 100%
-  ) !important;
-  text-align: center;
-  &_title {
-    color: #212433;
+.partner {
+  margin: 0 !important;
+  .title {
+    .ant-image {
+      position: absolute !important;
+      top: -112px;
+      right: -113px;
+      width: 184px;
+    }
   }
   .ant-card-body {
-    padding: 64px 250px !important;
-    @media (max-width: 1199.9px) {
-      padding: 64px 80px !important;
-    }
-    @media (max-width: 767.9px) {
-      padding: 32px 40px !important;
+    padding: 55px 24px !important;
+    .ant-image {
+      height: 48px;
     }
   }
+  &-card {
+    height: 254px;
+    box-shadow: none !important;
+  }
+  @media (max-width: 575px) {
+    .ant-card-body {
+      padding: 16px !important;
+      .ant-image {
+        width: 193px;
+        height: 24px;
+      }
+    }
+    .title {
+      .ant-image {
+        display: none !important;
+      }
+    }
+    &-card {
+      height: 96px;
+    }
+  }
+}
+
+.become-partner {
+  margin: 0 !important;
+  text-align: center;
 }
 
 // Section Home Blog
@@ -385,49 +411,27 @@
     }
   }
 }
-
-// Section community
-.community.ant-card {
-  position: relative;
-  // background: url('../../static/images/systems/') !important;
+.build-on-sentre {
+  text-align: center;
+  background: url('../../static/images/systems/sentre-dark.png') !important;
+  background-repeat: none;
   background-size: cover !important;
-  .ant-card-body {
-    padding: 64px;
-    .description {
-      font-size: 20px;
-      line-height: 32px;
-      font-weight: 400;
-      color: #7a7b85 !important;
-    }
-    @media (max-width: 767.9px) {
-      padding: 32px 16px;
-      h1 {
-        font-size: 24px;
-        line-height: 32px;
-      }
-      .description {
-        font-size: 16px;
-        line-height: 24px;
-      }
+  padding: 72px;
+  .title {
+    .ant-image {
+      position: absolute !important;
+      top: -100px;
+      left: 0;
+      width: 110px;
     }
   }
-  .ant-image {
-    position: absolute !important;
-    width: 316px;
-    left: -360px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  &::before {
-    content: '';
-    position: absolute;
-    width: calc(100% - 32px);
-    height: 100%;
-    top: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 16px;
-    z-index: -1;
+  @media (max-width: 575px) {
+    padding: 32px 16px !important;
+    .title {
+      .ant-image {
+        display: none !important;
+      }
+    }
   }
 }
 
@@ -487,9 +491,6 @@
 
 // Theme mode
 #light {
-  .footer {
-    border-top: 1px solid #d3d3d6;
-  }
   .ant-drawer-close {
     left: 0;
   }
@@ -516,11 +517,11 @@
 }
 
 #dark {
-  .footer {
-    border-top: 1px solid #4e4f5c;
-  }
   .ant-drawer-close {
     left: 0;
+  }
+  .utilities {
+    background: #2f334a !important;
   }
 
   .header.sticky {
@@ -537,22 +538,12 @@
       color: #fb9a9e !important;
     }
   }
-  .community.ant-card {
-    // background: url('../../static/images/community-dark.svg') !important;
-    &::before {
-      background: #21243366;
-    }
+  .sen-suite {
+    background: url('../../static/images/systems/bg-sen-suite-dark.png') !important;
+    background-repeat: none;
+    background-size: cover !important;
   }
 
-  .partner-card {
-    background: linear-gradient(
-      45deg,
-      #f9575e,
-      #212433 20%,
-      #212433 80%,
-      #5d6ccf 100%
-    ) !important;
-  }
   .article-content {
     * {
       color: #f4f4f5;

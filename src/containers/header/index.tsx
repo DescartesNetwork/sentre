@@ -19,18 +19,7 @@ import SelectMaterial from './selectMaterial'
 
 import { AppState } from 'store'
 import { setTheme, Theme } from 'store/ui.reducer'
-
-const SECTIONS_LIST = [
-  { title: 'Home', route: 'home' },
-  { title: 'Ecosystem', route: 'eco' },
-  { title: 'Roadmap', route: 'road-map' },
-  { title: 'Vision', route: 'vision' },
-  { title: 'Partners', route: 'partners' },
-  { title: 'Blog', route: 'blog' },
-  { title: 'Contact us', route: 'contact' },
-]
-export const SENTRE_URL = 'https://hub.sentre.io'
-const LITE_PAPER = 'https://docs.sentre.io/litepaper'
+import { LITE_PAPER, NAVIGATION, SENTRE_URL } from 'constant'
 
 const DISABLE = {
   display: 'none',
@@ -100,14 +89,14 @@ const Header = () => {
 
             <Drawer placement="left" onClose={onClose} visible={visible}>
               <List
-                dataSource={SECTIONS_LIST}
+                dataSource={NAVIGATION}
                 style={{ marginTop: '19px' }}
-                renderItem={(item) => (
+                renderItem={(section) => (
                   <List.Item
-                    onClick={() => scrollToSection(item.route, true)}
+                    onClick={() => scrollToSection(section.route, true)}
                     style={{ borderBottom: 'none', cursor: 'pointer' }}
                   >
-                    <Typography.Text>{item.title}</Typography.Text>
+                    <Typography.Text>{section.title}</Typography.Text>
                   </List.Item>
                 )}
               />
@@ -117,13 +106,13 @@ const Header = () => {
               style={!lg || location.pathname !== '/home' ? DISABLE : {}}
               className="sections"
             >
-              {SECTIONS_LIST.map((item) => (
+              {NAVIGATION.map((section) => (
                 <li
-                  onClick={() => scrollToSection(item.route, false)}
+                  onClick={() => scrollToSection(section.route, false)}
                   className="sections-item"
-                  key={item.title}
+                  key={section.title}
                 >
-                  {item.title}
+                  {section.title}
                 </li>
               ))}
             </ul>
