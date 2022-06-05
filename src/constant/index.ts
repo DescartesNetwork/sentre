@@ -1,17 +1,17 @@
+import { logoCoin98Png } from 'static/images/logos'
 import {
-  SolanaLogo,
-  WormHoleLight,
-  Coin98Logo,
-  SolanaLogoDark,
-  SerumLight,
-  CloverDark,
-  CloverLight,
-  Sypool,
-  JupiterLight,
-  SerumDark,
-  WormHoleDark,
-  JupiterDark,
-  Gate,
+  clvDarkSvg,
+  clvLightSvg,
+  gateSvg,
+  jupiterDarkSvg,
+  jupiterLightSvg,
+  partnerSolanaDarkPng,
+  partnerSolanaLightPng,
+  serumDarkSvg,
+  serumLightSvg,
+  sypoolSvg,
+  wormholeDarkSvg,
+  wormholeLightSvg,
 } from 'static/images/systems'
 
 export const NAVIGATION = [
@@ -53,86 +53,92 @@ export const LITE_PAPER = 'https://docs.sentre.io/litepaper'
 export const LIST_PARTNER = {
   light: [
     {
-      logo: SolanaLogo,
+      logo: partnerSolanaLightPng,
       description:
         'Solana is a decentralized blockchain built to enable scalable, user-friendly apps for the world.',
     },
     {
-      logo: Coin98Logo,
+      logo: logoCoin98Png,
       description:
         'An All in one DeFi platform to swap, stake, borrow, lend, invest and earn with crypto at ease.',
     },
     {
-      logo: SerumLight,
+      logo: serumLightSvg,
       description:
         'Serum brings the speed and convenience of centralized exchanges to DeFi while remaining fully trustless and transparent.',
     },
     {
-      logo: CloverLight,
+      logo: clvLightSvg,
       description:
         'CLV Chain is a Substrate-based specialized Layer 1 chain that is EVM compatible and cross-chain interoperable.',
     },
     {
-      logo: WormHoleLight,
+      logo: wormholeLightSvg,
       description:
         'Cross-chain everything. Each blockchain has a distinct strength. Wormhole lets you get the best out of every blockchain without compromise.',
     },
     {
-      logo: Sypool,
+      logo: sypoolSvg,
       description:
         'Sypool is a synthetic asset management protocol. Pool managers manage tokens like mutual fund managers manage assets.',
     },
     {
-      logo: JupiterLight,
+      logo: jupiterLightSvg,
       description:
         'The key liquidity aggregator and swap infrastructure for Solana. For smart traders who like money.',
     },
     {
-      logo: Gate,
+      logo: gateSvg,
       description:
         'Your Gateway to Crypto. Trade over 1,400 cryptocurrencies safely, quickly, and easily.',
     },
   ],
   dark: [
     {
-      logo: SolanaLogoDark,
+      logo: partnerSolanaDarkPng,
       description:
         'Solana is a decentralized blockchain built to enable scalable, user-friendly apps for the world.',
     },
     {
-      logo: Coin98Logo,
+      logo: logoCoin98Png,
       description:
         'An All in one DeFi platform to swap, stake, borrow, lend, invest and earn with crypto at ease.',
     },
     {
-      logo: SerumDark,
+      logo: serumDarkSvg,
       description:
         'Serum brings the speed and convenience of centralized exchanges to DeFi while remaining fully trustless and transparent.',
     },
     {
-      logo: CloverDark,
+      logo: clvDarkSvg,
       description:
         'CLV Chain is a Substrate-based specialized Layer 1 chain that is EVM compatible and cross-chain interoperable.',
     },
     {
-      logo: WormHoleDark,
+      logo: wormholeDarkSvg,
       description:
         'Cross-chain everything. Each blockchain has a distinct strength. Wormhole lets you get the best out of every blockchain without compromise.',
     },
     {
-      logo: Sypool,
+      logo: sypoolSvg,
       description:
         'Sypool is a synthetic asset management protocol. Pool managers manage tokens like mutual fund managers manage assets.',
     },
     {
-      logo: JupiterDark,
+      logo: jupiterDarkSvg,
       description:
         'The key liquidity aggregator and swap infrastructure for Solana. For smart traders who like money.',
     },
     {
-      logo: Gate,
+      logo: gateSvg,
       description:
         'Your Gateway to Crypto. Trade over 1,400 cryptocurrencies safely, quickly, and easily.',
     },
   ],
+}
+
+export enum MoonMapState {
+  foundation = 'foundation',
+  dAppStore = 'dapp-store',
+  acceleration = 'acceleration',
 }

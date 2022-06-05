@@ -1,8 +1,9 @@
-import { Col, Row, Typography, Image, Space } from 'antd'
 import { useEffect } from 'react'
-import { utilityBG } from 'static/images/systems'
 
+import { Col, Row, Typography, Image, Space } from 'antd'
 import RowSpaceVertical from '../components/rowSpaceVertical'
+
+import { utilityBgPng } from 'static/images/systems'
 
 const BENEFIT = [
   {
@@ -36,7 +37,7 @@ const Content = ({
 }) => (
   <Row gutter={[32, 32]} style={{ textAlign: 'center' }}>
     <Col span={24}>
-      <Image src={utilityBG} preview={false} />
+      <Image src={utilityBgPng} preview={false} />
     </Col>
     <Col span={24}>
       <Space direction="vertical">

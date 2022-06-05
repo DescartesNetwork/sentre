@@ -1,8 +1,9 @@
+import { useSelector } from 'react-redux'
+
 import { Button, Col, Row, Typography, Image } from 'antd'
 
 import { LITE_PAPER, SENTRE_URL } from 'constant'
-import { useSelector } from 'react-redux'
-import { Cube } from 'static/images/systems'
+import { cubePng } from 'static/images/systems'
 import { AppState } from 'store'
 
 const BuildOnSentre = () => {
@@ -13,7 +14,7 @@ const BuildOnSentre = () => {
       <Col span={24} className="title">
         <Row gutter={[16, 16]}>
           <Col span={24}>
-            <Image src={Cube} preview={false} />
+            <Image src={cubePng} preview={false} />
             <Typography.Title style={{ color: '#F4F4F5' }} level={1}>
               Build on <span style={{ color: '#F9575E' }}>Sentre</span>
             </Typography.Title>

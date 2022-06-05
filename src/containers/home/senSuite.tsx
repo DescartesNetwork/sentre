@@ -1,7 +1,7 @@
 import { Button, Col, Image, Row, Typography } from 'antd'
 import RowSpaceVertical from './components/rowSpaceVertical'
 
-import { ballBluePng, senSuite } from 'static/images/systems'
+import { ballBluePng, senSuitePng } from 'static/images/systems'
 
 const SenSuite = () => {
   return (
@@ -23,7 +23,7 @@ const SenSuite = () => {
         />
       </Col>
       <Col span={24}>
-        <Image src={senSuite} preview={false} />
+        <Image src={senSuitePng} preview={false} />
       </Col>
       <Col span={24}>
         <Button type="ghost">Read more</Button>

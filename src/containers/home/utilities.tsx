@@ -1,7 +1,11 @@
 import { Col, Row, Typography, Image } from 'antd'
 import RowSpaceVertical from './components/rowSpaceVertical'
 
-import { MiningToken, RevenueSharing, utilityBG } from 'static/images/systems'
+import {
+  miningTokenPng,
+  revenueSharingPng,
+  utilityBgPng,
+} from 'static/images/systems'
 const Utilities = () => {
   return (
     <Row
@@ -13,7 +17,7 @@ const Utilities = () => {
       id="utilities"
     >
       <Col className="title" span={24} style={{ textAlign: 'center' }}>
-        <Image src={utilityBG} preview={false} />
+        <Image src={utilityBgPng} preview={false} />
         <RowSpaceVertical
           title={
             <Typography.Title level={1}>
@@ -32,7 +36,7 @@ const Utilities = () => {
           align="middle"
         >
           <Col xs={{ span: 24, order: 1 }} md={{ span: 12, order: 1 }}>
-            <Image src={RevenueSharing} preview={false} />
+            <Image src={revenueSharingPng} preview={false} />
           </Col>
           <Col xs={{ span: 24, order: 2 }} md={{ span: 12, order: 2 }}>
             <RowSpaceVertical
@@ -57,7 +61,7 @@ const Utilities = () => {
             />
           </Col>
           <Col xs={{ span: 24, order: 3 }} md={{ span: 12, order: 4 }}>
-            <Image src={MiningToken} preview={false} />
+            <Image src={miningTokenPng} preview={false} />
           </Col>
         </Row>
       </Col>

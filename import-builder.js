@@ -2,7 +2,7 @@ const fs = require('fs')
 const prettier = require('prettier')
 const path = require('path')
 
-const folderName = 'src/static/images/socials'
+const folderName = 'src/static/images/systems'
 const fileName = '/index.ts'
 const fullSrc = __dirname + '/' + folderName + fileName
 // Color console log
