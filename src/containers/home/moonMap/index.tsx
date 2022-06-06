@@ -6,6 +6,7 @@ import CardFoundation, { Foundation } from './foundation'
 import CardDAppStore, { DAppStore } from './dAppStore'
 import IonIcon from 'components/icon'
 import CardAcceleration, { Acceleration } from './acceleration'
+
 import { MoonMapState } from 'constant'
 
 const MoonMap = () => {
@@ -15,7 +16,7 @@ const MoonMap = () => {
     <Row
       className="body-content"
       gutter={[64, 64]}
-      style={{ textAlign: 'center' }}
+      style={{ textAlign: 'center', margin: 0 }}
       id="moon-map"
     >
       <Col span={24} className="title">

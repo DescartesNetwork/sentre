@@ -3,25 +3,34 @@ import { useEffect } from 'react'
 import { Col, Row, Typography, Image, Space } from 'antd'
 import RowSpaceVertical from '../components/rowSpaceVertical'
 
-import { utilityBgPng } from 'static/images/systems'
+import {
+  coMarketingPng,
+  coPoolPng,
+  productIntegrationPng,
+  senhubPowerUpPng,
+} from 'static/images/systems'
 
 const BENEFIT = [
   {
+    logo: senhubPowerUpPng,
     title: 'SenHub Power-Up',
     description:
       'Grow together for a win-win partnership. Integrate on SenHub to get exposed to thousands of potential users and have a place in their favorite set of projects. Fill out our form for details!',
   },
   {
+    logo: productIntegrationPng,
     title: 'Product Integration',
     description:
       'Powerful add-ons can bring your products to the next level. Explore the Sen Suite and integrate us on your platform for a maximum strength boost. Ping us if you’re in for the tech!',
   },
   {
+    logo: coPoolPng,
     title: 'Co-Pools for liquidity',
     description:
       "Pool Creation is the quickest way to distribute your tokens to Solana users. Join our 'index fund' pool or Create a pool with us and have Sentre share your liquidity burden. If you're looking to distribute tokens and incentivize liquidity, get in touch!",
   },
   {
+    logo: coMarketingPng,
     title: 'Co-marketing support',
     description:
       'With a network of over 30 influential KOLs in fertile crypto lands and BIG partners all over the world such as Solana Foundation, Coin98, Serum, your Co-marketing campaigns with Sentre will bring tremendous branding effect. Ping us for more details!',
@@ -31,13 +40,15 @@ const BENEFIT = [
 const Content = ({
   title,
   description,
+  logo,
 }: {
   title: string
   description: string
+  logo: string
 }) => (
   <Row gutter={[32, 32]} style={{ textAlign: 'center' }}>
     <Col span={24}>
-      <Image src={utilityBgPng} preview={false} />
+      <Image src={logo} preview={false} />
     </Col>
     <Col span={24}>
       <Space direction="vertical">
@@ -76,7 +87,11 @@ const BecomePartner = () => {
         <Row gutter={[24, 64]}>
           {BENEFIT.map((item) => (
             <Col xs={24} md={12} key={item.title}>
-              <Content title={item.title} description={item.description} />
+              <Content
+                logo={item.logo}
+                title={item.title}
+                description={item.description}
+              />
             </Col>
           ))}
           <Col span={24}>

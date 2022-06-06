@@ -6,8 +6,8 @@ import RowSpaceVertical from '../components/rowSpaceVertical'
 
 import { AppState } from 'store'
 
-import { LIST_PARTNER } from 'constant'
 import { imgSquareBlurPng } from 'static/images/systems'
+import { LIST_PARTNER } from 'constant/partners'
 
 const PartnerCard = ({
   logo,
@@ -19,8 +19,8 @@ const PartnerCard = ({
   <Card bordered={false} className="partner-card">
     <Row
       gutter={[
-        { sm: 16, xs: 16, md: 24, lg: 24 },
-        { sm: 16, xs: 16, md: 24, lg: 24 },
+        { sm: 8, xs: 8, md: 24, lg: 24 },
+        { sm: 8, xs: 8, md: 24, lg: 24 },
       ]}
     >
       <Col span={24}>
@@ -36,6 +36,7 @@ const PartnerCard = ({
 const Partner = () => {
   const theme = useSelector((state: AppState) => state.ui.theme)
   const history = useHistory()
+
   return (
     <Row
       className="body-content partner"

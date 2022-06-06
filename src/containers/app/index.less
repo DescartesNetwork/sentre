@@ -79,6 +79,7 @@
   background: #181c36;
   &-content {
     padding: 100px 16px;
+    margin: 0 !important;
   }
 
   &-item {
@@ -86,14 +87,14 @@
   }
   @media (max-width: 991.9px) {
     height: auto;
-    // padding: 24px 0;
   }
   @media (max-width: 991.9px) {
     height: auto;
-    // padding: 24px 0;
   }
   @media (max-width: 767px) {
-    padding: 32px 16px !important;
+    &-content {
+      padding: 32px 16px !important;
+    }
     .brand {
       text-align: center;
     }
@@ -360,7 +361,9 @@
   .ant-card-body {
     padding: 55px 24px !important;
     .ant-image {
-      height: 48px;
+      &-img {
+        height: 48px !important;
+      }
     }
   }
   &-card {
@@ -371,8 +374,9 @@
     .ant-card-body {
       padding: 16px !important;
       .ant-image {
-        width: 193px;
-        height: 24px;
+        &-img {
+          height: 24px !important;
+        }
       }
     }
     .title {
@@ -381,13 +385,14 @@
       }
     }
     &-card {
-      height: 96px;
+      height: 164px;
     }
   }
 }
 
 .become-partner {
   margin: 0 !important;
+  padding-top: 44px;
   text-align: center;
 }
 

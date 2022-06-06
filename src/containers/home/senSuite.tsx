@@ -26,7 +26,9 @@ const SenSuite = () => {
         <Image src={senSuitePng} preview={false} />
       </Col>
       <Col span={24}>
-        <Button type="ghost">Read more</Button>
+        <Button style={{ borderColor: '#212433' }} type="ghost">
+          Read more
+        </Button>
       </Col>
     </Row>
   )

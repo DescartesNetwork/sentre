@@ -4,6 +4,8 @@ import bgSenSuiteDarkPng from './bg-sen-suite-dark.png'
 import bgSenSuitePng from './bg-sen-suite.png'
 import clvDarkSvg from './clv-dark.svg'
 import clvLightSvg from './clv-light.svg'
+import coMarketingPng from './co-marketing.png'
+import coPoolPng from './co-pool.png'
 import cubePng from './cube.png'
 import darkBgPng from './dark-bg.png'
 import emptyPng from './empty.png'
@@ -25,11 +27,13 @@ import mmN3Svg from './mm-n3.svg'
 import partnerCoin98Png from './partner-coin98.png'
 import partnerSolanaDarkPng from './partner-solana-dark.png'
 import partnerSolanaLightPng from './partner-solana-light.png'
+import productIntegrationPng from './product-integration.png'
 import revenueSharingPng from './revenue-sharing.png'
 import senFullDarkPng from './sen-full-dark.png'
 import senFullPng from './sen-full.png'
 import senLitePng from './sen-lite.png'
 import senSuitePng from './sen-suite.png'
+import senhubPowerUpPng from './senhub-power-up.png'
 import sentreDarkPng from './sentre-dark.png'
 import serumDarkSvg from './serum-dark.svg'
 import serumLightSvg from './serum-light.svg'
@@ -37,7 +41,6 @@ import sypoolSvg from './sypool.svg'
 import utilityBgPng from './utility-bg.png'
 import wormholeDarkSvg from './wormhole-dark.svg'
 import wormholeLightSvg from './wormhole-light.svg'
-
 export {
   ballBluePng,
   bgBannerPng,
@@ -45,6 +48,8 @@ export {
   bgSenSuitePng,
   clvDarkSvg,
   clvLightSvg,
+  coMarketingPng,
+  coPoolPng,
   cubePng,
   darkBgPng,
   emptyPng,
@@ -66,11 +71,13 @@ export {
   partnerCoin98Png,
   partnerSolanaDarkPng,
   partnerSolanaLightPng,
+  productIntegrationPng,
   revenueSharingPng,
   senFullDarkPng,
   senFullPng,
   senLitePng,
   senSuitePng,
+  senhubPowerUpPng,
   sentreDarkPng,
   serumDarkSvg,
   serumLightSvg,
