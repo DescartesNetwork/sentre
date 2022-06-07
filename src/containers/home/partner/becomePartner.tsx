@@ -5,38 +5,72 @@ import { Col, Row, Typography, Image, Space } from 'antd'
 import RowSpaceVertical from '../components/rowSpaceVertical'
 
 import {
+  coMarketingDarkPng,
   coMarketingPng,
+  coPoolDarkPng,
   coPoolPng,
+  productIntegrationDarkPng,
   productIntegrationPng,
+  senhubPowerUpDarkPng,
   senhubPowerUpPng,
 } from 'static/images/systems'
+import { useSelector } from 'react-redux'
+import { AppState } from 'store'
 
-const BENEFIT = [
-  {
-    logo: senhubPowerUpPng,
-    title: 'SenHub Power-Up',
-    description:
-      'Grow together for a win-win partnership. Integrate on SenHub to get exposed to thousands of potential users and have a place in their favorite set of projects. Fill out our form for details!',
-  },
-  {
-    logo: productIntegrationPng,
-    title: 'Product Integration',
-    description:
-      'Powerful add-ons can bring your products to the next level. Explore the Sen Suite and integrate us on your platform for a maximum strength boost. Ping us if you’re in for the tech!',
-  },
-  {
-    logo: coPoolPng,
-    title: 'Co-Pools for liquidity',
-    description:
-      "Pool Creation is the quickest way to distribute your tokens to Solana users. Join our 'index fund' pool or Create a pool with us and have Sentre share your liquidity burden. If you're looking to distribute tokens and incentivize liquidity, get in touch!",
-  },
-  {
-    logo: coMarketingPng,
-    title: 'Co-marketing support',
-    description:
-      'With a network of over 30 influential KOLs in fertile crypto lands and BIG partners all over the world such as Solana Foundation, Coin98, Serum, your Co-marketing campaigns with Sentre will bring tremendous branding effect. Ping us for more details!',
-  },
-]
+const BENEFIT = {
+  light: [
+    {
+      logo: senhubPowerUpPng,
+      title: 'SenHub Power-Up',
+      description:
+        'Grow together for a win-win partnership. Integrate on SenHub to get exposed to thousands of potential users and have a place in their favorite set of projects. Fill out our form for details!',
+    },
+    {
+      logo: productIntegrationPng,
+      title: 'Product Integration',
+      description:
+        'Powerful add-ons can bring your products to the next level. Explore the Sen Suite and integrate us on your platform for a maximum strength boost. Ping us if you’re in for the tech!',
+    },
+    {
+      logo: coPoolPng,
+      title: 'Co-Pools for liquidity',
+      description:
+        "Pool Creation is the quickest way to distribute your tokens to Solana users. Join our 'index fund' pool or Create a pool with us and have Sentre share your liquidity burden. If you're looking to distribute tokens and incentivize liquidity, get in touch!",
+    },
+    {
+      logo: coMarketingPng,
+      title: 'Co-marketing support',
+      description:
+        'With a network of over 30 influential KOLs in fertile crypto lands and BIG partners all over the world such as Solana Foundation, Coin98, Serum, your Co-marketing campaigns with Sentre will bring tremendous branding effect. Ping us for more details!',
+    },
+  ],
+  dark: [
+    {
+      logo: senhubPowerUpDarkPng,
+      title: 'SenHub Power-Up',
+      description:
+        'Grow together for a win-win partnership. Integrate on SenHub to get exposed to thousands of potential users and have a place in their favorite set of projects. Fill out our form for details!',
+    },
+    {
+      logo: productIntegrationDarkPng,
+      title: 'Product Integration',
+      description:
+        'Powerful add-ons can bring your products to the next level. Explore the Sen Suite and integrate us on your platform for a maximum strength boost. Ping us if you’re in for the tech!',
+    },
+    {
+      logo: coPoolDarkPng,
+      title: 'Co-Pools for liquidity',
+      description:
+        "Pool Creation is the quickest way to distribute your tokens to Solana users. Join our 'index fund' pool or Create a pool with us and have Sentre share your liquidity burden. If you're looking to distribute tokens and incentivize liquidity, get in touch!",
+    },
+    {
+      logo: coMarketingDarkPng,
+      title: 'Co-marketing support',
+      description:
+        'With a network of over 30 influential KOLs in fertile crypto lands and BIG partners all over the world such as Solana Foundation, Coin98, Serum, your Co-marketing campaigns with Sentre will bring tremendous branding effect. Ping us for more details!',
+    },
+  ],
+}
 const TYPE_FORM_ID = 'AUZcmw6Z'
 
 const Content = ({
@@ -62,10 +96,14 @@ const Content = ({
 )
 
 const BecomePartner = () => {
+  const theme = useSelector((state: AppState) => state.ui.theme)
+
   useEffect(() => {
     // scroll to top
     window.scrollTo(0, 0)
   }, [])
+
+  const benefits = BENEFIT[theme]
 
   return (
     <Row
@@ -87,7 +125,7 @@ const BecomePartner = () => {
       </Col>
       <Col span={24}>
         <Row gutter={[24, 64]}>
-          {BENEFIT.map((item) => (
+          {benefits.map((item) => (
             <Col xs={24} md={12} key={item.title}>
               <Content
                 logo={item.logo}
