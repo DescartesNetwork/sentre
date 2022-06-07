@@ -11,8 +11,6 @@ import {
   serumDarkSvg,
   serumLightSvg,
   sypoolSvg,
-  wormholeDarkSvg,
-  wormholeLightSvg,
 } from 'static/images/systems'
 
 export const LIST_PARTNER = {
