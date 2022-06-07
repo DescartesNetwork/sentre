@@ -38,11 +38,6 @@ export const LIST_PARTNER = {
         'CLV Chain is a Substrate-based specialized Layer 1 chain that is EVM compatible and cross-chain interoperable.',
     },
     {
-      logo: wormholeLightSvg,
-      description:
-        'Cross-chain everything. Each blockchain has a distinct strength. Wormhole lets you get the best out of every blockchain without compromise.',
-    },
-    {
       logo: sypoolSvg,
       description:
         'Sypool is a synthetic asset management protocol. Pool managers manage tokens like mutual fund managers manage assets.',
@@ -83,11 +78,6 @@ export const LIST_PARTNER = {
       logo: clvDarkSvg,
       description:
         'CLV Chain is a Substrate-based specialized Layer 1 chain that is EVM compatible and cross-chain interoperable.',
-    },
-    {
-      logo: wormholeDarkSvg,
-      description:
-        'Cross-chain everything. Each blockchain has a distinct strength. Wormhole lets you get the best out of every blockchain without compromise.',
     },
     {
       logo: sypoolSvg,

@@ -59,7 +59,7 @@ const Banner = () => {
                 style={{ position: 'relative', paddingRight: !!xl ? 48 : 4 }}
               >
                 <Typography.Text type="secondary" className="description">
-                  Explore & install DApps on Sen Hub, build on Sentre, and send
+                  Explore & install DApps on Senhub, build on Sentre, and send
                   your project to the moon with Sen Suite.
                 </Typography.Text>
               </Col>
@@ -74,7 +74,7 @@ const Banner = () => {
                   size="large"
                   onClick={() => window.open(SENTRE_URL, '_blank')}
                 >
-                  Open Sen Hub
+                  Open Senhub
                 </Button>
               </Col>
               <Col>

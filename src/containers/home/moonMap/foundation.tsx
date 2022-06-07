@@ -45,12 +45,11 @@ export const Foundation = ({ isExpand = false }: FoundationProps) => {
                 liquidity on Sen Farming, and manage your wealth on Sen Assets.
               </Typography.Text>
               <Typography.Text style={{ fontSize: 16 }}>
-                Along with the four pillars, Sentre developed Sen Hub as the
-                core product for developers. Get free knowledge from Sen
-                Academy, use available liquidity on the ecosystem, integrate
-                your DApp on Sen Store, and have quality Sentizens use your
-                DApps everyday. This era ended with the full release of all
-                above functions.
+                Along with the four pillars, Sentre developed Senhub as the core
+                product for developers. Get free knowledge from Sen Academy, use
+                available liquidity on the ecosystem, integrate your DApp on Sen
+                Store, and have quality Sentizens use your DApps everyday. This
+                era ended with the full release of all above functions.
               </Typography.Text>
             </Space>
           </Space>
