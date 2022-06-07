@@ -37,6 +37,7 @@ const BENEFIT = [
       'With a network of over 30 influential KOLs in fertile crypto lands and BIG partners all over the world such as Solana Foundation, Coin98, Serum, your Co-marketing campaigns with Sentre will bring tremendous branding effect. Ping us for more details!',
   },
 ]
+const TYPE_FORM_ID = 'AUZcmw6Z'
 
 const Content = ({
   title,
@@ -95,11 +96,11 @@ const BecomePartner = () => {
               />
             </Col>
           ))}
-          <Col span={24}>
-            <Typography.Title> Type Form</Typography.Title>
-          </Col>
           <Col span={24} style={{ minHeight: 500 }}>
-            <Widget id="AUZcmw6Z" style={{ width: '100%', height: '100%' }} />
+            <Widget
+              id={TYPE_FORM_ID}
+              style={{ width: '100%', height: '100%' }}
+            />
           </Col>
         </Row>
       </Col>
