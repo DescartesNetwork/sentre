@@ -7,6 +7,8 @@ import Partner from './partner'
 import SenSuite from './senSuite'
 import Utilities from './utilities'
 
+import './index.less'
+
 const Home = () => {
   return (
     <Row gutter={[16, { xs: 48, sm: 48, md: 96, lg: 96 }]}>

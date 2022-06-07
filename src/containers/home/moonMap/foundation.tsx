@@ -45,7 +45,7 @@ export const Foundation = ({ isExpand = false }: FoundationProps) => {
             </Space>
           </Space>
         ) : (
-          <Space align="baseline">
+          <Space align="baseline" className="wrap-img-nummber">
             <Image
               style={{ maxWidth: imgNumMaxW }}
               src={indexImg}
