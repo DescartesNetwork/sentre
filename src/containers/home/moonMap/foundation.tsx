@@ -1,18 +1,25 @@
 import { Card, Col, Image, Row, Space, Typography } from 'antd'
 import { MoonMapState } from 'constant'
-import { mmFoundationPng, mmN1Svg } from 'static/images/systems'
+import { useSelector } from 'react-redux'
+import { mmFoundationPng, mmN1DarkSvg, mmN1Svg } from 'static/images/systems'
+import { AppState } from 'store'
+
+const IMAGE_NUMBER = {
+  dark: mmN1DarkSvg,
+  light: mmN1Svg,
+}
 
 type FoundationProps = { isExpand?: boolean }
 export const Foundation = ({ isExpand = false }: FoundationProps) => {
+  const theme = useSelector((state: AppState) => state.ui.theme)
+
+  const indexImg = IMAGE_NUMBER[theme]
+
   return (
-    <Row style={{ height: '100%' }} align="bottom" wrap={false}>
-      <Col flex="auto">
+    <Row className="wrap-mm-content" align="bottom" wrap={false}>
+      <Col flex="auto" className="mm-content">
         {isExpand ? (
-          <Space
-            style={{ textAlign: 'start' }}
-            direction="vertical"
-            align="start"
-          >
+          <Space direction="vertical" align="start">
             <Typography.Title level={5}>1. Foundation</Typography.Title>
             <Typography.Text>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -35,12 +42,17 @@ export const Foundation = ({ isExpand = false }: FoundationProps) => {
           </Space>
         ) : (
           <Space align="baseline">
-            <Image src={mmN1Svg} preview={false} />
-            <Typography.Title level={5}>Foundation</Typography.Title>
+            <Image src={indexImg} preview={false} />
+            <Typography.Title
+              level={5}
+              style={{ position: 'absolute', left: 0, bottom: 32 }}
+            >
+              Foundation
+            </Typography.Title>
           </Space>
         )}
       </Col>
-      <Col span={12} style={{ textAlign: 'end' }}>
+      <Col span={12} className="moon-map-img">
         <Image
           style={{ maxWidth: 200 }}
           src={mmFoundationPng}
@@ -57,12 +69,12 @@ const CardFoundation = ({ onClick }: CardFoundationProps) => {
     <Card
       bordered={false}
       style={{
-        borderRadius: 0,
+        borderRadius: '16px 0 0 16px',
         height: '100%',
         cursor: 'pointer',
         boxShadow: 'unset',
       }}
-      bodyStyle={{ height: '100%' }}
+      bodyStyle={{ height: '100%', padding: '24px 0 0 24px' }}
       onClick={() => onClick(MoonMapState.foundation)}
     >
       <Foundation />

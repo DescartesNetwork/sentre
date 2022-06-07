@@ -1,18 +1,25 @@
 import { Card, Col, Image, Row, Space, Typography } from 'antd'
 import { MoonMapState } from 'constant'
-import { mmDappStorePng, mmN2Svg } from 'static/images/systems'
+import { useSelector } from 'react-redux'
+import { mmDappStorePng, mmN2DarkSvg, mmN2Svg } from 'static/images/systems'
+import { AppState } from 'store'
+
+const IMAGE_NUMBER = {
+  dark: mmN2DarkSvg,
+  light: mmN2Svg,
+}
 
 type DAppStoreProps = { isExpand?: boolean }
 export const DAppStore = ({ isExpand = false }: DAppStoreProps) => {
+  const theme = useSelector((state: AppState) => state.ui.theme)
+
+  const indexImg = IMAGE_NUMBER[theme]
+
   return (
-    <Row style={{ height: '100%' }} align="bottom" wrap={false}>
-      <Col flex="auto">
+    <Row className="wrap-mm-content" align="bottom" wrap={false}>
+      <Col flex="auto" className="mm-content">
         {isExpand ? (
-          <Space
-            style={{ textAlign: 'start' }}
-            direction="vertical"
-            align="start"
-          >
+          <Space direction="vertical" align="start">
             <Typography.Title level={5}>2. DAppStore</Typography.Title>
             <Typography.Text>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -35,12 +42,17 @@ export const DAppStore = ({ isExpand = false }: DAppStoreProps) => {
           </Space>
         ) : (
           <Space align="baseline">
-            <Image src={mmN2Svg} preview={false} />
-            <Typography.Title level={5}>DApp Store</Typography.Title>
+            <Image src={indexImg} preview={false} />
+            <Typography.Title
+              level={5}
+              style={{ position: 'absolute', left: 0, bottom: 32 }}
+            >
+              DApp Store
+            </Typography.Title>
           </Space>
         )}
       </Col>
-      <Col span={12} style={{ textAlign: 'end' }}>
+      <Col span={12} className="moon-map-img">
         <Image style={{ maxWidth: 200 }} src={mmDappStorePng} preview={false} />
       </Col>
     </Row>
@@ -53,12 +65,12 @@ const CardDAppStore = ({ onClick }: CardDAppStoreProps) => {
     <Card
       bordered={false}
       style={{
-        borderRadius: 0,
+        borderRadius: '0 16px 0 0',
         height: '100%',
         cursor: 'pointer',
         boxShadow: 'unset',
       }}
-      bodyStyle={{ height: '100%' }}
+      bodyStyle={{ height: '100%', padding: '24px 0 0 24px' }}
       onClick={() => onClick(MoonMapState.dAppStore)}
     >
       <DAppStore />

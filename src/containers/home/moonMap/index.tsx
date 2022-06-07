@@ -8,6 +8,7 @@ import IonIcon from 'components/icon'
 import CardAcceleration, { Acceleration } from './acceleration'
 
 import { MoonMapState } from 'constant'
+import './index.less'
 
 const MoonMap = () => {
   const [expandType, setExpandType] = useState('')
@@ -30,7 +31,10 @@ const MoonMap = () => {
         />
       </Col>
       <Col span={24}>
-        <Row gutter={[12, 12]} style={{ position: 'relative' }}>
+        <Row
+          gutter={[12, 12]}
+          style={{ position: 'relative', overflow: 'hidden' }}
+        >
           <Col span={12}>
             <CardFoundation onClick={setExpandType} />
           </Col>
@@ -48,7 +52,11 @@ const MoonMap = () => {
             placement="left"
             visible={!!expandType}
             getContainer={false}
-            style={{ position: 'absolute' }}
+            style={{
+              position: 'absolute',
+              borderRadius: 16,
+              overflow: 'hidden',
+            }}
             onClose={() => setExpandType('')}
             width={'100%'}
             mask={false}

@@ -21,8 +21,11 @@ import miningTokenPng from './mining-token.png'
 import mmAccelerationPng from './mm-acceleration.png'
 import mmDappStorePng from './mm-dapp-store.png'
 import mmFoundationPng from './mm-foundation.png'
+import mmN1DarkSvg from './mm-n1-dark.svg'
 import mmN1Svg from './mm-n1.svg'
+import mmN2DarkSvg from './mm-n2-dark.svg'
 import mmN2Svg from './mm-n2.svg'
+import mmN3DarkSvg from './mm-n3-dark.svg'
 import mmN3Svg from './mm-n3.svg'
 import partnerCoin98Png from './partner-coin98.png'
 import partnerSolanaDarkPng from './partner-solana-dark.png'
@@ -41,6 +44,7 @@ import sypoolSvg from './sypool.svg'
 import utilityBgPng from './utility-bg.png'
 import wormholeDarkSvg from './wormhole-dark.svg'
 import wormholeLightSvg from './wormhole-light.svg'
+
 export {
   ballBluePng,
   bgBannerPng,
@@ -65,8 +69,11 @@ export {
   mmAccelerationPng,
   mmDappStorePng,
   mmFoundationPng,
+  mmN1DarkSvg,
   mmN1Svg,
+  mmN2DarkSvg,
   mmN2Svg,
+  mmN3DarkSvg,
   mmN3Svg,
   partnerCoin98Png,
   partnerSolanaDarkPng,
