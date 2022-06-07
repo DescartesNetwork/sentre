@@ -33,17 +33,20 @@ const MoonMap = () => {
       <Col span={24}>
         <Row
           gutter={[12, 12]}
-          style={{ position: 'relative', overflow: 'hidden' }}
+          style={{
+            position: 'relative',
+            overflow: 'hidden',
+          }}
         >
-          <Col span={12}>
+          <Col xs={24} md={12}>
             <CardFoundation onClick={setExpandType} />
           </Col>
-          <Col span={12}>
+          <Col xs={24} md={12}>
             <Row gutter={[12, 12]}>
-              <Col span={24}>
+              <Col xs={12} md={24}>
                 <CardDAppStore onClick={setExpandType} />
               </Col>
-              <Col span={24}>
+              <Col xs={12} md={24}>
                 <CardAcceleration onClick={setExpandType} />
               </Col>
             </Row>
@@ -56,6 +59,7 @@ const MoonMap = () => {
               position: 'absolute',
               borderRadius: 16,
               overflow: 'hidden',
+              height: '100%',
             }}
             bodyStyle={{ padding: '24px 0 0 24px' }}
             onClose={() => setExpandType('')}
@@ -63,15 +67,13 @@ const MoonMap = () => {
             mask={false}
             closable={false}
           >
-            <Row justify="end" style={{ height: '100%' }}>
-              <Col>
-                <Button
-                  type="text"
-                  style={{ marginRight: 16 }}
-                  icon={<IonIcon name="close-outline" />}
-                  onClick={() => setExpandType('')}
-                />
-              </Col>
+            <Row justify="end" style={{ position: 'relative', height: '100%' }}>
+              <Button
+                type="text"
+                className="btn-close-drawer"
+                icon={<IonIcon name="close-outline" />}
+                onClick={() => setExpandType('')}
+              />
               <Col span={24}>
                 {MoonMapState.foundation === expandType && (
                   <Foundation isExpand />

@@ -14,11 +14,15 @@ const IMAGE_NUMBER = {
 type FoundationProps = { isExpand?: boolean }
 export const Foundation = ({ isExpand = false }: FoundationProps) => {
   const theme = useSelector((state: AppState) => state.ui.theme)
+  const width = useSelector((state: AppState) => state.ui.width)
 
   const indexImg = IMAGE_NUMBER[theme]
+  const mobileScreen = width < 768
+  const imgNumMaxW = mobileScreen ? 60 : 95
+  const imgMaxW = mobileScreen ? 140 : 200
 
   return (
-    <Row className="wrap-mm-content" align="bottom" wrap={false}>
+    <Row className="wrap-mm-content" align="bottom" wrap={mobileScreen}>
       <Col flex="auto" className={isExpand ? 'h-full' : ''}>
         {isExpand ? (
           <Space direction="vertical" align="start">
@@ -44,7 +48,11 @@ export const Foundation = ({ isExpand = false }: FoundationProps) => {
           </Space>
         ) : (
           <Space align="baseline">
-            <Image src={indexImg} preview={false} />
+            <Image
+              style={{ maxWidth: imgNumMaxW }}
+              src={indexImg}
+              preview={false}
+            />
             <Typography.Title
               level={5}
               style={{ position: 'absolute', left: 0, bottom: 32 }}
@@ -54,24 +62,31 @@ export const Foundation = ({ isExpand = false }: FoundationProps) => {
           </Space>
         )}
       </Col>
-      <Col span={12} className="moon-map-img">
-        <Image
-          style={{ maxWidth: 200 }}
-          src={mmFoundationPng}
-          preview={false}
-        />
-      </Col>
+      {mobileScreen && isExpand ? null : (
+        <Col xs={24} md={12} className="moon-map-img">
+          <Image
+            style={{ maxWidth: imgMaxW }}
+            src={mmFoundationPng}
+            preview={false}
+          />
+        </Col>
+      )}
     </Row>
   )
 }
 
 type CardFoundationProps = { onClick: (type: string) => void }
 const CardFoundation = ({ onClick }: CardFoundationProps) => {
+  const width = useSelector((state: AppState) => state.ui.width)
+
+  const mobileScreen = width < 768
+  const boderRadius = mobileScreen ? '16px 16px 0 0' : '16px 0 0 16px'
+
   return (
     <Card
       bordered={false}
       style={{
-        borderRadius: '16px 0 0 16px',
+        borderRadius: boderRadius,
         height: '100%',
         cursor: 'pointer',
         boxShadow: 'unset',

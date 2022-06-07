@@ -14,11 +14,14 @@ const IMAGE_NUMBER = {
 type DAppStoreProps = { isExpand?: boolean }
 export const DAppStore = ({ isExpand = false }: DAppStoreProps) => {
   const theme = useSelector((state: AppState) => state.ui.theme)
+  const width = useSelector((state: AppState) => state.ui.width)
 
   const indexImg = IMAGE_NUMBER[theme]
+  const mobileScreen = width < 768
+  const imgNumMaxW = mobileScreen ? 60 : 95
 
   return (
-    <Row className="wrap-mm-content" align="bottom" wrap={false}>
+    <Row className="wrap-mm-content" align="bottom" wrap={mobileScreen}>
       <Col flex="auto" className={isExpand ? 'h-full' : ''}>
         {isExpand ? (
           <Space direction="vertical" align="start">
@@ -44,7 +47,11 @@ export const DAppStore = ({ isExpand = false }: DAppStoreProps) => {
           </Space>
         ) : (
           <Space align="baseline">
-            <Image src={indexImg} preview={false} />
+            <Image
+              style={{ maxWidth: imgNumMaxW }}
+              src={indexImg}
+              preview={false}
+            />
             <Typography.Title
               level={5}
               style={{ position: 'absolute', left: 0, bottom: 32 }}
@@ -54,20 +61,31 @@ export const DAppStore = ({ isExpand = false }: DAppStoreProps) => {
           </Space>
         )}
       </Col>
-      <Col span={12} className="moon-map-img">
-        <Image style={{ maxWidth: 200 }} src={mmDappStorePng} preview={false} />
-      </Col>
+      {mobileScreen && isExpand ? null : (
+        <Col xs={24} md={12} className="moon-map-img">
+          <Image
+            style={{ maxWidth: 200 }}
+            src={mmDappStorePng}
+            preview={false}
+          />
+        </Col>
+      )}
     </Row>
   )
 }
 
 type CardDAppStoreProps = { onClick: (type: string) => void }
 const CardDAppStore = ({ onClick }: CardDAppStoreProps) => {
+  const width = useSelector((state: AppState) => state.ui.width)
+
+  const mobileScreen = width < 768
+  const boderRadius = mobileScreen ? '0 0 0 16px' : '0 16px 0 0'
+
   return (
     <Card
       bordered={false}
       style={{
-        borderRadius: '0 16px 0 0',
+        borderRadius: boderRadius,
         height: '100%',
         cursor: 'pointer',
         boxShadow: 'unset',

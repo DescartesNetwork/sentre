@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Widget } from '@typeform/embed-react'
 
 import { Col, Row, Typography, Image, Space } from 'antd'
 import RowSpaceVertical from '../components/rowSpaceVertical'
@@ -96,6 +97,9 @@ const BecomePartner = () => {
           ))}
           <Col span={24}>
             <Typography.Title> Type Form</Typography.Title>
+          </Col>
+          <Col span={24} style={{ minHeight: 500 }}>
+            <Widget id="AUZcmw6Z" style={{ width: '100%', height: '100%' }} />
           </Col>
         </Row>
       </Col>

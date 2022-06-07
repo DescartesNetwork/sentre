@@ -14,11 +14,14 @@ const IMAGE_NUMBER = {
 type AccelerationProps = { isExpand?: boolean }
 export const Acceleration = ({ isExpand = false }: AccelerationProps) => {
   const theme = useSelector((state: AppState) => state.ui.theme)
+  const width = useSelector((state: AppState) => state.ui.width)
 
   const indexImg = IMAGE_NUMBER[theme]
+  const mobileScreen = width < 768
+  const imgNumMaxW = mobileScreen ? 60 : 95
 
   return (
-    <Row className="wrap-mm-content" align="bottom" wrap={false}>
+    <Row className="wrap-mm-content" align="bottom" wrap={mobileScreen}>
       <Col flex="auto" className={isExpand ? 'h-full' : ''}>
         {isExpand ? (
           <Space direction="vertical" align="start">
@@ -44,7 +47,11 @@ export const Acceleration = ({ isExpand = false }: AccelerationProps) => {
           </Space>
         ) : (
           <Space align="baseline">
-            <Image src={indexImg} preview={false} />
+            <Image
+              style={{ maxWidth: imgNumMaxW }}
+              src={indexImg}
+              preview={false}
+            />
             <Typography.Title
               level={5}
               style={{ position: 'absolute', left: 0, bottom: 32 }}
@@ -54,13 +61,15 @@ export const Acceleration = ({ isExpand = false }: AccelerationProps) => {
           </Space>
         )}
       </Col>
-      <Col span={12} className="moon-map-img">
-        <Image
-          style={{ maxWidth: 200 }}
-          src={mmAccelerationPng}
-          preview={false}
-        />
-      </Col>
+      {mobileScreen && isExpand ? null : (
+        <Col xs={24} md={12} className="moon-map-img">
+          <Image
+            style={{ maxWidth: 200 }}
+            src={mmAccelerationPng}
+            preview={false}
+          />
+        </Col>
+      )}
     </Row>
   )
 }
@@ -75,6 +84,7 @@ const CardAcceleration = ({ onClick }: CardAccelerationProps) => {
         height: '100%',
         cursor: 'pointer',
         boxShadow: 'unset',
+        overflow: 'hidden',
       }}
       bodyStyle={{ height: '100%', padding: '24px 0 0 24px' }}
       onClick={() => onClick(MoonMapState.acceleration)}
