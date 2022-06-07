@@ -3,12 +3,21 @@ import { useSelector } from 'react-redux'
 import { Card, Col, Image, Row, Space, Typography } from 'antd'
 
 import { MoonMapState } from 'constant'
-import { mmFoundationPng, mmN1DarkSvg, mmN1Svg } from 'static/images/systems'
+import {
+  mmFoundationDarkPng,
+  mmFoundationPng,
+  mmN1DarkSvg,
+  mmN1Svg,
+} from 'static/images/systems'
 import { AppState } from 'store'
 
 const IMAGE_NUMBER = {
   dark: mmN1DarkSvg,
   light: mmN1Svg,
+}
+const IMAGE_ROCKET = {
+  dark: mmFoundationDarkPng,
+  light: mmFoundationPng,
 }
 
 type FoundationProps = { isExpand?: boolean }
@@ -16,6 +25,7 @@ export const Foundation = ({ isExpand = false }: FoundationProps) => {
   const theme = useSelector((state: AppState) => state.ui.theme)
   const width = useSelector((state: AppState) => state.ui.width)
 
+  const imgRocket = IMAGE_ROCKET[theme]
   const indexImg = IMAGE_NUMBER[theme]
   const mobileScreen = width < 768
   const imgNumMaxW = mobileScreen ? 60 : 95
@@ -64,7 +74,7 @@ export const Foundation = ({ isExpand = false }: FoundationProps) => {
         <Col xs={24} md={12} className="moon-map-img">
           <Image
             style={{ maxWidth: imgMaxW }}
-            src={mmFoundationPng}
+            src={imgRocket}
             preview={false}
           />
         </Col>
