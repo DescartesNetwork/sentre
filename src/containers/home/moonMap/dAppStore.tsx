@@ -1,6 +1,8 @@
-import { Card, Col, Image, Row, Space, Typography } from 'antd'
-import { MoonMapState } from 'constant'
 import { useSelector } from 'react-redux'
+
+import { Card, Col, Image, Row, Space, Typography } from 'antd'
+
+import { MoonMapState } from 'constant'
 import { mmDappStorePng, mmN2DarkSvg, mmN2Svg } from 'static/images/systems'
 import { AppState } from 'store'
 
