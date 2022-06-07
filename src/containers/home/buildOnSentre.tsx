@@ -40,7 +40,7 @@ const BuildOnSentre = () => {
               type="primary"
               onClick={() => window.open(SENTRE_URL, '_blank')}
             >
-              Start building
+              Open SenHub
             </Button>
           </Col>
 
@@ -52,7 +52,7 @@ const BuildOnSentre = () => {
               onClick={() => window.open(LITE_PAPER, '_blank')}
               size="large"
             >
-              How to building
+              How to build
             </Button>
           </Col>
         </Row>
