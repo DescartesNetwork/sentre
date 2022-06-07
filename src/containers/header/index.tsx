@@ -133,7 +133,7 @@ const Header = () => {
                 type="primary"
                 onClick={() => window.open(SENTRE_URL, '_blank')}
               >
-                Open Sen Hub
+                Open Senhub
               </Button>
             </Space>
           </Col>

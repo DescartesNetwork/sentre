@@ -30,7 +30,7 @@ export const DAppStore = ({ isExpand = false }: DAppStoreProps) => {
             <Space direction="vertical">
               <Typography.Text style={{ fontSize: 16 }}>
                 In the <strong>'DApp Store'</strong> Era, we will see the bloom
-                of hundreds of DApps integrated into Sen Hub. By the time we
+                of hundreds of DApps integrated into Senhub. By the time we
                 reach this, Sentre Protocol will have become the true{' '}
                 <strong>DApp Store for all things Solana</strong> - be it DeFi,
                 GameFi, or PriFi products.
