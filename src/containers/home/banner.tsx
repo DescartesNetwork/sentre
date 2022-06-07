@@ -74,7 +74,7 @@ const Banner = () => {
                   size="large"
                   onClick={() => window.open(SENTRE_URL, '_blank')}
                 >
-                  Open SenHub
+                  Open Sen Hub
                 </Button>
               </Col>
               <Col>
