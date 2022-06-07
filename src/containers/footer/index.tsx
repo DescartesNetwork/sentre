@@ -1,55 +1,121 @@
-import { useSelector } from 'react-redux'
-
-import { Row, Col, Space, Typography, Grid } from 'antd'
-
-import Icon from 'components/icon'
+import { Row, Col, Typography, Grid, Button, Space } from 'antd'
 import Brand from 'components/brand'
-import { AppState } from 'store'
 
-export const SOCIALS = [
-  { icon: 'paper-plane', src: 'https://t.me/Sentre' },
-  { icon: 'logo-twitter', src: 'https://twitter.com/SentreProtocol' },
-  { icon: 'logo-discord', src: 'https://discord.com/invite/VD7UBAp2HN' },
-  { icon: 'mail', src: 'mailto: hi@sentre.io' },
-]
+import { DOCUMENTS, NAVIGATION, SOCIALS } from 'constant'
 
 const Footer = () => {
-  const { sm, xs } = Grid.useBreakpoint() || {}
-  const { theme } = useSelector((state: AppState) => state.ui)
+  const { sm } = Grid.useBreakpoint() || {}
+
+  const scrollToSection = (id: string) => {
+    if (!id) return
+    const yOffset = -100 //88px that the height of header
+    const el = document.getElementById(`${id}`)!
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
+
+    window.scrollTo({ top: y, behavior: 'smooth' })
+  }
 
   return (
-    <Row className="footer" align="middle" justify="space-between">
-      <Col span={12}>
-        <Row gutter={[8, 4]} align="bottom">
-          <Col sm={8} md={6} lg={5} xl={4}>
-            <Brand
-              style={{ height: 24, cursor: 'pointer' }}
-              lite={!sm}
-              darkTheme={theme === 'dark'}
-            />
-          </Col>
-          <Col md={12} xs={24} sm={16}>
-            <Typography.Text type="secondary" style={{ fontSize: 12 }}>
-              © 2022, All Rights Reserved
-            </Typography.Text>
-          </Col>
-        </Row>
-      </Col>
-      <Col>
-        <Space className="ico-social" size={xs ? 20 : 24}>
-          {SOCIALS.map((social, index) => {
-            return (
-              <Icon
-                name={social.icon}
-                key={social.icon}
-                style={{ fontSize: xs ? 18 : 24, color: '#7A7B85' }}
-                onClick={() => window.open(social.src, '_blank')}
+    <div className="footer">
+      <Row
+        gutter={[12, 12]}
+        className="body-content footer-content"
+        justify="space-between"
+      >
+        <Col className="brand" xs={24} md={12}>
+          <Row gutter={[16, 16]} align="bottom">
+            <Col span={24}>
+              <Brand
+                style={{ height: 24, cursor: 'pointer' }}
+                lite={!sm}
+                darkTheme={true}
               />
-            )
-          })}
-        </Space>
-      </Col>
-    </Row>
+            </Col>
+            <Col span={24}>
+              <Typography.Text type="secondary" style={{ fontSize: 12 }}>
+                © 2022, All Rights Reserved
+              </Typography.Text>
+            </Col>
+          </Row>
+        </Col>
+        <Col xs={24} md={12} lg={8}>
+          <Row gutter={[64, 64]} justify="space-between">
+            <Col span={8}>
+              <Space
+                style={{ cursor: 'pointer' }}
+                size={12}
+                direction="vertical"
+              >
+                <Button
+                  className="footer-item"
+                  style={{ marginLeft: -17 }}
+                  type="text"
+                >
+                  Navigation
+                </Button>
+                {NAVIGATION.map((item) => (
+                  <Typography.Text
+                    onClick={() => scrollToSection(item.route)}
+                    className="footer-item"
+                    key={item.route}
+                  >
+                    {item.title}
+                  </Typography.Text>
+                ))}
+              </Space>
+            </Col>
+            <Col span={8}>
+              <Space
+                style={{ cursor: 'pointer' }}
+                size={12}
+                direction="vertical"
+              >
+                <Button
+                  className="footer-item"
+                  style={{ marginLeft: -17 }}
+                  type="text"
+                >
+                  Documents
+                </Button>
+                {DOCUMENTS.map((item) => (
+                  <Typography.Text
+                    onClick={() => window.open(item.src, '_blank')}
+                    className="footer-item"
+                    key={item.title}
+                  >
+                    {item.title}
+                  </Typography.Text>
+                ))}
+              </Space>
+            </Col>
+            <Col span={8}>
+              <Space
+                style={{ cursor: 'pointer' }}
+                size={12}
+                direction="vertical"
+              >
+                <Button
+                  className="footer-item"
+                  style={{ marginLeft: -17 }}
+                  type="text"
+                >
+                  Social
+                </Button>
+                {SOCIALS.map((social) => (
+                  <Typography.Text
+                    onClick={() => window.open(social.src, '_blank')}
+                    className="footer-item"
+                    key={social.src}
+                  >
+                    {social.title}
+                  </Typography.Text>
+                ))}
+              </Space>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    </div>
   )
 }
 export default Footer

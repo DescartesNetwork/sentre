@@ -16,12 +16,11 @@ import 'static/styles/dark.less'
 import 'static/styles/light.less'
 import './index.less'
 import Watcher from 'containers/watcher'
+import BecomePartner from 'containers/home/partner/becomePartner'
 
 const App = () => {
   const pageStyles = {
-    maxWidth: 1200,
     margin: 'auto',
-    padding: '0 15px',
   }
   const { theme } = useSelector((state: AppState) => state.ui)
 
@@ -39,6 +38,8 @@ const App = () => {
           <Col span={24}>
             <Switch>
               <Redirect exact from="/" to="/home" />
+              <Route exact path="/home" component={Home} />
+              <Route exact path="/partner" component={BecomePartner} />
               <Route exact path="/home" component={Home} />
               <Route exact path="/blogs" component={Blogs} />
               <Route exact path="/blogs/:articleId" component={ArticleDetail} />

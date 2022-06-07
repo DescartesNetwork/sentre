@@ -1,52 +1,25 @@
-import { useState } from 'react'
-
-import {
-  Row,
-  Col,
-  Typography,
-  Image,
-  Button,
-  Grid,
-  Modal,
-  Space,
-  Tooltip,
-} from 'antd'
+import { Row, Col, Typography, Image, Button, Grid, Space } from 'antd'
 import Icon from 'components/icon'
+import { SOCIALS, SENTRE_URL } from 'constant'
 
-import pdfFile from '../../static/base/sentre_whitepaper.pdf'
-import { SOCIALS } from 'containers/footer'
-import { SENLITE_URL, SENTRE_URL } from 'containers/header'
 import {
   bgBannerPng,
   imgSquareBlurPng,
   imgSquarePng,
 } from 'static/images/systems'
-import { flagEngSvg, flagIndoSvg, flagVnSvg } from 'static/images/languages'
 
 const DISABLE = {
   display: 'none',
 }
 
-const contries = [
-  { flag: flagVnSvg, name: 'Vietnam', src: pdfFile },
-  { flag: flagEngSvg, name: 'English', src: pdfFile },
-  { flag: flagIndoSvg, name: 'Indonesia', src: pdfFile },
-]
-
-const EXPLAIN_LITE_BTN =
-  'This version with a simple interface and essential functions for daily users.'
-const EXPLAIN_PRO_BTN =
-  'This version with full functions for professionals and developers.'
-
 const Banner = () => {
   const { xl } = Grid.useBreakpoint()
-  const [visible, setvisible] = useState(false)
 
   return (
     <Row
       gutter={[12, { xs: 48, sm: 24, md: 24, lg: 24 }]}
       align="middle"
-      className="banner"
+      className="banner body-content"
       id="home"
     >
       <Col
@@ -56,49 +29,40 @@ const Banner = () => {
         xs={{ span: 24, order: 2 }}
         className="right-content"
       >
-        <Row gutter={[16, { xs: 24, sm: 29, md: 40, lg: 40 }]}>
+        <Row gutter={[8, { xs: 16, sm: 21, md: 32, lg: 32 }]}>
           <Col span={24}>
-            <Row gutter={[16, { xs: 16, sm: 20, md: 27, lg: 27 }]}>
+            <Row gutter={[8, { xs: 8, sm: 12, md: 21, lg: 21 }]}>
               <Col span={24}>
                 <Typography.Title level={1} className="title">
-                  An Open Liquidity Protocol on{' '}
-                  <strong className="gradient-text">Solana</strong>
+                  <span className="title-spec">The DApp Store</span> For All
+                  Things <span className="gradient-text">Solana</span>
                 </Typography.Title>
+                <Image
+                  preview={false}
+                  src={imgSquarePng}
+                  style={!xl ? DISABLE : {}}
+                  className="banner-icon"
+                />
               </Col>
               <Col span={24} style={{ position: 'relative' }}>
                 <Typography.Text type="secondary" className="description">
-                  All-in-One Solana Open Platform with DApps Store and Universal
-                  Protocol for Liquidity.
+                  Trade on Sen Hub, build on Sentre, and send your project to
+                  the moon with Sen Suite.
                 </Typography.Text>
               </Col>
             </Row>
           </Col>
-          <Col xs={24} md={10} lg={8}>
+          <Col sm={12} xs={24} md={10} lg={8}>
             <Row gutter={[24, 24]}>
               <Col span={24}>
-                <Space size={20}>
-                  <Tooltip placement="topLeft" title={EXPLAIN_PRO_BTN}>
-                    <Button
-                      type="primary"
-                      size="large"
-                      style={{ width: 111 }}
-                      onClick={() => window.open(SENTRE_URL, '_blank')}
-                    >
-                      Pro App
-                    </Button>
-                  </Tooltip>
-
-                  <Tooltip placement="topLeft" title={EXPLAIN_LITE_BTN}>
-                    <Button
-                      type="ghost"
-                      size="large"
-                      style={{ width: 111 }}
-                      onClick={() => window.open(SENLITE_URL, '_blank')}
-                    >
-                      Lite App
-                    </Button>
-                  </Tooltip>
-                </Space>
+                <Button
+                  block
+                  type="primary"
+                  size="large"
+                  onClick={() => window.open(SENTRE_URL, '_blank')}
+                >
+                  Start building
+                </Button>
               </Col>
               <Col>
                 <Space size={20}>
@@ -118,17 +82,10 @@ const Banner = () => {
               </Col>
             </Row>
           </Col>
-
-          {/* <Col xs={12} md={10} lg={8}>
-            <Button size="large" block onClick={() => setvisible(true)}>
-              Instruction
-            </Button>
-          </Col> */}
         </Row>
         <Col span={24} className="banner-img">
           <Image preview={false} src={imgSquareBlurPng} />
         </Col>
-        <Image preview={false} src={imgSquarePng} style={!xl ? DISABLE : {}} />
       </Col>
       <Col
         xl={{ span: 11, order: 2 }}
@@ -139,39 +96,6 @@ const Banner = () => {
       >
         <Image preview={false} src={bgBannerPng} />
       </Col>
-      <Modal
-        closeIcon={<Icon name="close" />}
-        title={null}
-        footer={null}
-        visible={visible}
-        onCancel={() => setvisible(false)}
-      >
-        <Row gutter={[0, 48]} justify="center">
-          <Col span={24} style={{ textAlign: 'center' }}>
-            <Typography.Title level={5}>Choose the language</Typography.Title>
-          </Col>
-          <Col span={24} style={{ textAlign: 'center' }}>
-            <Row justify="center" gutter={48}>
-              {contries.map(({ name, flag, src }) => (
-                <Col key={name}>
-                  <Space
-                    direction="vertical"
-                    style={{ cursor: 'pointer' }}
-                    onClick={() => window.open(src)}
-                  >
-                    <Image
-                      src={flag}
-                      preview={false}
-                      style={{ borderRadius: 8 }}
-                    />
-                    <Typography.Text>{name}</Typography.Text>
-                  </Space>
-                </Col>
-              ))}
-            </Row>
-          </Col>
-        </Row>
-      </Modal>
     </Row>
   )
 }
