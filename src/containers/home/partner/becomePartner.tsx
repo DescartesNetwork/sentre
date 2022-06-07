@@ -96,6 +96,15 @@ const BecomePartner = () => {
               />
             </Col>
           ))}
+          <Col span={24} /> {/** Safe space */}
+          <Col span={24}>
+            <RowSpaceVertical
+              title={
+                <Typography.Title level={1}>Sign Up Form</Typography.Title>
+              }
+              description="Fill the form below so we know which collab method you want to do with us!"
+            />
+          </Col>
           <Col span={24} style={{ minHeight: 500 }}>
             <Widget
               id={TYPE_FORM_ID}

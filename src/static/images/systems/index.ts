@@ -1,4 +1,5 @@
 import ballBluePng from './ball-blue.png'
+import bgBannerDarkPng from './bg-banner-dark.png'
 import bgBannerPng from './bg-banner.png'
 import bgSenSuiteDarkPng from './bg-sen-suite-dark.png'
 import bgSenSuitePng from './bg-sen-suite.png'
@@ -47,6 +48,7 @@ import wormholeLightSvg from './wormhole-light.svg'
 
 export {
   ballBluePng,
+  bgBannerDarkPng,
   bgBannerPng,
   bgSenSuiteDarkPng,
   bgSenSuitePng,

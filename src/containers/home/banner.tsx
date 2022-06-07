@@ -1,19 +1,29 @@
 import { Row, Col, Typography, Image, Button, Grid, Space } from 'antd'
 import Icon from 'components/icon'
 import { SOCIALS, SENTRE_URL } from 'constant'
+import { useSelector } from 'react-redux'
 
 import {
+  bgBannerDarkPng,
   bgBannerPng,
   imgSquareBlurPng,
   imgSquarePng,
 } from 'static/images/systems'
+import { AppState } from 'store'
 
 const DISABLE = {
   display: 'none',
 }
+const BG_BANNER_IMG = {
+  dark: bgBannerDarkPng,
+  light: bgBannerPng,
+}
 
 const Banner = () => {
+  const theme = useSelector((state: AppState) => state.ui.theme)
   const { xl } = Grid.useBreakpoint()
+
+  const bgBanner = BG_BANNER_IMG[theme]
 
   return (
     <Row
@@ -44,7 +54,10 @@ const Banner = () => {
                   className="banner-icon"
                 />
               </Col>
-              <Col span={24} style={{ position: 'relative' }}>
+              <Col
+                span={24}
+                style={{ position: 'relative', paddingRight: !!xl ? 24 : 4 }}
+              >
                 <Typography.Text type="secondary" className="description">
                   Trade on Sen Hub, build on Sentre, and send your project to
                   the moon with Sen Suite.
@@ -94,7 +107,7 @@ const Banner = () => {
         xs={{ span: 24, order: 1 }}
         style={{ textAlign: 'right' }}
       >
-        <Image preview={false} src={bgBannerPng} />
+        <Image preview={false} src={bgBanner} />
       </Col>
     </Row>
   )

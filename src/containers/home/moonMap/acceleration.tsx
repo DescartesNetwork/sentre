@@ -3,12 +3,12 @@ import { useSelector } from 'react-redux'
 import { Card, Col, Image, Row, Space, Typography } from 'antd'
 
 import { MoonMapState } from 'constant'
-import { mmAccelerationPng, mmN3DarkSvg, mmN3Svg } from 'static/images/systems'
+import { mmAccelerationPng, mmN2DarkSvg, mmN2Svg } from 'static/images/systems'
 import { AppState } from 'store'
 
 const IMAGE_NUMBER = {
-  dark: mmN3DarkSvg,
-  light: mmN3Svg,
+  dark: mmN2DarkSvg,
+  light: mmN2Svg,
 }
 
 type AccelerationProps = { isExpand?: boolean }
@@ -19,6 +19,7 @@ export const Acceleration = ({ isExpand = false }: AccelerationProps) => {
   const indexImg = IMAGE_NUMBER[theme]
   const mobileScreen = width < 768
   const imgNumMaxW = mobileScreen ? 60 : 95
+  const imgMaxW = isExpand ? 250 : 200
 
   return (
     <Row className="wrap-mm-content" align="bottom" wrap={mobileScreen}>
@@ -49,7 +50,7 @@ export const Acceleration = ({ isExpand = false }: AccelerationProps) => {
             </Space>
           </Space>
         ) : (
-          <Space align="baseline">
+          <Space align="baseline" className="wrap-img-nummber">
             <Image
               style={{ maxWidth: imgNumMaxW }}
               src={indexImg}
@@ -67,7 +68,7 @@ export const Acceleration = ({ isExpand = false }: AccelerationProps) => {
       {mobileScreen && isExpand ? null : (
         <Col xs={24} md={12} className="moon-map-img">
           <Image
-            style={{ maxWidth: 200 }}
+            style={{ maxWidth: imgMaxW }}
             src={mmAccelerationPng}
             preview={false}
           />
