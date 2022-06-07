@@ -26,24 +26,23 @@ export const DAppStore = ({ isExpand = false }: DAppStoreProps) => {
         {isExpand ? (
           <Space direction="vertical" align="start">
             <Typography.Title level={5}>2. DAppStore</Typography.Title>
-            <Typography.Text>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum. Where does it come from? Contrary to popular belief,
-              Lorem Ipsum is not simply random text. It has roots in a piece of
-              classical Latin literature from 45 BC, making it over 2000 years
-              old. Richard McClintock, a Latin professor at Hampden-Sydney
-              College in Virginia, looked up one of the more obscure Latin
-              words, consectetur, from a Lorem Ipsum passage, and going through
-              the cites of the word in classical literature, discovered the
-            </Typography.Text>
+            <Space direction="vertical">
+              <Typography.Text style={{ fontSize: 16 }}>
+                In the <strong>'DApp Store'</strong> Era, we will see the bloom
+                of hundreds of DApps integrated into Sen Hub. By the time we
+                reach this, Sentre Protocol will have become the true{' '}
+                <strong>DApp Store for all things Solana</strong> - be it DeFi,
+                GameFi, or PriFi products.
+              </Typography.Text>
+              <Typography.Text style={{ fontSize: 16 }}>
+                Play your game, earn your tokens or NFTs, then trade with less
+                fees or farm for profit on the same platform. Cover your
+                sensitive transactions from privy eyes if you need. Participate
+                in shaping the future of the Sentre ecosystem through your own
+                customized DAO. Everything is in your hands - our community of
+                devoted and talented Sentizens, from users to developers.
+              </Typography.Text>
+            </Space>
           </Space>
         ) : (
           <Space align="baseline">

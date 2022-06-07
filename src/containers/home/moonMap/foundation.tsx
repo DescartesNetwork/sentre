@@ -27,24 +27,22 @@ export const Foundation = ({ isExpand = false }: FoundationProps) => {
         {isExpand ? (
           <Space direction="vertical" align="start">
             <Typography.Title level={5}>1. Foundation</Typography.Title>
-            <Typography.Text>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum. Where does it come from? Contrary to popular belief,
-              Lorem Ipsum is not simply random text. It has roots in a piece of
-              classical Latin literature from 45 BC, making it over 2000 years
-              old. Richard McClintock, a Latin professor at Hampden-Sydney
-              College in Virginia, looked up one of the more obscure Latin
-              words, consectetur, from a Lorem Ipsum passage, and going through
-              the cites of the word in classical literature, discovered the
-            </Typography.Text>
+            <Space direction="vertical">
+              <Typography.Text style={{ fontSize: 16 }}>
+                The <strong>'Foundation'</strong> Era started back in late 2020
+                with the birth of our four fundamental pillars for users. Invest
+                for profit on Sen LP, trade with less fees on Sen Swap, optimize
+                liquidity on Sen Farming, and manage your wealth on Sen Assets.
+              </Typography.Text>
+              <Typography.Text style={{ fontSize: 16 }}>
+                Along with the four pillars, Sentre developed Sen Hub as the
+                core product for developers. Get free knowledge from Sen
+                Academy, use available liquidity on the ecosystem, integrate
+                your DApp on Sen Store, and have quality Sentizens use your
+                DApps everyday. This era ended with the full release of all
+                above functions.
+              </Typography.Text>
+            </Space>
           </Space>
         ) : (
           <Space align="baseline">
