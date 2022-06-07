@@ -17,7 +17,7 @@ export const Foundation = ({ isExpand = false }: FoundationProps) => {
 
   return (
     <Row className="wrap-mm-content" align="bottom" wrap={false}>
-      <Col flex="auto" className="mm-content">
+      <Col flex="auto" className={isExpand ? 'h-full' : ''}>
         {isExpand ? (
           <Space direction="vertical" align="start">
             <Typography.Title level={5}>1. Foundation</Typography.Title>

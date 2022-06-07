@@ -17,7 +17,7 @@ export const Acceleration = ({ isExpand = false }: AccelerationProps) => {
 
   return (
     <Row className="wrap-mm-content" align="bottom" wrap={false}>
-      <Col flex="auto" className="mm-content">
+      <Col flex="auto" className={isExpand ? 'h-full' : ''}>
         {isExpand ? (
           <Space direction="vertical" align="start">
             <Typography.Title level={5}>3. Acceleration</Typography.Title>

@@ -17,10 +17,10 @@ const MoonMap = () => {
     <Row
       className="body-content"
       gutter={[64, 64]}
-      style={{ textAlign: 'center', margin: 0 }}
+      style={{ margin: 0 }}
       id="moon-map"
     >
-      <Col span={24} className="title">
+      <Col span={24} className="title" style={{ textAlign: 'center' }}>
         <RowSpaceVertical
           title={
             <Typography.Title level={1}>
@@ -57,6 +57,7 @@ const MoonMap = () => {
               borderRadius: 16,
               overflow: 'hidden',
             }}
+            bodyStyle={{ padding: '24px 0 0 24px' }}
             onClose={() => setExpandType('')}
             width={'100%'}
             mask={false}
@@ -66,6 +67,7 @@ const MoonMap = () => {
               <Col>
                 <Button
                   type="text"
+                  style={{ marginRight: 16 }}
                   icon={<IonIcon name="close-outline" />}
                   onClick={() => setExpandType('')}
                 />
