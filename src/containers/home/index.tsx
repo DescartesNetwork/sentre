@@ -1,12 +1,11 @@
 import { Col, Row } from 'antd'
 
 import Banner from './banner'
-import HomeBlog from './homeBlog'
+import BuildOnSentre from './buildOnSentre'
+import MoonMap from './moonMap'
 import Partner from './partner'
-import Community from './community'
-import Ecosystem from './ecosystem'
-import RoadMap from './roadMap'
-import Vision from './vision'
+import SenSuite from './senSuite'
+import Utilities from './utilities'
 
 const Home = () => {
   return (
@@ -15,22 +14,19 @@ const Home = () => {
         <Banner />
       </Col>
       <Col span={24}>
-        <Ecosystem />
+        <MoonMap />
       </Col>
       <Col span={24}>
-        <RoadMap />
+        <SenSuite />
       </Col>
       <Col span={24}>
-        <Vision />
+        <Utilities />
       </Col>
       <Col span={24}>
         <Partner />
       </Col>
       <Col span={24}>
-        <HomeBlog />
-      </Col>
-      <Col span={24}>
-        <Community />
+        <BuildOnSentre />
       </Col>
     </Row>
   )
