@@ -24,7 +24,7 @@ const MoonMap = () => {
         <RowSpaceVertical
           title={
             <Typography.Title level={1}>
-              The <span style={{ color: '#F9575E' }}>Moon</span> Map
+              <span style={{ color: '#F9575E' }}>Moon</span> Map
             </Typography.Title>
           }
           description="Our Vision, Mission and Achievements through the eras."

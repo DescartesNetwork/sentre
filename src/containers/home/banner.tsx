@@ -56,11 +56,11 @@ const Banner = () => {
               </Col>
               <Col
                 span={24}
-                style={{ position: 'relative', paddingRight: !!xl ? 24 : 4 }}
+                style={{ position: 'relative', paddingRight: !!xl ? 48 : 4 }}
               >
                 <Typography.Text type="secondary" className="description">
-                  Trade on Sen Hub, build on Sentre, and send your project to
-                  the moon with Sen Suite.
+                  Explore & install DApps on Sen Hub, build on Sentre, and send
+                  your project to the moon with Sen Suite.
                 </Typography.Text>
               </Col>
             </Row>
@@ -74,7 +74,7 @@ const Banner = () => {
                   size="large"
                   onClick={() => window.open(SENTRE_URL, '_blank')}
                 >
-                  Start building
+                  Open SenHub
                 </Button>
               </Col>
               <Col>

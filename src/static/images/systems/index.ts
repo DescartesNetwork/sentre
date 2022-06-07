@@ -11,6 +11,8 @@ import coPoolDarkPng from './co-pool-dark.png'
 import coPoolPng from './co-pool.png'
 import cubePng from './cube.png'
 import darkBgPng from './dark-bg.png'
+import defiLandMobileSvg from './defi-land-mobile.svg'
+import defiLandSvg from './defi-land.svg'
 import emptyPng from './empty.png'
 import gateSvg from './gate.svg'
 import imgCirclePng from './img-circle.png'
@@ -65,6 +67,8 @@ export {
   coPoolPng,
   cubePng,
   darkBgPng,
+  defiLandMobileSvg,
+  defiLandSvg,
   emptyPng,
   gateSvg,
   imgCirclePng,

@@ -2,6 +2,7 @@ import { logoCoin98Png } from 'static/images/logos'
 import {
   clvDarkSvg,
   clvLightSvg,
+  defiLandSvg,
   gateSvg,
   jupiterDarkSvg,
   jupiterLightSvg,
@@ -56,6 +57,11 @@ export const LIST_PARTNER = {
       description:
         'Your Gateway to Crypto. Trade over 1,400 cryptocurrencies safely, quickly, and easily.',
     },
+    {
+      logo: defiLandSvg,
+      description:
+        'DeFi Land is a multi-chain agriculture-simulation game created to gamify Decentralized Finance.',
+    },
   ],
   dark: [
     {
@@ -97,6 +103,11 @@ export const LIST_PARTNER = {
       logo: gateSvg,
       description:
         'Your Gateway to Crypto. Trade over 1,400 cryptocurrencies safely, quickly, and easily.',
+    },
+    {
+      logo: defiLandSvg,
+      description:
+        'DeFi Land is a multi-chain agriculture-simulation game created to gamify Decentralized Finance.',
     },
   ],
 }

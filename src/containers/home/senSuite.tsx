@@ -16,7 +16,7 @@ const SenSuite = () => {
         <RowSpaceVertical
           title={
             <Typography.Title level={1}>
-              The Sen <span style={{ color: '#F9575E' }}>Suite</span>
+              Sen <span style={{ color: '#F9575E' }}>Suite</span>
             </Typography.Title>
           }
           description="The limit breaker for projects on Solana."
