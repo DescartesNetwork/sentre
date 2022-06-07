@@ -1,12 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.be682071.css",
-    "main.js": "/static/js/main.b7127da2.js",
+    "main.js": "/static/js/main.86d192ab.js",
     "static/media/sentre-dark.png": "/static/media/sentre-dark.5a22c69f27f6ec4f0dc3.png",
     "static/media/bg-sen-suite-dark.png": "/static/media/bg-sen-suite-dark.03d9d6220b050c00ba63.png",
     "static/media/bg-sen-suite.png": "/static/media/bg-sen-suite.4794daae5370af2517db.png",
     "static/media/revenue-sharing.png": "/static/media/revenue-sharing.ff54dca84f1b71ae12f0.png",
     "static/media/mining-token.png": "/static/media/mining-token.2fe12d0347a3cd16482d.png",
+    "static/media/defi-land-mobile.svg": "/static/media/defi-land-mobile.a40d8731052fedcc066236c560d90b63.svg",
+    "static/media/defi-land.svg": "/static/media/defi-land.1e84ce1f072184d45e7b9380afbbba0d.svg",
     "static/media/sen-suite.png": "/static/media/sen-suite.196ea51958800d8e64d5.png",
     "static/media/img-fsquare.png": "/static/media/img-fsquare.deeed8692ea7b2e80eeb.png",
     "static/media/img-circle.png": "/static/media/img-circle.1a00e6a23da84a495335.png",
@@ -51,10 +53,10 @@
     "static/media/mm-n1.svg": "/static/media/mm-n1.7e7fd6ac3be66e4892bcb37718d99c5f.svg",
     "static/media/telegram.svg": "/static/media/telegram.d0a5a98799110debb907d13056814d5a.svg",
     "main.be682071.css.map": "/static/css/main.be682071.css.map",
-    "main.b7127da2.js.map": "/static/js/main.b7127da2.js.map"
+    "main.86d192ab.js.map": "/static/js/main.86d192ab.js.map"
   },
   "entrypoints": [
     "static/css/main.be682071.css",
-    "static/js/main.b7127da2.js"
+    "static/js/main.86d192ab.js"
   ]
 }
