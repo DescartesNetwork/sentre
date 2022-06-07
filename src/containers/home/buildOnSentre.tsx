@@ -40,7 +40,7 @@ const BuildOnSentre = () => {
               type="primary"
               onClick={() => window.open(SENTRE_URL, '_blank')}
             >
-              Open SenHub
+              Open Sen Hub
             </Button>
           </Col>
 
