@@ -1,13 +1,42 @@
 import { Button, Col, Image, Row, Typography } from 'antd'
 import RowSpaceVertical from './components/rowSpaceVertical'
 
-import { ballBluePng, senSuitePng } from 'static/images/systems'
+import {
+  ballBluePng,
+  baseImgPng,
+  bgSsCloudSvg,
+  img1LbSvg,
+  img1Svg,
+  img2LbSvg,
+  img2Svg,
+  img3LbSvg,
+  img3Svg,
+  img4LbSvg,
+  img4Svg,
+  img5LbSvg,
+  img5Svg,
+} from 'static/images/systems'
+import SenSuiteAnimation from 'components/animate/senSuiteAnimation'
+import { useSelector } from 'react-redux'
+import { AppState } from 'store'
+import { stat } from 'fs'
+
+const LIST_IMGS = [
+  { img: img1Svg, imgLabel: img1LbSvg },
+  { img: img2Svg, imgLabel: img2LbSvg },
+  { img: img3Svg, imgLabel: img3LbSvg },
+  { img: img4Svg, imgLabel: img4LbSvg },
+  { img: img5Svg, imgLabel: img5LbSvg },
+]
 
 const SenSuite = () => {
+  const width = useSelector((state: AppState) => state.ui.width)
+  const isMobile = width < 768
+
   return (
     <Row
       className="sen-suite"
-      gutter={[68, 68]}
+      gutter={[24, 24]}
       style={{ textAlign: 'center' }}
       id="sen-suite"
     >
@@ -23,7 +52,14 @@ const SenSuite = () => {
         />
       </Col>
       <Col span={24}>
-        <Image src={senSuitePng} preview={false} />
+        <SenSuiteAnimation
+          items={LIST_IMGS}
+          baseImg={baseImgPng}
+          isMobile={isMobile}
+        />
+      </Col>
+      <Col span={24} className="bg-ss-cloud">
+        <Image src={bgSsCloudSvg} preview={false} />
       </Col>
       <Col span={24}>
         <Button className="btn-readmore" type="ghost">
