@@ -22,7 +22,7 @@ const BuildOnSentre = () => {
           <Col span={24}>
             <Typography.Text
               type="secondary"
-              style={{ fontSize: isMobile ? 16 : 20 }}
+              style={{ color: '#F4F4F5', fontSize: isMobile ? 16 : 20 }}
             >
               Tired of using expensive services, doing business, and finding
               funds for your project?

@@ -1,8 +1,10 @@
 import ballBluePng from './ball-blue.png'
+import baseImgPng from './base-img.png'
 import bgBannerDarkPng from './bg-banner-dark.png'
 import bgBannerPng from './bg-banner.png'
 import bgSenSuiteDarkPng from './bg-sen-suite-dark.png'
 import bgSenSuitePng from './bg-sen-suite.png'
+import bgSsCloudSvg from './bg-ss-cloud.svg'
 import clvDarkSvg from './clv-dark.svg'
 import clvLightSvg from './clv-light.svg'
 import coMarketingDarkPng from './co-marketing-dark.png'
@@ -15,6 +17,16 @@ import defiLandMobileSvg from './defi-land-mobile.svg'
 import defiLandSvg from './defi-land.svg'
 import emptyPng from './empty.png'
 import gateSvg from './gate.svg'
+import img1LbSvg from './img-1-lb.svg'
+import img1Svg from './img-1.svg'
+import img2LbSvg from './img-2-lb.svg'
+import img2Svg from './img-2.svg'
+import img3LbSvg from './img-3-lb.svg'
+import img3Svg from './img-3.svg'
+import img4LbSvg from './img-4-lb.svg'
+import img4Svg from './img-4.svg'
+import img5LbSvg from './img-5-lb.svg'
+import img5Svg from './img-5.svg'
 import imgCirclePng from './img-circle.png'
 import imgFsquarePng from './img-fsquare.png'
 import imgSquareBlurPng from './img-square-blur.png'
@@ -55,10 +67,12 @@ import wormholeLightSvg from './wormhole-light.svg'
 
 export {
   ballBluePng,
+  baseImgPng,
   bgBannerDarkPng,
   bgBannerPng,
   bgSenSuiteDarkPng,
   bgSenSuitePng,
+  bgSsCloudSvg,
   clvDarkSvg,
   clvLightSvg,
   coMarketingDarkPng,
@@ -71,6 +85,16 @@ export {
   defiLandSvg,
   emptyPng,
   gateSvg,
+  img1LbSvg,
+  img1Svg,
+  img2LbSvg,
+  img2Svg,
+  img3LbSvg,
+  img3Svg,
+  img4LbSvg,
+  img4Svg,
+  img5LbSvg,
+  img5Svg,
   imgCirclePng,
   imgFsquarePng,
   imgSquareBlurPng,
