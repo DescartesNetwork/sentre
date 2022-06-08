@@ -26,7 +26,7 @@ export const Acceleration = ({ isExpand = false }: AccelerationProps) => {
       <Col flex="auto" className={isExpand ? 'h-full' : ''}>
         {isExpand ? (
           <Space direction="vertical" align="start">
-            <Typography.Title level={5}>3. Acceleration</Typography.Title>
+            <Typography.Title level={5}>2. Acceleration</Typography.Title>
             <Space direction="vertical">
               <Typography.Text style={{ fontSize: 16 }}>
                 The <strong>‘Acceleration’</strong> era starts in 2022 with the
