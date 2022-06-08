@@ -1,5 +1,8 @@
+import { useSelector } from 'react-redux'
+
 import { Button, Col, Image, Row, Typography } from 'antd'
 import RowSpaceVertical from './components/rowSpaceVertical'
+import SenSuiteAnimation from 'components/animate/senSuiteAnimation'
 
 import {
   ballBluePng,
@@ -16,10 +19,7 @@ import {
   img5LbSvg,
   img5Svg,
 } from 'static/images/systems'
-import SenSuiteAnimation from 'components/animate/senSuiteAnimation'
-import { useSelector } from 'react-redux'
 import { AppState } from 'store'
-import { stat } from 'fs'
 
 const LIST_IMGS = [
   { img: img1Svg, imgLabel: img1LbSvg },
