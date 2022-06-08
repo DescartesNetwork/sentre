@@ -1,4 +1,3 @@
-import { logoCoin98Png } from 'static/images/logos'
 import {
   clvDarkSvg,
   clvLightSvg,
@@ -6,17 +5,18 @@ import {
   gateSvg,
   jupiterDarkSvg,
   jupiterLightSvg,
-  partnerSolanaDarkPng,
-  partnerSolanaLightPng,
   serumDarkSvg,
   serumLightSvg,
   sypoolSvg,
-} from 'static/images/systems'
+  logoCoin98Png,
+  logoSolSvg,
+  logoSolDarkSvg,
+} from 'static/images/logos'
 
 export const LIST_PARTNER = {
   light: [
     {
-      logo: partnerSolanaLightPng,
+      logo: logoSolSvg,
       description:
         'Solana is a decentralized blockchain built to enable scalable, user-friendly apps for the world.',
     },
@@ -58,7 +58,7 @@ export const LIST_PARTNER = {
   ],
   dark: [
     {
-      logo: partnerSolanaDarkPng,
+      logo: logoSolDarkSvg,
       description:
         'Solana is a decentralized blockchain built to enable scalable, user-friendly apps for the world.',
     },
