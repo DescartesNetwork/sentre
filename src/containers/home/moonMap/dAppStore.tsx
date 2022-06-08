@@ -26,7 +26,7 @@ export const DAppStore = ({ isExpand = false }: DAppStoreProps) => {
       <Col flex="auto" className={isExpand ? 'h-full' : ''}>
         {isExpand ? (
           <Space direction="vertical" align="start">
-            <Typography.Title level={5}>2. DAppStore</Typography.Title>
+            <Typography.Title level={5}>3. DAppStore</Typography.Title>
             <Space direction="vertical">
               <Typography.Text style={{ fontSize: 16 }}>
                 In the <strong>'DApp Store'</strong> Era, we will see the bloom
