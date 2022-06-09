@@ -79,16 +79,18 @@ const CardDAppStore = ({ onClick }: CardDAppStoreProps) => {
   const width = useSelector((state: AppState) => state.ui.width)
 
   const mobileScreen = width < 768
-  const boderRadius = mobileScreen ? '0 0 0 16px' : '0 16px 0 0'
+  const boderRadius = mobileScreen ? '0 0 16px 0' : '0 16px 0 0'
 
   return (
     <Card
       bordered={false}
+      className="card-hoverable"
       style={{
         borderRadius: boderRadius,
         height: '100%',
         cursor: 'pointer',
         boxShadow: 'unset',
+        overflow: 'hidden',
       }}
       bodyStyle={{ height: '100%', padding: '24px 0 0 24px' }}
       onClick={() => onClick(MoonMapState.dAppStore)}

@@ -43,10 +43,10 @@ const MoonMap = () => {
           </Col>
           <Col xs={24} md={12}>
             <Row gutter={[12, 12]}>
-              <Col xs={12} md={24}>
+              <Col xs={{ span: 12, order: 2 }} md={{ span: 24, order: 1 }}>
                 <CardDAppStore onClick={setExpandType} />
               </Col>
-              <Col xs={12} md={24}>
+              <Col xs={{ span: 12, order: 1 }} md={{ span: 24, order: 2 }}>
                 <CardAcceleration onClick={setExpandType} />
               </Col>
             </Row>

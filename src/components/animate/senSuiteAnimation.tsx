@@ -124,7 +124,7 @@ const SenSuiteAnimation = ({
         }
       }
 
-      // disabled image label when element hidden
+      // disabled image label when parent element hidden in viewport
       if (bPTop > windowH * 0.75) setIsStoped(false)
 
       // set stoped position Y when scroll down

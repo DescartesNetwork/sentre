@@ -10,7 +10,7 @@ const BuildOnSentre = () => {
   const width = useSelector((state: AppState) => state.ui.width)
   const isMobile = width < 575
   return (
-    <Row gutter={[32, 32]} className="build-on-sentre">
+    <Row gutter={[32, 32]} className="build-on-sentre" id="builder">
       <Col span={24} className="title">
         <Row gutter={[16, 16]}>
           <Col span={24}>
