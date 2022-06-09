@@ -92,6 +92,7 @@ const CardFoundation = ({ onClick }: CardFoundationProps) => {
   return (
     <Card
       bordered={false}
+      className="card-hoverable"
       style={{
         borderRadius: boderRadius,
         height: '100%',

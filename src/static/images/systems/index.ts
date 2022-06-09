@@ -35,6 +35,8 @@ import jupiterDarkSvg from './jupiter-dark.svg'
 import jupiterLightSvg from './jupiter-light.svg'
 import lightBgPng from './light-bg.png'
 import miningTokenPng from './mining-token.png'
+import mkCoin1Svg from './mk-coin-1.svg'
+import mkCoin2Svg from './mk-coin-2.svg'
 import mmAccelerationPng from './mm-acceleration.png'
 import mmDappStorePng from './mm-dapp-store.png'
 import mmFoundationDarkPng from './mm-foundation-dark.png'
@@ -51,6 +53,9 @@ import partnerSolanaLightPng from './partner-solana-light.png'
 import productIntegrationDarkPng from './product-integration-dark.png'
 import productIntegrationPng from './product-integration.png'
 import revenueSharingPng from './revenue-sharing.png'
+import rsCoin1Svg from './rs-coin-1.svg'
+import rsCoin2Svg from './rs-coin-2.svg'
+import rsCoin3Svg from './rs-coin-3.svg'
 import senFullDarkPng from './sen-full-dark.png'
 import senFullPng from './sen-full.png'
 import senLitePng from './sen-lite.png'
@@ -103,6 +108,8 @@ export {
   jupiterLightSvg,
   lightBgPng,
   miningTokenPng,
+  mkCoin1Svg,
+  mkCoin2Svg,
   mmAccelerationPng,
   mmDappStorePng,
   mmFoundationDarkPng,
@@ -119,6 +126,9 @@ export {
   productIntegrationDarkPng,
   productIntegrationPng,
   revenueSharingPng,
+  rsCoin1Svg,
+  rsCoin2Svg,
+  rsCoin3Svg,
   senFullDarkPng,
   senFullPng,
   senLitePng,

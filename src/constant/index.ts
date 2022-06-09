@@ -1,9 +1,10 @@
 export const NAVIGATION = [
   { title: 'Home', route: 'home' },
-  { title: 'Moon map', route: 'moon-map' },
+  { title: 'Moon Map', route: 'moon-map' },
   { title: 'Sen Suite', route: 'sen-suite' },
   { title: 'Utilities', route: 'utilities' },
   { title: 'Partners', route: 'partners' },
+  { title: 'Builder', route: 'builder' },
 ]
 export const DOCUMENTS = [
   { title: 'Github', src: 'https://github.com/DescartesNetwork' },

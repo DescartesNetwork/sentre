@@ -1,11 +1,16 @@
-import { Col, Row, Typography, Image } from 'antd'
+import { Col, Row, Typography, Image, Space } from 'antd'
 import RowSpaceVertical from './components/rowSpaceVertical'
+import {
+  MiningAnimation,
+  RevenueAnimation,
+} from 'components/animate/utilitiesAnimation'
 
 import {
   miningTokenPng,
   revenueSharingPng,
   utilityBgPng,
 } from 'static/images/systems'
+
 const Utilities = () => {
   return (
     <Row
@@ -36,7 +41,10 @@ const Utilities = () => {
           align="middle"
         >
           <Col xs={{ span: 24, order: 1 }} md={{ span: 12, order: 1 }}>
-            <Image src={revenueSharingPng} preview={false} />
+            <Space>
+              <Image src={revenueSharingPng} preview={false} />
+              <RevenueAnimation />
+            </Space>
           </Col>
           <Col xs={{ span: 24, order: 2 }} md={{ span: 12, order: 2 }}>
             <RowSpaceVertical
@@ -61,7 +69,10 @@ const Utilities = () => {
             />
           </Col>
           <Col xs={{ span: 24, order: 3 }} md={{ span: 12, order: 4 }}>
-            <Image src={miningTokenPng} preview={false} />
+            <Space>
+              <Image src={miningTokenPng} preview={false} />
+              <MiningAnimation />
+            </Space>
           </Col>
         </Row>
       </Col>

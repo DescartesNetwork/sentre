@@ -117,6 +117,9 @@
       width: 185px;
       left: -84px;
       top: -55px;
+      img {
+        animation-duration: 4s;
+      }
     }
   }
 
@@ -243,6 +246,9 @@
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
+    img {
+      animation: smoothBounce 3.6s infinite ease-in-out;
+    }
   }
 }
 
@@ -301,6 +307,9 @@
       top: -125px;
       right: 0;
       width: 93px;
+      img {
+        animation: smoothBounce 4.2s infinite ease-in-out;
+      }
     }
   }
 
@@ -335,6 +344,9 @@
       top: -155px;
       left: -155px;
       width: 110px;
+      img {
+        animation: smoothBounce 4s ease-in infinite;
+      }
     }
   }
   @media (max-width: 575px) {
@@ -356,6 +368,9 @@
       top: -112px;
       right: -113px;
       width: 184px;
+      img {
+        animation: smoothBounce 5s ease-in-out infinite;
+      }
     }
   }
   .ant-card-body {
@@ -369,6 +384,10 @@
   &-card {
     height: 254px;
     box-shadow: none !important;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.01) translateY(-2px);
+    }
   }
   @media (max-width: 575px) {
     .ant-card-body {
@@ -428,6 +447,9 @@
       top: -100px;
       left: 0;
       width: 110px;
+      img {
+        animation: smoothBounce 4s linear infinite;
+      }
     }
   }
   @media (max-width: 575px) {
@@ -519,6 +541,11 @@
   .ico-social {
     color: #4e4f5c;
   }
+  .partner {
+    &-card:hover {
+      box-shadow: 0px 4px 40px rgba(33, 36, 51, 0.12) !important;
+    }
+  }
 }
 
 #dark {
@@ -563,5 +590,10 @@
   }
   .ico-social {
     color: #d3d3d6;
+  }
+  .partner {
+    &-card:hover {
+      box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.36) !important;
+    }
   }
 }

@@ -80,11 +80,17 @@ export const Acceleration = ({ isExpand = false }: AccelerationProps) => {
 
 type CardAccelerationProps = { onClick: (type: string) => void }
 const CardAcceleration = ({ onClick }: CardAccelerationProps) => {
+  const width = useSelector((state: AppState) => state.ui.width)
+
+  const mobileScreen = width < 768
+  const boderRadius = mobileScreen ? '0 0 0 16px' : '0 0 16px 0'
+
   return (
     <Card
       bordered={false}
+      className="card-hoverable"
       style={{
-        borderRadius: '0 0 16px 0',
+        borderRadius: boderRadius,
         height: '100%',
         cursor: 'pointer',
         boxShadow: 'unset',
