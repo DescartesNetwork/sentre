@@ -5,6 +5,7 @@ export const NAVIGATION = [
   { title: 'Utilities', route: 'utilities' },
   { title: 'Partners', route: 'partners' },
   { title: 'Builder', route: 'builder' },
+  { title: 'Academy', route: 'https://academy.sentre.io' },
 ]
 export const DOCUMENTS = [
   { title: 'Github', src: 'https://github.com/DescartesNetwork' },

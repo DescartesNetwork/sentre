@@ -6,8 +6,9 @@ import { DOCUMENTS, NAVIGATION, SOCIALS } from 'constant'
 const Footer = () => {
   const { sm } = Grid.useBreakpoint() || {}
 
-  const scrollToSection = (id: string) => {
+  const handleNavigation = (id: string) => {
     if (!id) return
+    if (id.startsWith('https')) return window.open(id, '_blank')
     const yOffset = -100 //88px that the height of header
     const el = document.getElementById(`${id}`)!
     const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
@@ -55,7 +56,7 @@ const Footer = () => {
                 </Button>
                 {NAVIGATION.map((item) => (
                   <Typography.Text
-                    onClick={() => scrollToSection(item.route)}
+                    onClick={() => handleNavigation(item.route)}
                     className="footer-item"
                     key={item.route}
                   >
