@@ -20,12 +20,9 @@ const RowSpaceVertical = ({
   const isMobile = width < 575
 
   return (
-    <Space direction="vertical" size={16}>
+    <Space direction="vertical">
       {title}
-      <Typography.Text
-        style={{ fontSize: isMobile ? 16 : fontSize }}
-        type="secondary"
-      >
+      <Typography.Text style={{ fontSize: isMobile ? 16 : fontSize }}>
         {description}
       </Typography.Text>
     </Space>
