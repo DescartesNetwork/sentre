@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.aa818860.css",
-    "main.js": "/static/js/main.63353981.js",
+    "main.css": "/static/css/main.de5110b6.css",
+    "main.js": "/static/js/main.b266fb6e.js",
     "static/media/sentre-dark.png": "/static/media/sentre-dark.5a22c69f27f6ec4f0dc3.png",
     "static/media/bg-sen-suite-dark.png": "/static/media/bg-sen-suite-dark.03d9d6220b050c00ba63.png",
     "static/media/bg-sen-suite.png": "/static/media/bg-sen-suite.4794daae5370af2517db.png",
@@ -94,11 +94,11 @@
     "static/media/mm-n1-dark.svg": "/static/media/mm-n1-dark.1c85c1a0c41c54552864b04eafe3e540.svg",
     "static/media/mm-n1.svg": "/static/media/mm-n1.7e7fd6ac3be66e4892bcb37718d99c5f.svg",
     "static/media/telegram.svg": "/static/media/telegram.d0a5a98799110debb907d13056814d5a.svg",
-    "main.aa818860.css.map": "/static/css/main.aa818860.css.map",
-    "main.63353981.js.map": "/static/js/main.63353981.js.map"
+    "main.de5110b6.css.map": "/static/css/main.de5110b6.css.map",
+    "main.b266fb6e.js.map": "/static/js/main.b266fb6e.js.map"
   },
   "entrypoints": [
-    "static/css/main.aa818860.css",
-    "static/js/main.63353981.js"
+    "static/css/main.de5110b6.css",
+    "static/js/main.b266fb6e.js"
   ]
 }
