@@ -40,11 +40,12 @@ const Header = () => {
     setVisible(false)
   }
 
-  const scrollToSection = (id: string, flag: boolean) => {
+  const handleNavigation = (id: string, flag: boolean) => {
     if (!id) return
     if (flag) {
       setVisible(false)
     }
+    if (id.startsWith('https')) return window.open(id, '_blank')
     const yOffset = -100 //88px that the height of header
     const el = document.getElementById(`${id}`)!
     const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
@@ -93,7 +94,7 @@ const Header = () => {
                 style={{ marginTop: '19px' }}
                 renderItem={(section) => (
                   <List.Item
-                    onClick={() => scrollToSection(section.route, true)}
+                    onClick={() => handleNavigation(section.route, true)}
                     style={{ borderBottom: 'none', cursor: 'pointer' }}
                   >
                     <Typography.Text>{section.title}</Typography.Text>
@@ -108,7 +109,7 @@ const Header = () => {
             >
               {NAVIGATION.map((section) => (
                 <li
-                  onClick={() => scrollToSection(section.route, false)}
+                  onClick={() => handleNavigation(section.route, false)}
                   className="sections-item"
                   key={section.title}
                 >
