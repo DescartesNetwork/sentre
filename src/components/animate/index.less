@@ -6,7 +6,7 @@
     min-height: 380px;
   }
   @media (max-width: 768px) {
-    min-height: 240px;
+    min-height: 180px;
   }
   .wrap-img {
     position: absolute;
@@ -86,18 +86,23 @@
   }
   .base-img {
     position: absolute;
-    width: 460px;
+    width: 250px;
     left: 52%;
     transform: translateX(-52%);
-    bottom: -40px;
+    bottom: 0px;
     z-index: 2;
     @media (max-width: 992px) {
-      width: 400px;
+      width: 220px;
       left: 55%;
       transform: translateX(-55%);
     }
     @media (max-width: 768px) {
-      width: 200px;
+      width: 150px;
+      left: 52%;
+      transform: translateX(-52%);
+    }
+    @media (max-width: 575px) {
+      width: 150px;
       left: 55%;
       transform: translateX(-55%);
     }

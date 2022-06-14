@@ -35,7 +35,8 @@
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "impImg": "node ./import-builder.js"
+    "impImg": "node ./import-builder.js",
+    "gpush": "git add . && git commit -m '_' && git pull && git push"
   },
   "eslintConfig": {
     "extends": [

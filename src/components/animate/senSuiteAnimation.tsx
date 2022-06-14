@@ -7,15 +7,15 @@ const TRANSLATE_Y_RATIO_FIRST = 2.2
 const TRANSLATE_Y_RATIO_SEC = 2.5
 const TRANSLATE_Y_RATIO_LAST = 5.5
 
-const TRANSLATE_Y_RATIO_MOBILE_FIRST = 3.5
-const TRANSLATE_Y_RATIO_MOBILE_SEC = 4
-const TRANSLATE_Y_RATIO_MOBILE_LAST = 20
+const TRANSLATE_Y_RATIO_MOBILE_FIRST = 1.8
+const TRANSLATE_Y_RATIO_MOBILE_SEC = 2.2
+const TRANSLATE_Y_RATIO_MOBILE_LAST = 6
 
 const SPACING_HORIZONTAL_SEC = 80
 const SPACING_HORIZONTAL_LAST = 30
 
-const SPACING_HORIZONTAL_MOBILE_SEC = 40
-const SPACING_HORIZONTAL_MOBILE_LAST = 5
+const SPACING_HORIZONTAL_MOBILE_SEC = 50
+const SPACING_HORIZONTAL_MOBILE_LAST = 15
 
 type ImagesTypes = { img: string; imgLabel: string }
 type SenSuiteAnimationProps = {
@@ -97,38 +97,39 @@ const SenSuiteAnimation = ({
       const windowH = window.innerHeight
 
       const translateY = bPHeight - (bPBottom - windowH) - 0.2 * bPHeight
-      const translateX = translateY / 10
       const scaleRatio = 1 / bPHeight
 
       if (timer) clearTimeout(timer)
 
       // add translate style to image
-      if (
-        bPTop + 0.2 * bPHeight < windowH &&
-        bPBottom + 0.2 * bPHeight > windowH
-      ) {
+      if (bPTop + 0.2 * bPHeight < windowH) {
+        let reCalculateTranslateY = translateY
+
+        if (bPBottom + 0.2 * bPHeight < windowH)
+          reCalculateTranslateY = bPHeight
+
         for (const item in items) {
           const numItem = Number(item)
-          const transY = calculatePositionY(translateY, numItem)
+          const transY = calculatePositionY(reCalculateTranslateY, numItem)
+          const tranX = calculatePositionX(reCalculateTranslateY / 10, numItem)
           document
             .querySelector(`.wrap-img.item-img_${numItem + 1}`)
             ?.setAttribute(
               'style',
-              `transform: scale(${scaleRatio * translateY}) translate3d(${
+              `transform: scale(${
+                scaleRatio * reCalculateTranslateY
+              }) translate3d(${
                 (numItem + 1) % 2 === 0 ? '-' : ''
-              }${calculatePositionX(
-                translateX,
-                numItem,
-              )}px, -${transY}px, 0) perspective(0px)`,
+              }${tranX}px, -${transY}px, 0) perspective(0px)`,
             )
         }
       }
 
       // disabled image label when parent element hidden in viewport
-      if (bPTop > windowH * 0.75) setIsStoped(false)
+      if (bPTop > windowH) setIsStoped(false)
 
       // set stoped position Y when scroll down
-      if (positionY < window.scrollY)
+      if (positionY - 20 < window.scrollY)
         timer = setTimeout(() => setIsStoped(true), 100)
       setPositionY(window.scrollY)
     },
