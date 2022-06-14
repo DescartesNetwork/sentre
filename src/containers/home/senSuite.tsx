@@ -28,6 +28,8 @@ const LIST_IMGS = [
   { img: img4Svg, imgLabel: img4LbSvg },
   { img: img5Svg, imgLabel: img5LbSvg },
 ]
+const BLOG_SEN_SUITE =
+  'https://academy.sentre.io/#/blogs/123246296205?category=dev'
 
 const SenSuite = () => {
   const width = useSelector((state: AppState) => state.ui.width)
@@ -62,7 +64,11 @@ const SenSuite = () => {
         <Image src={bgSsCloudSvg} preview={false} />
       </Col>
       <Col span={24}>
-        <Button className="btn-readmore" type="ghost">
+        <Button
+          className="btn-readmore"
+          size="large"
+          onClick={() => window.open(BLOG_SEN_SUITE, '_blank')}
+        >
           Read more
         </Button>
       </Col>
