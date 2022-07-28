@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.fc34e21a.css",
-    "main.js": "/static/js/main.809a07b4.js",
+    "main.js": "/static/js/main.916d25a6.js",
     "static/media/sentre-dark.png": "/static/media/sentre-dark.5a22c69f27f6ec4f0dc3.png",
     "static/media/bg-sen-suite-dark.png": "/static/media/bg-sen-suite-dark.03d9d6220b050c00ba63.png",
     "static/media/bg-sen-suite.png": "/static/media/bg-sen-suite.4794daae5370af2517db.png",
@@ -60,9 +60,7 @@
     "static/media/cube.png": "/static/media/cube.ef79f83dfaa0f1143010.png",
     "static/media/mm-foundation.png": "/static/media/mm-foundation.849cf651023d72d67dcb.png",
     "static/media/mm-foundation-dark.png": "/static/media/mm-foundation-dark.143261aeb7ff05384786.png",
-    "static/media/sen-full-dark.png": "/static/media/sen-full-dark.f334428ce186b2472dcb.png",
     "static/media/mm-dapp-store.png": "/static/media/mm-dapp-store.49909a0fa64b64c7d2de.png",
-    "static/media/sen-full.png": "/static/media/sen-full.658f05fff127284973db.png",
     "static/media/utility-bg.png": "/static/media/utility-bg.71fb7018390f4a4d1c65.png",
     "static/media/logo-gate.svg": "/static/media/logo-gate.5b7ac18e61704238bc00045fee8548ed.svg",
     "static/media/gate.svg": "/static/media/gate.9adbbb98a231581ee07b49aefb04a6f1.svg",
@@ -95,10 +93,10 @@
     "static/media/mm-n1.svg": "/static/media/mm-n1.7e7fd6ac3be66e4892bcb37718d99c5f.svg",
     "static/media/telegram.svg": "/static/media/telegram.d0a5a98799110debb907d13056814d5a.svg",
     "main.fc34e21a.css.map": "/static/css/main.fc34e21a.css.map",
-    "main.809a07b4.js.map": "/static/js/main.809a07b4.js.map"
+    "main.916d25a6.js.map": "/static/js/main.916d25a6.js.map"
   },
   "entrypoints": [
     "static/css/main.fc34e21a.css",
-    "static/js/main.809a07b4.js"
+    "static/js/main.916d25a6.js"
   ]
 }
