@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fc34e21a.css",
-    "main.js": "/static/js/main.3182ab42.js",
+    "main.css": "/static/css/main.7a655217.css",
+    "main.js": "/static/js/main.5894b402.js",
     "static/media/sentre-dark.png": "/static/media/sentre-dark.5a22c69f27f6ec4f0dc3.png",
     "static/media/bg-sen-suite-dark.png": "/static/media/bg-sen-suite-dark.03d9d6220b050c00ba63.png",
     "static/media/bg-sen-suite.png": "/static/media/bg-sen-suite.4794daae5370af2517db.png",
@@ -13,11 +13,10 @@
     "static/media/logo-lido.svg": "/static/media/logo-lido.3c09babddce02f4be400a5172f888a8e.svg",
     "static/media/logo-saros.svg": "/static/media/logo-saros.c9e3153a364aa6ffb3c4580c3df4783a.svg",
     "static/media/logo-sen-lightning.svg": "/static/media/logo-sen-lightning.f95747d81d902c66e4688488297562f1.svg",
+    "static/media/logo-sentre.svg": "/static/media/logo-sentre.5818276dad59874d7a69d13717054456.svg",
     "static/media/logo-sypool.svg": "/static/media/logo-sypool.b81023bdfd79cc0907f89b7ac52c0b25.svg",
     "static/media/logo-sen-lp.svg": "/static/media/logo-sen-lp.faa2ddcdcc806e1e113e197b162e85f2.svg",
     "static/media/logo-lucid.svg": "/static/media/logo-lucid.8b8a13bf032f4cc82ae9713e85b5b2d2.svg",
-    "static/media/logo-sentre.svg": "/static/media/logo-sentre.a661cdcadb40d9c9fcc30751d733607b.svg",
-    "static/media/logo-sentre-dark.svg": "/static/media/logo-sentre-dark.2f31fc58de25cd631e294ca9e351360e.svg",
     "static/media/logo-idl-parser.svg": "/static/media/logo-idl-parser.544b53da7dd4cd8824487803e301655f.svg",
     "static/media/mk-coin-1.svg": "/static/media/mk-coin-1.6ad0e5f26f01ac1cdaea5463cca0db24.svg",
     "static/media/logo-sen-booster.svg": "/static/media/logo-sen-booster.53246f1623bfb045668b5e4b69621ee5.svg",
@@ -94,11 +93,11 @@
     "static/media/mm-n1-dark.svg": "/static/media/mm-n1-dark.053d8791fc49b6d9d7ff8018aebbaeb2.svg",
     "static/media/mm-n1.svg": "/static/media/mm-n1.7e7fd6ac3be66e4892bcb37718d99c5f.svg",
     "static/media/telegram.svg": "/static/media/telegram.d0a5a98799110debb907d13056814d5a.svg",
-    "main.fc34e21a.css.map": "/static/css/main.fc34e21a.css.map",
-    "main.3182ab42.js.map": "/static/js/main.3182ab42.js.map"
+    "main.7a655217.css.map": "/static/css/main.7a655217.css.map",
+    "main.5894b402.js.map": "/static/js/main.5894b402.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc34e21a.css",
-    "static/js/main.3182ab42.js"
+    "static/css/main.7a655217.css",
+    "static/js/main.5894b402.js"
   ]
 }
