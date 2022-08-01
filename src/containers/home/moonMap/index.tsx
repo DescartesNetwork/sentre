@@ -17,7 +17,7 @@ const MoonMap = () => {
     <Row
       className="body-content"
       gutter={[64, 64]}
-      style={{ margin: 0 }}
+      style={{ marginLeft: 0, marginRight: 0 }}
       id="moon-map"
     >
       <Col span={24} className="title" style={{ textAlign: 'center' }}>

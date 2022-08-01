@@ -24,6 +24,8 @@ import telegramSvg from './telegram.svg'
 import twitterSvg from './twitter.svg'
 import wormholeDarkSvg from './wormhole-dark.svg'
 import wormholeLightSvg from './wormhole-light.svg'
+import solendLight from './solend.svg'
+import solendDark from './solend-dark.svg'
 
 export {
   clvDarkSvg,
@@ -52,4 +54,6 @@ export {
   twitterSvg,
   wormholeDarkSvg,
   wormholeLightSvg,
+  solendDark,
+  solendLight,
 }
