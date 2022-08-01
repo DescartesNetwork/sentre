@@ -179,9 +179,16 @@
     gap: 16px;
   }
   .wave-base-img {
-    flex: auto;
     margin-top: 22px;
-    text-align: right;
+    display: flex;
+    flex: auto;
+    flex-flow: column;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    gap: 6px;
+    animation: wave 5s linear infinite;
+    animation-delay: 1.8s;
     @media (max-width: 992px) {
       margin-top: 16px;
     }
@@ -190,8 +197,6 @@
     }
     img {
       max-width: 90px;
-      animation: wave 5s linear infinite;
-      animation-delay: 1.8s;
       @media (max-width: 992px) {
         max-width: 60px;
       }

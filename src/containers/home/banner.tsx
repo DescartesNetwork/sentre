@@ -1,5 +1,3 @@
-import { useSelector } from 'react-redux'
-
 import { Row, Col, Typography, Image, Button, Grid, Space } from 'antd'
 import BannerAnimation from 'components/animate/bannerAnimation'
 import Icon from 'components/icon'
@@ -24,22 +22,17 @@ import {
   logoSenOtcSvg,
   logoSenRankSvg,
   logoSenswapSvg,
-  logoSentreDarkSvg,
   logoSentreSvg,
   logoSypoolSvg,
   logoZeta,
 } from 'static/images/appLogos'
 
 import { imgSquareBlurPng, imgSquarePng } from 'static/images/systems'
-import { AppState } from 'store'
 
 const DISABLE = {
   display: 'none',
 }
-const LOGO_SENTRE = {
-  dark: logoSentreDarkSvg,
-  light: logoSentreSvg,
-}
+
 const WAVE_IMGS = {
   line1: [logoBulkSenderSvg, logoSenRankSvg, logoAnyArts, logoDefiland],
   line2: [logoInterdaoSvg, logoSenOtcSvg, logoHedge, logoLucidSvg],
@@ -49,10 +42,7 @@ const WAVE_IMGS = {
 }
 
 const Banner = () => {
-  const theme = useSelector((state: AppState) => state.ui.theme)
   const { xl } = Grid.useBreakpoint()
-
-  const logoSentre = LOGO_SENTRE[theme]
 
   return (
     <Row
@@ -136,7 +126,7 @@ const Banner = () => {
         sm={{ span: 18, order: 1 }}
         xs={{ span: 24, order: 1 }}
       >
-        <BannerAnimation baseImg={logoSentre} items={WAVE_IMGS} />
+        <BannerAnimation baseImg={logoSentreSvg} items={WAVE_IMGS} />
       </Col>
     </Row>
   )
