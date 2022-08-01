@@ -18,7 +18,6 @@ import logoSenLpSvg from './logo-sen-lp.svg'
 import logoSenOtcSvg from './logo-sen-otc.svg'
 import logoSenRankSvg from './logo-sen-rank.svg'
 import logoSenswapSvg from './logo-senswap.svg'
-import logoSentreDarkSvg from './logo-sentre-dark.svg'
 import logoSentreSvg from './logo-sentre.svg'
 import logoSypoolSvg from './logo-sypool.svg'
 
@@ -43,7 +42,6 @@ export {
   logoSenOtcSvg,
   logoSenRankSvg,
   logoSenswapSvg,
-  logoSentreDarkSvg,
   logoSentreSvg,
   logoSypoolSvg,
 }
