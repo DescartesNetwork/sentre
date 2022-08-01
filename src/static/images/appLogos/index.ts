@@ -1,12 +1,12 @@
 import logoBulkSenderSvg from './logo-bulk-sender.svg'
-import logoColor1Svg from './logo-color-1.svg'
-import logoColor2Svg from './logo-color-2.svg'
-import logoColor3Svg from './logo-color-3.svg'
-import logoColor4Svg from './logo-color-4.svg'
-import logoColor5Svg from './logo-color-5.svg'
-import logoColor6Svg from './logo-color-6.svg'
-import logoColor7Svg from './logo-color-7.svg'
-import logoColor8Svg from './logo-color-8.svg'
+import logoAnyArts from './logo-any-arts.svg'
+import logoDefiland from './logo-defiland.svg'
+import logoHedge from './logo-hedge.svg'
+import logoSaros from './logo-saros.svg'
+import logoZeta from './logo-zeta.svg'
+import logoLido from './logo-lido.svg'
+import logoMiniRoyal from './logo-mini-royal.svg'
+import logoIdlParser from './logo-idl-parser.svg'
 import logoInterdaoSvg from './logo-interdao.svg'
 import logoLucidSvg from './logo-lucid.svg'
 import logoSenAssestSvg from './logo-sen-assest.svg'
@@ -24,14 +24,14 @@ import logoSypoolSvg from './logo-sypool.svg'
 
 export {
   logoBulkSenderSvg,
-  logoColor1Svg,
-  logoColor2Svg,
-  logoColor3Svg,
-  logoColor4Svg,
-  logoColor5Svg,
-  logoColor6Svg,
-  logoColor7Svg,
-  logoColor8Svg,
+  logoAnyArts,
+  logoDefiland,
+  logoHedge,
+  logoSaros,
+  logoZeta,
+  logoLido,
+  logoMiniRoyal,
+  logoIdlParser,
   logoInterdaoSvg,
   logoLucidSvg,
   logoSenAssestSvg,

@@ -5,17 +5,16 @@ import BannerAnimation from 'components/animate/bannerAnimation'
 import Icon from 'components/icon'
 import { SOCIALS, SENTRE_URL } from 'constant'
 import {
+  logoAnyArts,
   logoBulkSenderSvg,
-  logoColor1Svg,
-  logoColor2Svg,
-  logoColor3Svg,
-  logoColor4Svg,
-  logoColor5Svg,
-  logoColor6Svg,
-  logoColor7Svg,
-  logoColor8Svg,
+  logoDefiland,
+  logoHedge,
+  logoIdlParser,
   logoInterdaoSvg,
+  logoLido,
   logoLucidSvg,
+  logoMiniRoyal,
+  logoSaros,
   logoSenAssestSvg,
   logoSenBalansolSvg,
   logoSenBoosterSvg,
@@ -28,6 +27,7 @@ import {
   logoSentreDarkSvg,
   logoSentreSvg,
   logoSypoolSvg,
+  logoZeta,
 } from 'static/images/appLogos'
 
 import { imgSquareBlurPng, imgSquarePng } from 'static/images/systems'
@@ -41,17 +41,11 @@ const LOGO_SENTRE = {
   light: logoSentreSvg,
 }
 const WAVE_IMGS = {
-  line1: [logoBulkSenderSvg, logoSenRankSvg, logoColor1Svg, logoColor2Svg],
-  line2: [logoInterdaoSvg, logoSenOtcSvg, logoLucidSvg, logoColor3Svg],
-  line3: [
-    logoSenAssestSvg,
-    logoSenswapSvg,
-    logoSenLpSvg,
-    logoColor4Svg,
-    logoColor5Svg,
-  ],
-  line4: [logoSenBalansolSvg, logoSypoolSvg, logoSenBoosterSvg, logoColor6Svg],
-  line5: [logoSenLightningSvg, logoSenFarmingSvg, logoColor7Svg, logoColor8Svg],
+  line1: [logoBulkSenderSvg, logoSenRankSvg, logoAnyArts, logoDefiland],
+  line2: [logoInterdaoSvg, logoSenOtcSvg, logoHedge, logoLucidSvg],
+  line3: [logoSenAssestSvg, logoSenswapSvg, logoSaros, logoSenLpSvg, logoZeta],
+  line4: [logoSenBalansolSvg, logoLido, logoSenBoosterSvg, logoSypoolSvg],
+  line5: [logoSenLightningSvg, logoSenFarmingSvg, logoMiniRoyal, logoIdlParser],
 }
 
 const Banner = () => {

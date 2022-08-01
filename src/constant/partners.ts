@@ -11,6 +11,8 @@ import {
   logoCoin98Png,
   logoSolSvg,
   logoSolDarkSvg,
+  solendLight,
+  solendDark,
 } from 'static/images/logos'
 
 export const LIST_PARTNER = {
@@ -31,9 +33,9 @@ export const LIST_PARTNER = {
         'Serum brings the speed and convenience of centralized exchanges to DeFi while remaining fully trustless and transparent.',
     },
     {
-      logo: clvLightSvg,
+      logo: solendLight,
       description:
-        'CLV Chain is a Substrate-based specialized Layer 1 chain that is EVM compatible and cross-chain interoperable.',
+        'Solend is the autonomous interest rate machine for lending on Solana.',
     },
     {
       logo: sypoolSvg,
@@ -55,6 +57,11 @@ export const LIST_PARTNER = {
       description:
         'DeFi Land is a multi-chain agriculture-simulation game created to gamify Decentralized Finance.',
     },
+    {
+      logo: clvLightSvg,
+      description:
+        'CLV Chain is a Substrate-based specialized Layer 1 chain that is EVM compatible and cross-chain interoperable.',
+    },
   ],
   dark: [
     {
@@ -73,9 +80,9 @@ export const LIST_PARTNER = {
         'Serum brings the speed and convenience of centralized exchanges to DeFi while remaining fully trustless and transparent.',
     },
     {
-      logo: clvDarkSvg,
+      logo: solendDark,
       description:
-        'CLV Chain is a Substrate-based specialized Layer 1 chain that is EVM compatible and cross-chain interoperable.',
+        'Solend is the autonomous interest rate machine for lending on Solana.',
     },
     {
       logo: sypoolSvg,
@@ -96,6 +103,11 @@ export const LIST_PARTNER = {
       logo: defiLandSvg,
       description:
         'DeFi Land is a multi-chain agriculture-simulation game created to gamify Decentralized Finance.',
+    },
+    {
+      logo: clvDarkSvg,
+      description:
+        'CLV Chain is a Substrate-based specialized Layer 1 chain that is EVM compatible and cross-chain interoperable.',
     },
   ],
 }
