@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux'
 
 import { Button, Col, Row, Typography, Image } from 'antd'
 
-import { LITE_PAPER, SENTRE_URL } from 'constant'
+import { SENTRE_DOCS, SENTRE_URL } from 'constant'
 import { cubePng } from 'static/images/systems'
 import { AppState } from 'store'
 
@@ -49,7 +49,7 @@ const BuildOnSentre = () => {
               block
               type="ghost"
               style={{ color: '#E9E9EB' }}
-              onClick={() => window.open(LITE_PAPER, '_blank')}
+              onClick={() => window.open(SENTRE_DOCS, '_blank')}
               size="large"
             >
               How to build

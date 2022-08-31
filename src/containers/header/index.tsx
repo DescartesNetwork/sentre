@@ -19,7 +19,7 @@ import SelectMaterial from './selectMaterial'
 
 import { AppState } from 'store'
 import { setTheme, Theme } from 'store/ui.reducer'
-import { LITE_PAPER, NAVIGATION, SENTRE_URL } from 'constant'
+import { NAVIGATION, SENTRE_DOCS, SENTRE_URL } from 'constant'
 
 const DISABLE = {
   display: 'none',
@@ -126,7 +126,7 @@ const Header = () => {
               />
               <Button
                 type="ghost"
-                onClick={() => window.open(LITE_PAPER, '_blank')}
+                onClick={() => window.open(SENTRE_DOCS, '_blank')}
                 icon={<Icon name="book" />}
               />
 
