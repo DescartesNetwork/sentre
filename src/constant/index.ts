@@ -1,3 +1,7 @@
+export const SENTRE_URL = 'https://hub.sentre.io'
+export const SENTRE_DOCS = 'https://docs.sentre.io/'
+export const SENTRE_ACADEMY = 'https://academy.sentre.io/'
+
 export const NAVIGATION = [
   { title: 'Home', route: 'home' },
   { title: 'Moon Map', route: 'moon-map' },
@@ -5,13 +9,12 @@ export const NAVIGATION = [
   { title: 'Utilities', route: 'utilities' },
   { title: 'Partners', route: 'partners' },
   { title: 'Builder', route: 'builder' },
-  { title: 'Academy', route: 'https://academy.sentre.io' },
+  { title: 'Academy', route: SENTRE_ACADEMY },
 ]
 export const DOCUMENTS = [
   { title: 'Github', src: 'https://github.com/DescartesNetwork' },
-  { title: 'Docs', src: 'https://docs.sentre.io/litepaper' },
-  { title: 'Academy', src: 'https://academy.sentre.io/' },
-  { title: 'Blog', src: 'https://sentre.medium.com/' },
+  { title: 'Docs', src: SENTRE_DOCS },
+  { title: 'Academy', src: SENTRE_ACADEMY },
 ]
 export const SOCIALS = [
   {
@@ -32,9 +35,6 @@ export const SOCIALS = [
   },
   { icon: 'mail', title: 'Email', src: 'mailto: hi@sentre.io' },
 ]
-
-export const SENTRE_URL = 'https://hub.sentre.io'
-export const LITE_PAPER = 'https://docs.sentre.io/litepaper'
 
 export enum MoonMapState {
   foundation = 'foundation',

@@ -2,56 +2,61 @@ import { useEffect } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-import { Row, Col } from 'antd'
+import { Row, Col, Typography } from 'antd'
 import Header from 'containers/header'
 import Home from 'containers/home'
 import Footer from '../footer'
-import Blogs from '../blogs'
-import ArticleDetail from '../blogs/articleDetail'
 import NotFound from 'containers/404'
-import FetchArticles from '../blogs/components/fetchArticles'
-import { AppState } from 'store'
-
-import 'static/styles/dark.less'
-import 'static/styles/light.less'
-import './index.less'
 import Watcher from 'containers/watcher'
 import BecomePartner from 'containers/home/partner/becomePartner'
 
+import { AppState } from 'store'
+import WhitePaper from 'static/base/sentre_whitepaper.pdf'
+import PitchDesk from 'static/base/sentre_pitch_desk.pdf'
+import 'static/styles/dark.less'
+import 'static/styles/light.less'
+import './index.less'
+
 const App = () => {
-  const pageStyles = {
-    margin: 'auto',
-  }
-  const { theme } = useSelector((state: AppState) => state.ui)
+  const theme = useSelector((state: AppState) => state.ui.theme)
 
   useEffect(() => {
     document.body.setAttribute('id', theme)
   }, [theme])
 
   return (
-    <Row>
+    <Row gutter={[24, 0]}>
       <Col span={24}>
         <Header />
       </Col>
       <Col span={24}>
-        <Row style={{ ...pageStyles }}>
-          <Col span={24}>
-            <Switch>
-              <Redirect exact from="/" to="/home" />
-              <Route exact path="/home" component={Home} />
-              <Route exact path="/partner" component={BecomePartner} />
-              <Route exact path="/home" component={Home} />
-              <Route exact path="/blogs" component={Blogs} />
-              <Route exact path="/blogs/:articleId" component={ArticleDetail} />
-              <Route exact path="*" component={NotFound} />
-            </Switch>
-          </Col>
-          <Col span={24}>
-            <Footer />
-          </Col>
-        </Row>
+        <Switch>
+          <Redirect exact from="/" to="/home" />
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/partner" component={BecomePartner} />
+          <Route exact path="/home" component={Home} />
+          <Route
+            exact
+            path="/whitepaper"
+            render={() => {
+              window.location.href = window.location.origin + WhitePaper
+              return <Typography.Text>Redirecting...</Typography.Text>
+            }}
+          />
+          <Route
+            exact
+            path="/pitchdesk"
+            render={() => {
+              window.location.href = window.location.origin + PitchDesk
+              return <Typography.Text>Redirecting...</Typography.Text>
+            }}
+          />
+          <Route exact path="*" component={NotFound} />
+        </Switch>
       </Col>
-      <FetchArticles />
+      <Col span={24}>
+        <Footer />
+      </Col>
       <Watcher />
     </Row>
   )
