@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-import { Row, Col } from 'antd'
+import { Row, Col, Typography } from 'antd'
 import Header from 'containers/header'
 import Home from 'containers/home'
 import Footer from '../footer'
@@ -40,7 +40,7 @@ const App = () => {
             path="/whitepaper"
             render={() => {
               window.location.href = window.location.origin + WhitePaper
-              return 'Redirecting...'
+              return <Typography.Text>Redirecting...</Typography.Text>
             }}
           />
           <Route
@@ -48,7 +48,7 @@ const App = () => {
             path="/pitchdesk"
             render={() => {
               window.location.href = window.location.origin + PitchDesk
-              return 'Redirecting...'
+              return <Typography.Text>Redirecting...</Typography.Text>
             }}
           />
           <Route exact path="*" component={NotFound} />
