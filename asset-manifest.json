@@ -1,7 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.7a655217.css",
-    "main.js": "/static/js/main.5894b402.js",
+    "main.css": "/static/css/main.fb228688.css",
+    "main.js": "/static/js/main.68ba6a7e.js",
+    "static/media/sentre_pitch_desk.pdf": "/static/media/sentre_pitch_desk.c9a177a2a3f17ec571e6.pdf",
+    "static/media/sentre_whitepaper.pdf": "/static/media/sentre_whitepaper.347d3fea21f933629ff5.pdf",
     "static/media/sentre-dark.png": "/static/media/sentre-dark.5a22c69f27f6ec4f0dc3.png",
     "static/media/bg-sen-suite-dark.png": "/static/media/bg-sen-suite-dark.03d9d6220b050c00ba63.png",
     "static/media/bg-sen-suite.png": "/static/media/bg-sen-suite.4794daae5370af2517db.png",
@@ -93,11 +95,11 @@
     "static/media/mm-n1-dark.svg": "/static/media/mm-n1-dark.053d8791fc49b6d9d7ff8018aebbaeb2.svg",
     "static/media/mm-n1.svg": "/static/media/mm-n1.7e7fd6ac3be66e4892bcb37718d99c5f.svg",
     "static/media/telegram.svg": "/static/media/telegram.d0a5a98799110debb907d13056814d5a.svg",
-    "main.7a655217.css.map": "/static/css/main.7a655217.css.map",
-    "main.5894b402.js.map": "/static/js/main.5894b402.js.map"
+    "main.fb228688.css.map": "/static/css/main.fb228688.css.map",
+    "main.68ba6a7e.js.map": "/static/js/main.68ba6a7e.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a655217.css",
-    "static/js/main.5894b402.js"
+    "static/css/main.fb228688.css",
+    "static/js/main.68ba6a7e.js"
   ]
 }
